@@ -15,16 +15,16 @@
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;; shell
-(setq explicit-shell-file-name "/bin/bash")
-(setq shell-file-name "bash")
-(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-(setenv "SHELL" shell-file-name)
-(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
-(global-set-key [f1] 'shell)
+;; shell TODO
+;;(add-to-list 'load-path "~/.emacs.d/neotree")
+;;(require 'multi-term)
+
 
 ;; org mode
-
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-switchb)
 
 
 
