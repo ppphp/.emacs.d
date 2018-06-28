@@ -7,3 +7,18 @@
 [submodule "projectile"]
 	path = projectile
 	url = https://github.com/bbatsov/projectile.git
+[submodule "org-mode"]
+	path = org-mode
+	url = https://code.orgmode.org/bzg/org-mode.git
+[submodule "rust-mode"]
+	path = rust-mode
+	url = https://github.com/rust-lang/rust-mode.git
+[submodule "elixir-mode"]
+	path = elixir-mode
+	url = https://github.com/elixir-editors/emacs-elixir.git
+[submodule "haskell-mode"]
+	path = haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
+[submodule "magit"]
+	path = magit
+	url = https://github.com/magit/magit.git

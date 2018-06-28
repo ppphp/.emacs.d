@@ -36,7 +36,7 @@
 (add-to-list 'load-path "~/.emacs.d/projectile")
 (require 'projectile)
 (projectile-mode)
-
+(global-set-key [f5] 'projectile-find-file)
 
 ;; org mode
 (global-set-key "\C-cl" 'org-store-link)
