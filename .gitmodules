@@ -1,0 +1,9 @@
+[submodule "neotree"]
+	path = neotree
+	url = https://github.com/jaypei/emacs-neotree
+[submodule "multi-term"]
+	path = multi-term
+	url = https://github.com/emacsorphanage/multi-term.git
+[submodule "projectile"]
+	path = projectile
+	url = https://github.com/bbatsov/projectile.git
