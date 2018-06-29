@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/hobby/ppphp.github.io/")

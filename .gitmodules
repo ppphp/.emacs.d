@@ -22,3 +22,6 @@
 [submodule "magit"]
 	path = magit
 	url = https://github.com/magit/magit.git
+[submodule "eim"]
+	path = eim
+	url = https://github.com/wenbinye/emacs-eim
