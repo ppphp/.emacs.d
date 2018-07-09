@@ -45,3 +45,21 @@
 (global-set-key "\C-cb" 'org-switchb)
 
 
+;; input manager
+(add-to-list 'load-path "~/.emacs.d/popup-el")
+(add-to-list 'load-path "~/.emacs.d/emacs-async")
+(add-to-list 'load-path "~/.emacs.d/pyim")
+(add-to-list 'load-path "~/.emacs.d/pyim-basedict")
+(require 'pyim)
+(require 'pyim-basedict)
+(pyim-basedict-enable)
+(setq default-input-method "pyim")
+(global-set-key (kbd "C-\\") 'toggle-input-method)
+
+
+
+
+
+
+
+

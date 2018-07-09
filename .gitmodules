@@ -25,3 +25,15 @@
 [submodule "eim"]
 	path = eim
 	url = https://github.com/wenbinye/emacs-eim
+[submodule "pyim"]
+	path = pyim
+	url = https://github.com/tumashu/pyim.git
+[submodule "popup-el"]
+	path = popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "emacs-async"]
+	path = emacs-async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "pyim-basedict"]
+	path = pyim-basedict
+	url = https://github.com/tumashu/pyim-basedict.git
