@@ -6,7 +6,7 @@
 (load-theme 'atom-one-dark t)
 
 ;; close welcome
-(setq inhibit-startup-message t)
+;; (setq inhibit-startup-message t)
 
 ;; overall setting
 (global-linum-mode t) ;; show line number

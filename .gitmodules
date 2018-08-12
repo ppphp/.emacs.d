@@ -28,6 +28,7 @@
 [submodule "pyim"]
 	path = pyim
 	url = https://github.com/tumashu/pyim.git
+	ignore = untracked
 [submodule "popup-el"]
 	path = popup-el
 	url = https://github.com/auto-complete/popup-el.git
