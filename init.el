@@ -56,7 +56,14 @@
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 
-
+;; magit
+(add-to-list 'load-path "~/.emacs.d/dash")
+(add-to-list 'load-path "~/.emacs.d/magit-popup")
+(add-to-list 'load-path "~/.emacs.d/with-editor")
+(add-to-list 'load-path "~/.emacs.d/ghub")
+(add-to-list 'load-path "~/.emacs.d/magit/lisp")
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 
 

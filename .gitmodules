@@ -38,3 +38,15 @@
 [submodule "pyim-basedict"]
 	path = pyim-basedict
 	url = https://github.com/tumashu/pyim-basedict.git
+[submodule "dash"]
+	path = dash
+	url = https://github.com/magnars/dash.el
+[submodule "magit-popup"]
+	path = magit-popup
+	url = https://github.com/magit/magit-popup
+[submodule "with-editor"]
+	path = with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "ghub"]
+	path = ghub
+	url = https://github.com/magit/ghub.git
