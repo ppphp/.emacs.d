@@ -56,6 +56,7 @@
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 
+
 ;; magit
 (add-to-list 'load-path "~/.emacs.d/dash")
 (add-to-list 'load-path "~/.emacs.d/magit-popup")
@@ -66,6 +67,18 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
+;; dashboard
+(add-to-list 'load-path "~/.emacs.d/page-break-lines")
+(add-to-list 'load-path "~/.emacs.d/emacs-dashboard")
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+(setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        (agenda . 5)
+                        (registers . 5)))
 
 
 

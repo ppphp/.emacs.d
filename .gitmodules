@@ -50,3 +50,9 @@
 [submodule "ghub"]
 	path = ghub
 	url = https://github.com/magit/ghub.git
+[submodule "emacs-dashboard"]
+	path = emacs-dashboard
+	url = https://github.com/rakanalh/emacs-dashboard
+[submodule "page-break-lines"]
+	path = page-break-lines
+	url = https://github.com/purcell/page-break-lines
