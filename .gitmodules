@@ -56,3 +56,78 @@
 [submodule "page-break-lines"]
 	path = page-break-lines
 	url = https://github.com/purcell/page-break-lines
+[submodule "js-format"]
+	path = js-format
+	url = https://github.com/futurist/js-format.el
+[submodule "js2-mode"]
+	path = js2-mode
+	url = https://github.com/mooz/js2-mode
+[submodule "groovy-emacs-modes"]
+	path = groovy-emacs-modes
+	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes
+[submodule "sbt-mode"]
+	path = sbt-mode
+	url = https://github.com/hvesalai/sbt-mode
+[submodule "julia-emacs"]
+	path = julia-emacs
+	url = https://github.com/JuliaEditorSupport/julia-emacs/
+[submodule "emacs-mips-mode"]
+	path = emacs-mips-mode
+	url = https://github.com/hlissner/emacs-mips-mode
+[submodule "verilog-mode"]
+	path = verilog-mode
+	url = https://github.com/veripool/verilog-mode
+[submodule "undo-tree"]
+	path = undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule "rainbow-mode"]
+	path = rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode
+[submodule "rspec-mode"]
+	path = rspec-mode
+	url = https://github.com/pezra/rspec-mode
+[submodule "clojure-mode"]
+	path = clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode
+[submodule "cider"]
+	path = cider
+	url = https://github.com/clojure-emacs/cider
+[submodule "slime"]
+	path = slime
+	url = https://github.com/slime/slime
+[submodule "coffee-mode"]
+	path = coffee-mode
+	url = https://github.com/defunkt/coffee-mode
+[submodule "php-mode"]
+	path = php-mode
+	url = https://github.com/emacs-php/php-mode
+[submodule "web-mode"]
+	path = web-mode
+	url = https://github.com/fxbois/web-mode
+[submodule "swift-mode"]
+	path = swift-mode
+	url = https://github.com/swift-emacs/swift-mode
+[submodule "distel"]
+	path = distel
+	url = https://github.com/massemanet/distel
+[submodule "ESS"]
+	path = ESS
+	url = https://github.com/emacs-ess/ESS
+[submodule "magithub"]
+	path = magithub
+	url = https://github.com/vermiculus/magithub
+[submodule "Hyde"]
+	path = Hyde
+	url = https://github.com/nibrahim/Hyde
+[submodule "docker.el"]
+	path = docker.el
+	url = https://github.com/Silex/docker.el
+[submodule "puppet-mode"]
+	path = puppet-mode
+	url = https://github.com/voxpupuli/puppet-mode
+[submodule "emacs-ansible"]
+	path = emacs-ansible
+	url = https://github.com/k1LoW/emacs-ansible
+[submodule "go-mode.el"]
+	path = go-mode.el
+	url = https://github.com/dominikh/go-mode.el

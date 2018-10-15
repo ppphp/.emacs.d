@@ -81,5 +81,13 @@
                         (registers . 5)))
 
 
+;; javascript format
+(add-to-list 'load-path "~/.emacs.d/js2-mode")
+(add-to-list 'load-path "~/.emacs.d/js-format")
+(require 'js-format)
+(global-set-key (kbd "C-x j b") 'js-format-buffer)
+
+
+
 
 
