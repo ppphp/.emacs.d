@@ -1,12 +1,15 @@
 [submodule "neotree"]
 	path = neotree
 	url = https://github.com/jaypei/emacs-neotree
+	branch = 0.5.2
 [submodule "multi-term"]
 	path = multi-term
 	url = https://github.com/emacsorphanage/multi-term.git
+	branch = 1.2
 [submodule "projectile"]
 	path = projectile
 	url = https://github.com/bbatsov/projectile.git
+	branch = v1.0.0
 [submodule "org-mode"]
 	path = org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
@@ -56,3 +59,6 @@
 [submodule "page-break-lines"]
 	path = page-break-lines
 	url = https://github.com/purcell/page-break-lines
+[submodule "markdown-mode"]
+	path = markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git

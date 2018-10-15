@@ -5,13 +5,10 @@
 ;;(load-theme 'dracula t)
 (load-theme 'atom-one-dark t)
 
-;; close welcome
-;; (setq inhibit-startup-message t)
-
 ;; overall setting
 (global-linum-mode t) ;; show line number
 (scroll-bar-mode -1) ;; hide scroll bar
-
+(setq make-backup-files nil) ;; cancel auto-save file
 
 ;; encoding && font https://www.reddit.com/r/emacs/comments/5twcka/which_font_do_you_use/
 (set-language-environment "UTF-8")
@@ -80,6 +77,15 @@
                         (agenda . 5)
                         (registers . 5)))
 
+;; markdown mode
 
+(add-to-list 'load-path "~/.emacs.d/markdown-mode")
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
