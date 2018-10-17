@@ -138,3 +138,12 @@
 	path = go-mode.el
 	url = https://github.com/dominikh/go-mode.el
 
+[submodule "EmacsMultishell"]
+	path = EmacsMultishell
+	url = https://github.com/kenmanheimer/EmacsMultishell
+[submodule "all-the-icons.el"]
+	path = all-the-icons.el
+	url = https://github.com/domtronn/all-the-icons.el
+[submodule "emacs-memoize"]
+	path = emacs-memoize
+	url = https://github.com/skeeto/emacs-memoize
