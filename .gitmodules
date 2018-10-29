@@ -148,3 +148,6 @@
 [submodule "emacs-memoize"]
 	path = emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize
+[submodule "sublimity"]
+	path = sublimity
+	url = https://github.com/zk-phi/sublimity

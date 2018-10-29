@@ -1,3 +1,5 @@
+
+
 (package-initialize)
 
 ;; theme
@@ -14,6 +16,18 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+(add-to-list 'load-path "~/.emacs.d/sublimity")
+(require 'sublimity)
+(sublimity-mode 1)
+(setq sublimity-scroll-weight 10
+      sublimity-scroll-drift-length 5)
+(setq sublimity-map-size 20)
+(setq sublimity-map-fraction 0.3)
+(setq sublimity-map-text-scale -7)
+(add-hook 'sublimity-map-setup-hook
+	  (lambda ()
+	    (setq buffer-face-mode-face '(:family "Monospace"))
+            (buffer-face-mode)))
 
 
 ;; encoding && font https://www.reddit.com/r/emacs/comments/5twcka/which_font_do_you_use/
@@ -119,3 +133,6 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
+
+
+
