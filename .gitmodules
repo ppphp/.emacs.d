@@ -65,6 +65,7 @@
 [submodule "js-format"]
 	path = js-format
 	url = https://github.com/futurist/js-format.el
+	ignore = untracked
 [submodule "js2-mode"]
 	path = js2-mode
 	url = https://github.com/mooz/js2-mode
