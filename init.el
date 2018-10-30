@@ -94,11 +94,7 @@
 (dashboard-setup-startup-hook)
 (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
 (setq dashboard-startup-banner 'logo)
-(setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+(setq dashboard-items '((projects . 100)))
 
 ;; markdown mode
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
@@ -106,6 +102,9 @@
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
 
 ;; javascript format
@@ -115,14 +114,7 @@
 (global-set-key (kbd "C-x j b") 'js-format-buffer)
 
 
-
-
-;; markdown mode
-(autoload 'gfm-mode "markdown-mode"
-   "Major mode for editing GitHub Flavored Markdown files" t)
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
-
-
+;; web
 (add-to-list 'load-path "~/.emacs.d/web-mode")
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -134,5 +126,23 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 
+;; go-mode
+(add-to-list 'load-path "~/.emacs.d/go-mode.el")
+(autoload 'go-mode "go-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+
+;; toml mode
+(add-to-list 'load-path "~/.emacs.d/toml-mode.el")
+(require 'toml-mode)
+(add-to-list 'auto-mode-alist '("\\.toml\\'" . toml-mode))
+
+;; groovy mode
+(add-to-list 'load-path "~/.emacs.d/s")
+(add-to-list 'load-path "~/.emacs.d/groovy-emacs-modes")
+(require 'groovy-mode)
+
+;; csv mode
+(add-to-list 'load-path "~/.emacs.d/csv-mode")
+(require 'csv-mode)
 
 

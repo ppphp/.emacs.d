@@ -55,7 +55,7 @@
 	url = https://github.com/magit/ghub.git
 [submodule "emacs-dashboard"]
 	path = emacs-dashboard
-	url = https://github.com/rakanalh/emacs-dashboard
+	url = https://github.com/ppphp/emacs-dashboard
 [submodule "page-break-lines"]
 	path = page-break-lines
 	url = https://github.com/purcell/page-break-lines
@@ -151,3 +151,12 @@
 [submodule "sublimity"]
 	path = sublimity
 	url = https://github.com/zk-phi/sublimity
+[submodule "toml-mode.el"]
+	path = toml-mode.el
+	url = https://github.com/dryman/toml-mode.el.git
+[submodule "s"]
+	path = s
+	url = https://github.com/magnars/s.el.git
+[submodule "csv-mode"]
+	path = csv-mode
+	url = https://github.com/emacsmirror/csv-mode.git
