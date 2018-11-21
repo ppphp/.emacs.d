@@ -8,7 +8,7 @@
 (load-theme 'atom-one-dark t)
 
 ;; overall setting
-(global-linum-mode t) 
+;;(global-linum-mode t) 
 ;; show line number
 (scroll-bar-mode -1) ;; hide scroll bar
 (setq make-backup-files nil) ;; cancel auto-save file
@@ -126,10 +126,17 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 
-;; go-mode
+;; go-mode http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/
 (add-to-list 'load-path "~/.emacs.d/go-mode.el")
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'before-save-hook 'go-remove-unused-imports)
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "C-c i") 'go-goto-imports)))
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd \"M-.\") 'godef-jump)))
+
 
 ;; toml mode
 (add-to-list 'load-path "~/.emacs.d/toml-mode.el")
@@ -155,5 +162,15 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 
+
+
+(add-to-list 'load-path "~/.emacs.d/company-mode")
+
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; ruby format
+(add-to-list 'load-path "~/.emacs.d/rubocopfmt.el")
+(require 'rubocopfmt)
+(add-hook 'ruby-mode-hook #'rubocopfmt-mode)
 
 

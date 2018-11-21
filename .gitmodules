@@ -172,3 +172,7 @@
 [submodule "helm"]
 	path = helm
 	url = https://github.com/emacs-helm/helm
+[submodule "rubocopfmt.el"]
+	path = rubocopfmt.el
+	url = https://github.com/jimeh/rubocopfmt.el
+
