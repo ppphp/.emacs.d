@@ -166,3 +166,9 @@
 [submodule "rubocopfmt.el"]
 	path = rubocopfmt.el
 	url = https://github.com/jimeh/rubocopfmt.el
+[submodule "dockerfile-mode"]
+	path = dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode
+[submodule "use-package"]
+	path = use-package
+	url = https://github.com/jwiegley/use-package

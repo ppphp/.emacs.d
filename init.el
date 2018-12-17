@@ -162,4 +162,8 @@
 (require 'rubocopfmt)
 (add-hook 'ruby-mode-hook #'rubocopfmt-mode)
 
+;; docker 
+(add-to-list 'load-path "~/.emacs.d/dockerfile-mode")
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
