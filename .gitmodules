@@ -1,15 +1,12 @@
 [submodule "neotree"]
 	path = neotree
 	url = https://github.com/jaypei/emacs-neotree
-	branch = 0.5.2
 [submodule "multi-term"]
 	path = multi-term
 	url = https://github.com/emacsorphanage/multi-term.git
-	branch = 1.2
 [submodule "projectile"]
 	path = projectile
 	url = https://github.com/bbatsov/projectile.git
-	branch = v1.0.0
 [submodule "org-mode"]
 	path = org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
@@ -166,12 +163,14 @@
 [submodule "company-mode"]
 	path = company-mode
 	url = https://github.com/company-mode/company-mode.git
+	branch = 0.9.10
 [submodule "yasnippet"]
 	path = yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
 [submodule "helm"]
 	path = helm
 	url = https://github.com/emacs-helm/helm
+	branch = v3.2
 [submodule "rubocopfmt.el"]
 	path = rubocopfmt.el
 	url = https://github.com/jimeh/rubocopfmt.el
@@ -182,3 +181,30 @@
 [submodule "use-package"]
 	path = use-package
 	url = https://github.com/jwiegley/use-package
+[submodule "emacs-format-all-the-code"]
+	path = emacs-format-all-the-code
+	url = https://github.com/lassik/emacs-format-all-the-code
+[submodule "flycheck"]
+	path = flycheck
+	url = https://github.com/flycheck/flycheck.git
+[submodule "lsp-mode"]
+	path = lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode
+[submodule "helm-lsp"]
+	path = helm-lsp
+	url = https://github.com/emacs-lsp/helm-lsp
+[submodule "lsp-ui"]
+	path = lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui.git
+[submodule "company-lsp"]
+	path = company-lsp
+	url = https://github.com/tigersoldier/company-lsp.git
+[submodule "f.el"]
+	path = f.el
+	url = https://github.com/rejeep/f.el
+[submodule "ht.el"]
+	path = ht.el
+	url = https://github.com/Wilfred/ht.el.git
+[submodule "spinner.el"]
+	path = spinner.el
+	url = https://github.com/Malabarba/spinner.el
