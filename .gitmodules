@@ -1,210 +1,144 @@
 [submodule "neotree"]
-	path = neotree
+	path = modules/neotree
 	url = https://github.com/jaypei/emacs-neotree
 [submodule "multi-term"]
-	path = multi-term
+	path = modules/multi-term
 	url = https://github.com/emacsorphanage/multi-term.git
 [submodule "projectile"]
-	path = projectile
+	path = modules/projectile
 	url = https://github.com/bbatsov/projectile.git
 [submodule "org-mode"]
-	path = org-mode
+	path = modules/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
-[submodule "rust-mode"]
-	path = rust-mode
-	url = https://github.com/rust-lang/rust-mode.git
-[submodule "elixir-mode"]
-	path = elixir-mode
-	url = https://github.com/elixir-editors/emacs-elixir.git
-[submodule "haskell-mode"]
-	path = haskell-mode
-	url = https://github.com/haskell/haskell-mode.git
 [submodule "magit"]
-	path = magit
+	path = modules/magit
 	url = https://github.com/magit/magit.git
 [submodule "eim"]
-	path = eim
+	path = modules/eim
 	url = https://github.com/wenbinye/emacs-eim
 [submodule "pyim"]
-	path = pyim
+	path = modules/pyim
 	url = https://github.com/tumashu/pyim.git
 	ignore = untracked
 [submodule "popup-el"]
-	path = popup-el
+	path = modules/popup-el
 	url = https://github.com/auto-complete/popup-el.git
 [submodule "emacs-async"]
-	path = emacs-async
+	path = modules/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
 [submodule "pyim-basedict"]
-	path = pyim-basedict
+	path = modules/pyim-basedict
 	url = https://github.com/tumashu/pyim-basedict.git
 [submodule "dash"]
-	path = dash
+	path = modules/dash
 	url = https://github.com/magnars/dash.el
 [submodule "magit-popup"]
-	path = magit-popup
+	path = modules/magit-popup
 	url = https://github.com/magit/magit-popup
 [submodule "with-editor"]
-	path = with-editor
+	path = modules/with-editor
 	url = https://github.com/magit/with-editor.git
 [submodule "ghub"]
-	path = ghub
+	path = modules/ghub
 	url = https://github.com/magit/ghub.git
 [submodule "emacs-dashboard"]
-	path = emacs-dashboard
+	path = modules/emacs-dashboard
 	url = https://github.com/ppphp/emacs-dashboard
 [submodule "page-break-lines"]
-	path = page-break-lines
+	path = modules/page-break-lines
 	url = https://github.com/purcell/page-break-lines
 [submodule "markdown-mode"]
-	path = markdown-mode
+	path = modules/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "js-format"]
-	path = js-format
-	url = https://github.com/futurist/js-format.el
-	ignore = untracked
-[submodule "js2-mode"]
-	path = js2-mode
-	url = https://github.com/mooz/js2-mode
-[submodule "groovy-emacs-modes"]
-	path = groovy-emacs-modes
-	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes
-[submodule "sbt-mode"]
-	path = sbt-mode
-	url = https://github.com/hvesalai/sbt-mode
-[submodule "julia-emacs"]
-	path = julia-emacs
-	url = https://github.com/JuliaEditorSupport/julia-emacs/
-[submodule "emacs-mips-mode"]
-	path = emacs-mips-mode
-	url = https://github.com/hlissner/emacs-mips-mode
-[submodule "verilog-mode"]
-	path = verilog-mode
-	url = https://github.com/veripool/verilog-mode
 [submodule "undo-tree"]
-	path = undo-tree
+	path = modules/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
 [submodule "rainbow-mode"]
-	path = rainbow-mode
+	path = modules/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode
-[submodule "rspec-mode"]
-	path = rspec-mode
-	url = https://github.com/pezra/rspec-mode
 [submodule "clojure-mode"]
-	path = clojure-mode
+	path = modules/clojure-mode
 	url = https://github.com/clojure-emacs/clojure-mode
 [submodule "cider"]
-	path = cider
+	path = modules/cider
 	url = https://github.com/clojure-emacs/cider
 [submodule "slime"]
-	path = slime
+	path = modules/slime
 	url = https://github.com/slime/slime
-[submodule "coffee-mode"]
-	path = coffee-mode
-	url = https://github.com/defunkt/coffee-mode
-[submodule "php-mode"]
-	path = php-mode
-	url = https://github.com/emacs-php/php-mode
 [submodule "web-mode"]
-	path = web-mode
+	path = modules/web-mode
 	url = https://github.com/fxbois/web-mode
-[submodule "swift-mode"]
-	path = swift-mode
-	url = https://github.com/swift-emacs/swift-mode
 [submodule "distel"]
-	path = distel
+	path = modules/distel
 	url = https://github.com/massemanet/distel
 [submodule "ESS"]
-	path = ESS
+	path = modules/ESS
 	url = https://github.com/emacs-ess/ESS
 [submodule "magithub"]
-	path = magithub
+	path = modules/magithub
 	url = https://github.com/vermiculus/magithub
 [submodule "Hyde"]
-	path = Hyde
+	path = modules/Hyde
 	url = https://github.com/nibrahim/Hyde
-[submodule "docker.el"]
-	path = docker.el
-	url = https://github.com/Silex/docker.el
-[submodule "puppet-mode"]
-	path = puppet-mode
-	url = https://github.com/voxpupuli/puppet-mode
-[submodule "emacs-ansible"]
-	path = emacs-ansible
-	url = https://github.com/k1LoW/emacs-ansible
-[submodule "go-mode.el"]
-	path = go-mode.el
-	url = https://github.com/dominikh/go-mode.el
-
 [submodule "EmacsMultishell"]
-	path = EmacsMultishell
+	path = modules/EmacsMultishell
 	url = https://github.com/kenmanheimer/EmacsMultishell
 [submodule "all-the-icons.el"]
-	path = all-the-icons.el
+	path = modules/all-the-icons.el
 	url = https://github.com/domtronn/all-the-icons.el
 [submodule "emacs-memoize"]
-	path = emacs-memoize
+	path = modules/emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize
 [submodule "sublimity"]
-	path = sublimity
+	path = modules/sublimity
 	url = https://github.com/zk-phi/sublimity
-[submodule "toml-mode.el"]
-	path = toml-mode.el
-	url = https://github.com/dryman/toml-mode.el.git
 [submodule "s"]
-	path = s
+	path = modules/s
 	url = https://github.com/magnars/s.el.git
-[submodule "csv-mode"]
-	path = csv-mode
-	url = https://github.com/emacsmirror/csv-mode.git
 [submodule "helm-company"]
-	path = helm-company
+	path = modules/helm-company
 	url = https://github.com/Sodel-the-Vociferous/helm-company.git
 [submodule "company-mode"]
-	path = company-mode
+	path = modules/company-mode
 	url = https://github.com/company-mode/company-mode.git
 	branch = 0.9.10
 [submodule "yasnippet"]
-	path = yasnippet
+	path = modules/yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
 [submodule "helm"]
-	path = helm
+	path = modules/helm
 	url = https://github.com/emacs-helm/helm
 	branch = v3.2
-[submodule "rubocopfmt.el"]
-	path = rubocopfmt.el
-	url = https://github.com/jimeh/rubocopfmt.el
-
-[submodule "dockerfile-mode"]
-	path = dockerfile-mode
-	url = https://github.com/spotify/dockerfile-mode
 [submodule "use-package"]
-	path = use-package
+	path = modules/use-package
 	url = https://github.com/jwiegley/use-package
 [submodule "emacs-format-all-the-code"]
-	path = emacs-format-all-the-code
+	path = modules/emacs-format-all-the-code
 	url = https://github.com/lassik/emacs-format-all-the-code
 [submodule "flycheck"]
-	path = flycheck
+	path = modules/flycheck
 	url = https://github.com/flycheck/flycheck.git
 [submodule "lsp-mode"]
-	path = lsp-mode
+	path = modules/lsp-mode
 	url = https://github.com/emacs-lsp/lsp-mode
 [submodule "helm-lsp"]
-	path = helm-lsp
+	path = modules/helm-lsp
 	url = https://github.com/emacs-lsp/helm-lsp
 [submodule "lsp-ui"]
-	path = lsp-ui
+	path = modules/lsp-ui
 	url = https://github.com/emacs-lsp/lsp-ui.git
 [submodule "company-lsp"]
-	path = company-lsp
+	path = modules/company-lsp
 	url = https://github.com/tigersoldier/company-lsp.git
 [submodule "f.el"]
-	path = f.el
+	path = modules/f.el
 	url = https://github.com/rejeep/f.el
 [submodule "ht.el"]
-	path = ht.el
+	path = modules/ht.el
 	url = https://github.com/Wilfred/ht.el.git
 [submodule "spinner.el"]
-	path = spinner.el
+	path = modules/spinner.el
 	url = https://github.com/Malabarba/spinner.el
+[submodule "dap-mode"]
+	path = modules/dap-mode
+	url = https://github.com/emacs-lsp/dap-mode.git
