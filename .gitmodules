@@ -75,3 +75,6 @@
 [submodule "dap-mode"]
 	path = modules/dap-mode
 	url = https://github.com/emacs-lsp/dap-mode.git
+[submodule "modules/go-mode.el"]
+	path = modules/go-mode.el
+	url = https://github.com/dominikh/go-mode.el
