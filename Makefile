@@ -1,6 +1,5 @@
 
 all:
-
-	cd helm; EMACSLOADPATH="/path/to/emacs-async:" make
+	cd modules/helm;EMACSLOADPATH="`pwd`/../emacs-async" make
 
 
