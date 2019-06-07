@@ -11,4 +11,7 @@
 (require 'init-lsp)
 (require 'init-flycheck)
 (require 'init-go)
+(require 'init-dashboard)
+
+
 ;;; init.el ends here

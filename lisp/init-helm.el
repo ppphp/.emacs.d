@@ -1,3 +1,6 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
 ;; global helm init
 (add-to-list 'load-path "~/.emacs.d/modules/popup-el")
@@ -7,3 +10,4 @@
 (require 'helm-config)
 (helm-mode 1)
 (provide 'init-helm)
+;;; init-helm.el ends here

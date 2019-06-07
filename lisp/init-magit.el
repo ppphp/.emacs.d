@@ -1,5 +1,8 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
-;; global magit init
+ ;; global magit init
 (add-to-list 'load-path "~/.emacs.d/modules/ghub")
 (add-to-list 'load-path "~/.emacs.d/modules/magit-popup")
 (add-to-list 'load-path "~/.emacs.d/modules/with-editor")
@@ -8,3 +11,4 @@
 (require 'magit)
 
 (provide 'init-magit)
+;;; init-magit.el ends here

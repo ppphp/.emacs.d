@@ -78,3 +78,9 @@
 [submodule "modules/go-mode.el"]
 	path = modules/go-mode.el
 	url = https://github.com/dominikh/go-mode.el
+[submodule "modules/emacs-dashboard"]
+	path = modules/emacs-dashboard
+	url = https://github.com/emacs-dashboard/emacs-dashboard
+[submodule "modules/pages-break-lines"]
+	path = modules/pages-break-lines
+	url = https://github.com/purcell/page-break-lines
