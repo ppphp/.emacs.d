@@ -1,3 +1,6 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
 ;; global projectile init
 (add-to-list 'load-path "~/.emacs.d/modules/projectile")
@@ -14,3 +17,4 @@
           (concat "rg -0 --files --color=never --hidden" rg-cmd))))
 
 (provide 'init-projectile)
+;;; init-projectile.el ends here

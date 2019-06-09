@@ -1,3 +1,6 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
 ;; lsp-mode init
 (add-to-list 'load-path "~/.emacs.d/modules/markdown-mode")
@@ -27,3 +30,4 @@
 (push 'company-lsp company-backends)
 
 (provide 'init-lsp)
+;;; init-lsp.el ends here
