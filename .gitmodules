@@ -90,3 +90,6 @@
 [submodule "modules/emacs-memoize"]
 	path = modules/emacs-memoize
 	url = https://github.com/skeeto/emacs-memoize.git
+[submodule "modules/yaml-mode"]
+	path = modules/yaml-mode
+	url = http://github.com/yoshiki/yaml-mode

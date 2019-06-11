@@ -3,6 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(require 'init-common)
+(require 'init-configfile)
 (require 'init-theme)
 (require 'init-projectile)
 (require 'init-magit)
