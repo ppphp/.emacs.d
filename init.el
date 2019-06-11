@@ -10,6 +10,7 @@
 (require 'init-magit)
 (require 'init-helm)
 (require 'init-company)
+(require 'init-yasnippet)
 (require 'init-lsp)
 (require 'init-flycheck)
 (require 'init-go)

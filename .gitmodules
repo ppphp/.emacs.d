@@ -93,3 +93,6 @@
 [submodule "modules/yaml-mode"]
 	path = modules/yaml-mode
 	url = http://github.com/yoshiki/yaml-mode
+[submodule "modules/yasnippet"]
+	path = modules/yasnippet
+	url = https://github.com/joaotavora/yasnippet.git

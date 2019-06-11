@@ -15,8 +15,11 @@
 (require 'lsp-rust)
 (require 'lsp-pyls)
 (require 'lsp-go)
+(setq lsp-auto-guess-root t)
+(setq lsp-prefer-flymake nil)
 (add-hook 'python-mode-hook #'lsp-python-enable)
-(add-hook 'go-mode-hook #'lsp-go-enable)
+(add-hook 'go-mode-hook #'lsp)
+
 
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-ui")
 (require 'lsp-ui)
