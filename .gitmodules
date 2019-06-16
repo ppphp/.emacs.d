@@ -1,9 +1,6 @@
 [submodule "projectile"]
 	path = modules/projectile
 	url = https://github.com/bbatsov/projectile.git
-[submodule "magit"]
-	path = modules/magit
-	url = https://github.com/magit/magit.git
 [submodule "eim"]
 	path = modules/eim
 	url = https://github.com/wenbinye/emacs-eim
@@ -40,14 +37,12 @@
 [submodule "company-mode"]
 	path = modules/company-mode
 	url = https://github.com/company-mode/company-mode.git
-	branch = 0.9.10
 [submodule "yasnippet"]
 	path = modules/yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
 [submodule "helm"]
 	path = modules/helm
 	url = https://github.com/emacs-helm/helm
-	branch = v3.2
 [submodule "flycheck"]
 	path = modules/flycheck
 	url = https://github.com/flycheck/flycheck.git
@@ -96,3 +91,21 @@
 [submodule "modules/yasnippet"]
 	path = modules/yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
+[submodule "modules/treemacs"]
+	path = modules/treemacs
+	url = https://github.com/Alexander-Miller/treemacs.git
+[submodule "modules/lsp-treemacs"]
+	path = modules/lsp-treemacs
+	url = https://github.com/emacs-lsp/lsp-treemacs.git
+[submodule "modules/ace-window"]
+	path = modules/ace-window
+	url = https://github.com/abo-abo/ace-window
+[submodule "modules/avy"]
+	path = modules/avy
+	url = https://github.com/abo-abo/avy.git
+[submodule "modules/pfuture"]
+	path = modules/pfuture
+	url = https://github.com/Alexander-Miller/pfuture.git
+[submodule "modules/hydra"]
+	path = modules/hydra
+	url = https://github.com/abo-abo/hydra.git

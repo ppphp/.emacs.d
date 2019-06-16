@@ -16,3 +16,7 @@ elpa
 .cask
 
 .lsp*
+
+.cache
+
+snippets
