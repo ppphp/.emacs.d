@@ -109,3 +109,9 @@
 [submodule "modules/hydra"]
 	path = modules/hydra
 	url = https://github.com/abo-abo/hydra.git
+[submodule "modules/magit"]
+	path = modules/magit
+	url = https://github.com/magit/magit.git
+[submodule "modules/transient"]
+	path = modules/transient
+	url = https://github.com/magit/transient.git
