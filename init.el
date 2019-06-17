@@ -15,7 +15,11 @@
 (require 'init-flycheck)
 (require 'init-makefile)
 (require 'init-go)
+(require 'init-rust)
+(require 'init-python)
+;(require 'init-ruby)
+(require 'init-treemacs)
 (require 'init-dashboard)
-
+(require 'init-keymap)
 
 ;;; init.el ends here

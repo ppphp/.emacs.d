@@ -12,13 +12,24 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
 (require 'lsp-mode)
 (require 'lsp)
-(require 'lsp-rust)
-(require 'lsp-pyls)
-(require 'lsp-go)
 (setq lsp-auto-guess-root t)
 (setq lsp-prefer-flymake nil)
-(add-hook 'python-mode-hook #'lsp-python-enable)
+(setq lsp-enable-completion-at-point t)
+(setq lsp-enable-snippet t)
+(setq lsp-eldoc-render-all t)
+
+
+(require 'lsp-pyls)
+(add-hook 'python-mode-hook #'lsp)
+
+(require 'lsp-go)
 (add-hook 'go-mode-hook #'lsp)
+
+(require 'lsp-rust)
+(add-hook 'rust-mode-hook #'lsp)
+
+;(require 'lsp-ruby)
+;(add-hook 'ruby-mode-hook #'lsp)
 
 
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-ui")

@@ -17,4 +17,7 @@ elpa
 
 .lsp*
 
+.cache
+
 snippets
+
