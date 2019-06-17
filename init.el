@@ -13,6 +13,7 @@
 (require 'init-yasnippet)
 (require 'init-lsp)
 (require 'init-flycheck)
+(require 'init-makefile)
 (require 'init-go)
 (require 'init-dashboard)
 
