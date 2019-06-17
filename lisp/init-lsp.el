@@ -35,7 +35,10 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-ui")
 (require 'lsp-ui)
 (require 'lsp-ui-imenu)
-(setq lsp-ui-sideline-ignore-duplicate t)
+;(setq lsp-ui-sideline-ignore-duplicate t)
+(eldoc-mode nil)  
+(global-eldoc-mode -1)
+(setq lsp-ui-flycheck-enable t)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 
