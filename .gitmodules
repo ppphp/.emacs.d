@@ -111,7 +111,16 @@
 	url = https://github.com/abo-abo/hydra.git
 [submodule "modules/magit"]
 	path = modules/magit
-	url = https://github.com/magit/magit.git
+	url = https://github.com/magit/magit
 [submodule "modules/transient"]
 	path = modules/transient
 	url = https://github.com/magit/transient.git
+[submodule "modules/org-mode"]
+	path = modules/org-mode
+	url = https://code.orgmode.org/bzg/org-mode.git
+[submodule "modules/go-mode"]
+	path = modules/go-mode
+	url = https://github.com/dominikh/go-mode.el
+[submodule "modules/rust-mode"]
+	path = modules/rust-mode
+	url = https://github.com/rust-lang/rust-mode

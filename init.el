@@ -11,6 +11,7 @@
 (require 'init-helm)
 (require 'init-company)
 (require 'init-yasnippet)
+(require 'init-org)
 (require 'init-lsp)
 (require 'init-flycheck)
 (require 'init-makefile)
