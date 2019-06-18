@@ -124,3 +124,18 @@
 [submodule "modules/rust-mode"]
 	path = modules/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+[submodule "doom-modeline"]
+	path = doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "nyan-mode"]
+	path = nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "modules/nyan-mode"]
+	path = modules/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "modules/doom-modeline"]
+	path = modules/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "modules/shrink-path"]
+	path = modules/shrink-path
+	url = https://github.com/emacsmirror/shrink-path

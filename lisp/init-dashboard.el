@@ -2,12 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d/modules/emacs-memoize")
-(add-to-list 'load-path "~/.emacs.d/modules/all-the-icons.el")
 (require 'all-the-icons)
-
-(add-to-list 'load-path "~/.emacs.d/modules/pages-break-lines")
-(add-to-list 'load-path "~/.emacs.d/modules/emacs-dashboard")
 (require 'dashboard)
 
 (dashboard-setup-startup-hook)

@@ -12,7 +12,6 @@
 
 ;(add-to-list 'auto-mode-alist (cons "\\.rs\\'" 'rust-mode))
 
-(add-to-list 'load-path "~/.emacs.d/modules/rust-mode")
 (require 'rust-mode)
 
 

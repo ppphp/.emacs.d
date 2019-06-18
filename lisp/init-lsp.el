@@ -3,13 +3,6 @@
 ;;; Code:
 
 ;; lsp-mode init
-(add-to-list 'load-path "~/.emacs.d/modules/markdown-mode")
-(add-to-list 'load-path "~/.emacs.d/modules/spinner.el")
-(add-to-list 'load-path "~/.emacs.d/modules/ht.el")
-(add-to-list 'load-path "~/.emacs.d/modules/s")
-(add-to-list 'load-path "~/.emacs.d/modules/f.el")
-(add-to-list 'load-path "~/.emacs.d/modules/dash")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
 (require 'lsp-mode)
 (require 'lsp)
 (setq lsp-auto-guess-root t)
