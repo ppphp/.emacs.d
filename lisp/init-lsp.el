@@ -5,14 +5,14 @@
 ;; lsp-mode init
 (require 'lsp-mode)
 ;(require 'lsp-clients)
-;(setq lsp-auto-guess-root t)
-;(setq lsp-prefer-flymake nil)
-;(setq lsp-enable-completion-at-point t)
+(setq lsp-auto-guess-root t)
+(setq lsp-prefer-flymake nil)
+(setq lsp-enable-completion-at-point t)
 ;(setq lsp-enable-snippet t)
 ;(setq lsp-eldoc-render-all t)
-;(setq flymake-fringe-indicator-position 'right-fringe)
+(setq flymake-fringe-indicator-position 'right-fringe)
 
-;(add-hook 'prog-mode-hook #'lsp)
+(add-hook 'prog-mode-hook #'lsp)
 ;(require 'lsp-pyls)
 ;(add-hook 'python-mode-hook #'lsp)
 
@@ -20,34 +20,34 @@
 ;(add-hook 'go-mode-hook #'lsp)
 
 ;(require 'lsp-rust)
-(add-hook 'prog-mode-hook #'lsp)
+;(add-hook 'prog-mode-hook #'lsp)
 
 ;(require 'lsp-ruby)
 ;(add-hook 'ruby-mode-hook #'lsp)
 
 
-;(require 'lsp-ui)
-;(require 'lsp-ui-imenu)
+(require 'lsp-ui)
+(require 'lsp-ui-imenu)
 ;(lsp-ui-doc-background ((t (:background nil))))
-;(setq lsp-ui-doc-enable t
-;                 lsp-ui-doc-use-webkit nil
-;                 lsp-ui-doc-include-signature t
-;                 lsp-ui-doc-position 'top
-;                 lsp-ui-doc-border (face-foreground 'default)
-;                 lsp-ui-sideline-enable nil
-;                 lsp-ui-sideline-ignore-duplicate t)
+(setq lsp-ui-doc-enable t
+                 lsp-ui-doc-use-webkit nil
+                 lsp-ui-doc-include-signature t
+                 lsp-ui-doc-position 'top
+                 lsp-ui-doc-border (face-foreground 'default)
+                 lsp-ui-sideline-enable nil
+                 lsp-ui-sideline-ignore-duplicate t)
 
-;(setq lsp-ui-sideline-ignore-duplicate t)
+(setq lsp-ui-sideline-ignore-duplicate t)
 ;(eldoc-mode nil)
 ;(global-eldoc-mode -1)
-;(setq lsp-ui-flycheck-enable t)
-;(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(setq lsp-ui-flycheck-enable t)
+(add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
-;(defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
-;  (setq mode-line-format nil))
+(defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
+  (setq mode-line-format nil))
 
-;(require 'company-lsp)
-;(push 'company-lsp company-backends)
+(require 'company-lsp)
+(push 'company-lsp company-backends)
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
