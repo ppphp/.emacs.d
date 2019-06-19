@@ -154,3 +154,6 @@
 [submodule "modules/lsp-ui"]
 	path = modules/lsp-ui
 	url = https://github.com/emacs-lsp/lsp-ui
+[submodule "modules/dash.el"]
+	path = modules/dash.el
+	url = https://github.com/magnars/dash.el
