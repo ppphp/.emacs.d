@@ -1,63 +1,3 @@
-[submodule "projectile"]
-	path = modules/projectile
-	url = https://github.com/bbatsov/projectile.git
-[submodule "eim"]
-	path = modules/eim
-	url = https://github.com/wenbinye/emacs-eim
-[submodule "popup-el"]
-	path = modules/popup-el
-	url = https://github.com/auto-complete/popup-el.git
-[submodule "emacs-async"]
-	path = modules/emacs-async
-	url = https://github.com/jwiegley/emacs-async.git
-[submodule "dash"]
-	path = modules/dash
-	url = https://github.com/magnars/dash.el
-[submodule "magit-popup"]
-	path = modules/magit-popup
-	url = https://github.com/magit/magit-popup
-[submodule "with-editor"]
-	path = modules/with-editor
-	url = https://github.com/magit/with-editor.git
-[submodule "ghub"]
-	path = modules/ghub
-	url = https://github.com/magit/ghub.git
-[submodule "markdown-mode"]
-	path = modules/markdown-mode
-	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "magithub"]
-	path = modules/magithub
-	url = https://github.com/vermiculus/magithub
-[submodule "s"]
-	path = modules/s
-	url = https://github.com/magnars/s.el.git
-[submodule "helm-company"]
-	path = modules/helm-company
-	url = https://github.com/Sodel-the-Vociferous/helm-company.git
-[submodule "company-mode"]
-	path = modules/company-mode
-	url = https://github.com/company-mode/company-mode.git
-[submodule "yasnippet"]
-	path = modules/yasnippet
-	url = https://github.com/joaotavora/yasnippet.git
-[submodule "helm"]
-	path = modules/helm
-	url = https://github.com/emacs-helm/helm
-[submodule "flycheck"]
-	path = modules/flycheck
-	url = https://github.com/flycheck/flycheck.git
-[submodule "f.el"]
-	path = modules/f.el
-	url = https://github.com/rejeep/f.el
-[submodule "ht.el"]
-	path = modules/ht.el
-	url = https://github.com/Wilfred/ht.el.git
-[submodule "spinner.el"]
-	path = modules/spinner.el
-	url = https://github.com/Malabarba/spinner.el
-[submodule "dap-mode"]
-	path = modules/dap-mode
-	url = https://github.com/emacs-lsp/dap-mode.git
 [submodule "modules/go-mode.el"]
 	path = modules/go-mode.el
 	url = https://github.com/dominikh/go-mode.el
@@ -112,12 +52,6 @@
 [submodule "modules/rust-mode"]
 	path = modules/rust-mode
 	url = https://github.com/rust-lang/rust-mode
-[submodule "doom-modeline"]
-	path = doom-modeline
-	url = https://github.com/seagle0128/doom-modeline
-[submodule "nyan-mode"]
-	path = nyan-mode
-	url = https://github.com/TeMPOraL/nyan-mode
 [submodule "modules/nyan-mode"]
 	path = modules/nyan-mode
 	url = https://github.com/TeMPOraL/nyan-mode
@@ -130,12 +64,6 @@
 [submodule "modules/company-box"]
 	path = modules/company-box
 	url = https://github.com/sebastiencs/company-box
-[submodule "prescient.el"]
-	path = prescient.el
-	url = https://github.com/raxod502/prescient.el
-[submodule "company-quickhelp"]
-	path = company-quickhelp
-	url = https://github.com/expez/company-quickhelp
 [submodule "modules/prescient.el"]
 	path = modules/prescient.el
 	url = https://github.com/raxod502/prescient.el
@@ -157,3 +85,9 @@
 [submodule "modules/dash.el"]
 	path = modules/dash.el
 	url = https://github.com/magnars/dash.el
+[submodule "modules/s.el"]
+	path = modules/s.el
+	url = https://github.com/magnars/s.el.git
+[submodule "modules/f.el"]
+	path = modules/f.el
+	url = https://github.com/rejeep/f.el

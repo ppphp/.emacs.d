@@ -17,7 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/spinner.el")
 (add-to-list 'load-path "~/.emacs.d/modules/ht.el")
-(add-to-list 'load-path "~/.emacs.d/modules/s")
+(add-to-list 'load-path "~/.emacs.d/modules/s.el")
 (add-to-list 'load-path "~/.emacs.d/modules/f.el")
 (add-to-list 'load-path "~/.emacs.d/modules/dash.el")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
