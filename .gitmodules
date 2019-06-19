@@ -148,3 +148,6 @@
 [submodule "modules/editorconfig-emacs"]
 	path = modules/editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs
+[submodule "modules/lsp-mode"]
+	path = modules/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode
