@@ -21,6 +21,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/f.el")
 (add-to-list 'load-path "~/.emacs.d/modules/dash")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp-ui")
+(add-to-list 'load-path "~/.emacs.d/modules/company-lsp")
 (add-to-list 'load-path "~/.emacs.d/modules/ghub")
 (add-to-list 'load-path "~/.emacs.d/modules/magit-popup")
 (add-to-list 'load-path "~/.emacs.d/modules/with-editor")
@@ -46,61 +48,51 @@
 
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (setq debug-on-error t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(require 'savehist)
- (setq enable-recursive-minibuffers t
-              history-length 1000
-              savehist-additional-variables '(mark-ring
-                                              global-mark-ring
-                                              search-ring
-                                              regexp-search-ring
-                                              extended-command-history)
-              savehist-autosave-interval 300)
-(setq frame-title-format '("Emacs - %b")
-      icon-title-format frame-title-format)
+;(require 'savehist)
+; (setq enable-recursive-minibuffers t
+;              history-length 1000
+;              savehist-additional-variables '(mark-ring
+;                                              global-mark-ring
+;                                              search-ring
+;                                              regexp-search-ring
+;                                              extended-command-history)
+;              savehist-autosave-interval 300)
+;(setq frame-title-format '("Emacs - %b")
+;      icon-title-format frame-title-format)
 
-(setq auto-save-default nil)
-(prefer-coding-system 'utf-8)
-(setq delete-by-moving-to-trash t)
-(setq-default major-mode 'text-mode)
-(setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
-(setq sentence-end-double-space nil)
+;(setq auto-save-default nil)
+;(prefer-coding-system 'utf-8)
+;(setq delete-by-moving-to-trash t)
+;(setq-default major-mode 'text-mode)
+;(setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
+;(setq sentence-end-double-space nil)
 ;(global-key-binding "<C-return>" rectangle-mark-mode)
 ;(require 'multiple-cursors)
 
-(require 'hl-line)
-(global-hl-line-mode t)
-(require 'rainbow-delimiters)
-(rainbow-delimiters-mode t)
+;(require 'hl-line)
+;(global-hl-line-mode t)
+;(require 'rainbow-delimiters)
+;(rainbow-delimiters-mode t)
 
-(require 'editorconfig)
-(editorconfig-mode 1)
-(if (display-graphic-p)
-    (progn
-      (setq initial-frame-alist
-            '(
-              (width . 144) ; chars
-              (height . 60) ; lines
-	      ))
-      (setq default-frame-alist
-            '(
-              (width . 144)
-              (height . 60)))
-  ))
+;(require 'editorconfig)
+;(editorconfig-mode 1)
+;(if (display-graphic-p)
+;    (progn
+;      (setq initial-frame-alist
+;            '(
+;              (width . 144) ; chars
+;              (height . 60) ; lines
+;	      ))
+;      (setq default-frame-alist
+;            '(
+;              (width . 144)
+;              (height . 60)))
+;  ))
 (provide 'init-common)
 ;;; init-common.el ends here
