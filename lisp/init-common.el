@@ -23,6 +23,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-ui")
 (add-to-list 'load-path "~/.emacs.d/modules/company-lsp")
+(add-to-list 'load-path "~/.emacs.d/modules/dash")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/ghub")
 (add-to-list 'load-path "~/.emacs.d/modules/magit-popup")
 (add-to-list 'load-path "~/.emacs.d/modules/with-editor")
@@ -49,6 +51,8 @@
 
 (custom-set-variables
  '(inhibit-startup-screen t))
+(custom-set-faces
+ )
 (setq debug-on-error t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
