@@ -91,3 +91,33 @@
 [submodule "modules/f.el"]
 	path = modules/f.el
 	url = https://github.com/rejeep/f.el
+[submodule "modules/modules/projectile"]
+	path = modules/modules/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "modules/modules/emacs-eim"]
+	path = modules/modules/emacs-eim
+	url = https://github.com/wenbinye/emacs-eim
+[submodule "modules/projectile"]
+	path = modules/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "modules/emacs-eim"]
+	path = modules/emacs-eim
+	url = https://github.com/wenbinye/emacs-eim
+[submodule "modules/popup-el"]
+	path = modules/popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "modules/emacs-async"]
+	path = modules/emacs-async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "modules/magit-popup"]
+	path = modules/magit-popup
+	url = https://github.com/magit/magit-popup
+[submodule "modules/with-editor"]
+	path = modules/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "modules/markdown-mode"]
+	path = modules/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "modules/ghub"]
+	path = modules/ghub
+	url = https://github.com/magit/ghub.git
