@@ -46,18 +46,6 @@
 [submodule "flycheck"]
 	path = modules/flycheck
 	url = https://github.com/flycheck/flycheck.git
-[submodule "lsp-mode"]
-	path = modules/lsp-mode
-	url = https://github.com/emacs-lsp/lsp-mode
-[submodule "helm-lsp"]
-	path = modules/helm-lsp
-	url = https://github.com/emacs-lsp/helm-lsp
-[submodule "lsp-ui"]
-	path = modules/lsp-ui
-	url = https://github.com/emacs-lsp/lsp-ui.git
-[submodule "company-lsp"]
-	path = modules/company-lsp
-	url = https://github.com/tigersoldier/company-lsp.git
 [submodule "f.el"]
 	path = modules/f.el
 	url = https://github.com/rejeep/f.el
@@ -124,3 +112,39 @@
 [submodule "modules/rust-mode"]
 	path = modules/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+[submodule "doom-modeline"]
+	path = doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "nyan-mode"]
+	path = nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "modules/nyan-mode"]
+	path = modules/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "modules/doom-modeline"]
+	path = modules/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "modules/shrink-path"]
+	path = modules/shrink-path
+	url = https://github.com/emacsmirror/shrink-path
+[submodule "modules/company-box"]
+	path = modules/company-box
+	url = https://github.com/sebastiencs/company-box
+[submodule "prescient.el"]
+	path = prescient.el
+	url = https://github.com/raxod502/prescient.el
+[submodule "company-quickhelp"]
+	path = company-quickhelp
+	url = https://github.com/expez/company-quickhelp
+[submodule "modules/prescient.el"]
+	path = modules/prescient.el
+	url = https://github.com/raxod502/prescient.el
+[submodule "modules/company-quickhelp"]
+	path = modules/company-quickhelp
+	url = https://github.com/expez/company-quickhelp
+[submodule "modules/rainbow-delimiters"]
+	path = modules/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters
+[submodule "modules/editorconfig-emacs"]
+	path = modules/editorconfig-emacs
+	url = https://github.com/editorconfig/editorconfig-emacs

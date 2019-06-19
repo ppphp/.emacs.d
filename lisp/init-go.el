@@ -10,7 +10,6 @@
 ;(define-derived-mode go-mode prog-mode "Go"
 ;  )
 
-(add-to-list 'load-path "~/.emacs.d/modules/go-mode.el")
 (require 'go-mode)
 ;(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
 

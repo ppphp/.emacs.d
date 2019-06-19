@@ -6,6 +6,8 @@
 (require 'init-common)
 (require 'init-configfile)
 (require 'init-theme)
+(require 'init-dashboard)
+(require 'init-modeline)
 (require 'init-projectile)
 (require 'init-magit)
 (require 'init-helm)
@@ -20,7 +22,7 @@
 (require 'init-python)
 ;(require 'init-ruby)
 (require 'init-treemacs)
-(require 'init-dashboard)
 (require 'init-keymap)
+
 
 ;;; init.el ends here
