@@ -90,6 +90,17 @@
 
 (require 'editorconfig)
 (editorconfig-mode 1)
-
+(if (display-graphic-p)
+    (progn
+      (setq initial-frame-alist
+            '(
+              (width . 144) ; chars
+              (height . 60) ; lines
+	      ))
+      (setq default-frame-alist
+            '(
+              (width . 144)
+              (height . 60)))
+  ))
 (provide 'init-common)
 ;;; init-common.el ends here

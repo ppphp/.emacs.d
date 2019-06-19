@@ -151,3 +151,6 @@
 [submodule "modules/lsp-mode"]
 	path = modules/lsp-mode
 	url = https://github.com/emacs-lsp/lsp-mode
+[submodule "modules/lsp-ui"]
+	path = modules/lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui
