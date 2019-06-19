@@ -13,17 +13,6 @@
 (setq flymake-fringe-indicator-position 'right-fringe)
 
 (add-hook 'prog-mode-hook #'lsp)
-;(require 'lsp-pyls)
-;(add-hook 'python-mode-hook #'lsp)
-
-;(require 'lsp-go)
-;(add-hook 'go-mode-hook #'lsp)
-
-;(require 'lsp-rust)
-;(add-hook 'prog-mode-hook #'lsp)
-
-;(require 'lsp-ruby)
-;(add-hook 'ruby-mode-hook #'lsp)
 
 
 (require 'lsp-ui)
