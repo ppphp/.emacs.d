@@ -10,6 +10,7 @@
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cl" 'lsp-find-definition)
 
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

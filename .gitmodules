@@ -142,3 +142,6 @@
 [submodule "modules/flycheck"]
 	path = modules/flycheck
 	url = https://github.com/flycheck/flycheck.git
+[submodule "modules/treepy.el"]
+	path = modules/treepy.el
+	url = https://github.com/volrath/treepy.el
