@@ -14,6 +14,8 @@
               (get-text-property 0 'dynamic-docstring-function docstring))))))
 
 (require 'multi-term)
+(require 'eshell)
+(require 'shell)
 
 (provide 'init-term)
 ;;; init-term.el ends here

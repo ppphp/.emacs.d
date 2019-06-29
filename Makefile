@@ -28,9 +28,15 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treepy.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/with-editor:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/yasnippet:$(EMACSLOADPATH)
 
-.PHONY: all modules
+.PHONY: all modules cask
 
-all: modules
+all: cask modules
 
 modules:
+	git submodule update --init --recursive
 	make -C modules
+
+cask:
+ifeq (,$(shell command -v cask 2> /dev/null))
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+endif
