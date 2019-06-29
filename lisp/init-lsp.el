@@ -12,7 +12,7 @@
 ;(setq lsp-eldoc-render-all t)
 (setq flymake-fringe-indicator-position 'right-fringe)
 
-(add-hook 'prog-mode-hook #'lsp)
+;(add-hook 'prog-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
 
 

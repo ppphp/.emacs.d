@@ -13,6 +13,8 @@
 (require 'init-helm)
 (require 'init-company)
 (require 'init-yasnippet)
+(require 'init-tabbar)
+(require 'init-term)
 (require 'init-org)
 (require 'init-lsp)
 (require 'init-flycheck)

@@ -145,3 +145,9 @@
 [submodule "modules/treepy.el"]
 	path = modules/treepy.el
 	url = https://github.com/volrath/treepy.el
+[submodule "modules/tabbar"]
+	path = modules/tabbar
+	url = https://github.com/dholm/tabbar.git
+[submodule "modules/multi-term"]
+	path = modules/multi-term
+	url = https://github.com/milkypostman/multi-term

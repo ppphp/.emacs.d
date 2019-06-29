@@ -46,6 +46,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/nyan-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/rainbow-delimiters")
 (add-to-list 'load-path "~/.emacs.d/modules/editorconfig-emacs")
+(add-to-list 'load-path "~/.emacs.d/modules/multi-term")
+(add-to-list 'load-path "~/.emacs.d/modules/tabbar")
 
 
 

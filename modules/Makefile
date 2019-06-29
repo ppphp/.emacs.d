@@ -28,9 +28,15 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treepy.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/with-editor:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/yasnippet:$(EMACSLOADPATH)
 
-.PHONY: all modules
+#export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-all: modules
+.PHONY: all org-mode helm
 
-modules:
-	make -C modules
+## compile module codes
+all: org-mode helm
+
+org-mode: 
+	make -C org-mode
+
+helm:
+	make -C helm
