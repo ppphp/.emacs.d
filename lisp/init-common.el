@@ -48,6 +48,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs.d/modules/multi-term")
 (add-to-list 'load-path "~/.emacs.d/modules/tabbar")
+(add-to-list 'load-path "~/.emacs.d/modules/treepy.el")
 
 
 

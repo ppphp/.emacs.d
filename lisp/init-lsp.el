@@ -14,6 +14,7 @@
 
 ;(add-hook 'prog-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
+(add-hook 'rust-mode-hook #'lsp)
 
 
 (require 'lsp-ui)
