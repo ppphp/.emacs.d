@@ -163,3 +163,9 @@
 [submodule "modules/libegit2"]
 	path = modules/libegit2
 	url = https://github.com/magit/libegit2.git
+[submodule "modules/ansi.el"]
+	path = modules/ansi.el
+	url = https://github.com/rejeep/ansi.el
+[submodule "modules/shut-up"]
+	path = modules/shut-up
+	url = https://github.com/cask/shut-up

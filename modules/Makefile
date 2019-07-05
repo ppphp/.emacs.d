@@ -32,13 +32,15 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ert-runner.el:$(EMACSLOADP
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/commander:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/markdown-mode:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/libegit2:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ansi.el:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all org-mode helm ace-window avy commander company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize ert-runner.el f.el flycheck ghub ht.el hydra libegit2 lsp-mode lsp-ui magit yasnippet
+.PHONY: all ace-window avy commander company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
 
 ## compile module codes
-all: org-mode helm ace-window avy company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize f.el
+all: ace-window avy company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
 
 ace-window:
 	make compile -C ace-window
@@ -67,9 +69,6 @@ emacs-memoize:
 ert-runner.el:
 	make compile -C ert-runner.el
 
-f.el:
-	make compile -C f.el
-
 flycheck:
 	make compile -C flycheck
 
@@ -79,23 +78,17 @@ ghub:
 helm:
 	make -C helm
 
-ht.el:
-	make -C ht.el
-
 hydra:
 	make compile -C hydra
 
 libegit2:
 	make -C libegit2
 
-lsp-mode:
-	make -C lsp-mode
-
-lsp-ui:
-	make -C lsp-ui
-
 magit:
 	make -C magit
+
+projectile:
+	make -C projectile
 
 org-mode: 
 	make -C org-mode

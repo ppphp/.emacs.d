@@ -2,16 +2,19 @@
 ;;; Commentary:
 ;;; Code:
 
-;(defcustom go-mode-hook nil
-;  "Hook called by `go-mode'."
-;  :type 'hook
-;  :group 'go)
 
-;(define-derived-mode go-mode prog-mode "Go"
-;  )
+;;; font lock copy from go-mode
 
-(require 'go-mode)
-;(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
+(define-derived-mode go-mode prog-mode "Go"
+  
+  ;(lsp-document-highlight)
+  )
+
+;(require 'go-mode)
+(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
+
+(add-hook 'go-mode-hook #'lsp)
+
 
 (provide 'init-go)
 ;;; init-go.el ends here
