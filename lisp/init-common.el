@@ -50,7 +50,10 @@
 (add-to-list 'load-path "~/.emacs.d/modules/tabbar")
 
 
-
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 (custom-set-variables
  '(inhibit-startup-screen t))
 (custom-set-faces
