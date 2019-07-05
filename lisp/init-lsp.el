@@ -4,7 +4,8 @@
 
 ;; lsp-mode init
 (require 'lsp-mode)
-;(require 'lsp-clients)
+(require 'lsp-clients)
+(require 'lsp-go)
 (setq lsp-auto-guess-root t)
 (setq lsp-prefer-flymake nil)
 (setq lsp-enable-completion-at-point t)
@@ -12,9 +13,9 @@
 ;(setq lsp-eldoc-render-all t)
 (setq flymake-fringe-indicator-position 'right-fringe)
 
-;(add-hook 'prog-mode-hook #'lsp)
-(add-hook 'go-mode-hook #'lsp)
-(add-hook 'rust-mode-hook #'lsp)
+;(add-hook 'prog-mode-hook 'lsp)
+;(add-hook 'go-mode-hook #'lsp)
+;(add-hook 'rust-mode-hook #'lsp)
 
 
 (require 'lsp-ui)
