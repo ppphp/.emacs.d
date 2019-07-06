@@ -11,8 +11,10 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cl" 'lsp-find-definition)
-(global-unset-key (kbd "<C-mouse-1>"))
-(global-set-key (kbd "<C-mouse-1>") 'lsp-find-definition)
+;(global-unset-key (kbd "<C-mouse-1>"))
+;(global-set-key (kbd "<C-mouse-1>") 'lsp-find-definition)
+
+(define-key global-map "\C-cg" 'magit-status)
 
 (provide 'init-keymap)
 ;;; init-keymap.el ends here
