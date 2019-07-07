@@ -16,5 +16,7 @@
 
 (define-key global-map "\C-cg" 'magit-status)
 
+(global-set-key [f12] 'multi-term-dedicated-toggle)
+
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

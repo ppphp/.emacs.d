@@ -8,9 +8,10 @@
   :group 'ruby)
 
 (define-derived-mode ruby-mode prog-mode "Ruby"
+  (lsp)
   )
 
-(add-to-list 'auto-mode-alist (cons "\\.ruby\\'" 'ruby-mode))
+(add-to-list 'auto-mode-alist (cons "\\.rb\\'" 'ruby-mode))
 
 (provide 'init-ruby)
 ;;; init-ruby.el ends here

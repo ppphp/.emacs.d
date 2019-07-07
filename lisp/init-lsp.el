@@ -9,13 +9,9 @@
 (setq lsp-auto-guess-root t)
 (setq lsp-prefer-flymake nil)
 (setq lsp-enable-completion-at-point t)
-;(setq lsp-enable-snippet t)
-;(setq lsp-eldoc-render-all t)
+(setq lsp-enable-snippet t)
+(setq lsp-eldoc-render-all t)
 (setq flymake-fringe-indicator-position 'right-fringe)
-
-;(add-hook 'prog-mode-hook 'lsp)
-;(add-hook 'go-mode-hook #'lsp)
-;(add-hook 'rust-mode-hook #'lsp)
 
 
 (require 'lsp-ui)
@@ -30,8 +26,8 @@
                  lsp-ui-sideline-ignore-duplicate t)
 
 (setq lsp-ui-sideline-ignore-duplicate t)
-;(eldoc-mode nil)
-;(global-eldoc-mode -1)
+(eldoc-mode nil)
+(global-eldoc-mode -1)
 (setq lsp-ui-flycheck-enable t)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 

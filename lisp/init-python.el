@@ -8,6 +8,7 @@
   :group 'python)
 
 (define-derived-mode python-mode prog-mode "Python"
+  (lsp)
   )
 
 (add-to-list 'auto-mode-alist (cons "\\.py\\'" 'python-mode))

@@ -5,14 +5,14 @@
 ;(add
 ; )
 
-;(define-derived-mode go-mode prog-mode "Go"  
-;  (lsp-document-highlight)
-;  )
+(define-derived-mode c-mode prog-mode "C"  
+  
+  )
 
 ;(require 'go-mode)
-;(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
+(add-to-list 'auto-mode-alist (cons "\\.c\\'" 'c-mode))
 
-;(add-hook 'go-mode-hook #'lsp)
+(add-hook 'c-mode-hook #'lsp)
 
 (provide 'init-c)
 ;;; init-c.el ends here

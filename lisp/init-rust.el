@@ -3,7 +3,7 @@
 ;;; Code:
 
 (define-derived-mode rust-mode prog-mode "Rust"
-  
+  (lsp)
   ;(lsp-document-highlight)
   )
 
