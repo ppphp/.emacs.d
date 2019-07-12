@@ -49,6 +49,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/multi-term")
 (add-to-list 'load-path "~/.emacs.d/modules/tabbar")
 (add-to-list 'load-path "~/.emacs.d/modules/treepy.el")
+(add-to-list 'load-path "~/.emacs.d/modules/tabbar-ruler.el")
+(add-to-list 'load-path "~/.emacs.d/modules/mode-icons")
 
 
 (prefer-coding-system 'utf-8)
@@ -65,16 +67,22 @@
 (menu-bar-mode -1)
 
 (require 'savehist)
- (setq enable-recursive-minibuffers t
-              history-length 1000
-              savehist-additional-variables '(mark-ring
-                                              global-mark-ring
-                                              search-ring
-                                              regexp-search-ring
-                                              extended-command-history)
-              savehist-autosave-interval 300)
-(setq frame-title-format '("Emacs - %b")
-      icon-title-format frame-title-format)
+(setq enable-recursive-minibuffers t
+             history-length 1000
+             savehist-additional-variables '(mark-ring
+                                             global-mark-ring
+                                             search-ring
+                                             regexp-search-ring
+                                             extended-command-history)
+             savehist-autosave-interval 300)
+
+(setq frame-title-format
+    '(""
+      "%b"
+      (:eval
+       (let ((project-name (projectile-project-name)))
+         (unless (string= "-" project-name)
+           (format " in [%s]" project-name))))))
 
 (setq auto-save-default nil)
 (prefer-coding-system 'utf-8)

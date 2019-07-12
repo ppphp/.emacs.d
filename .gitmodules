@@ -169,3 +169,9 @@
 [submodule "modules/shut-up"]
 	path = modules/shut-up
 	url = https://github.com/cask/shut-up
+[submodule "modules/tabbar-ruler.el"]
+	path = modules/tabbar-ruler.el
+	url = https://github.com/mattfidler/tabbar-ruler.el
+[submodule "modules/mode-icons"]
+	path = modules/mode-icons
+	url = https://github.com/ryuslash/mode-icons
