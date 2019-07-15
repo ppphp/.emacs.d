@@ -40,7 +40,7 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 .PHONY: all ace-window avy commander company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
 
 ## compile module codes
-all: ace-window avy company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
+all: helm #ace-window avy company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
 
 ace-window:
 	make compile -C ace-window
