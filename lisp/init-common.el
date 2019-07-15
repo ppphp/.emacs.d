@@ -49,6 +49,10 @@
 (add-to-list 'load-path "~/.emacs.d/modules/multi-term")
 (add-to-list 'load-path "~/.emacs.d/modules/tabbar")
 (add-to-list 'load-path "~/.emacs.d/modules/treepy.el")
+(add-to-list 'load-path "~/.emacs.d/modules/tabbar-ruler.el")
+(add-to-list 'load-path "~/.emacs.d/modules/mode-icons")
+(add-to-list 'load-path "~/.emacs.d/modules/dart-mode")
+(add-to-list 'load-path "~/.emacs.d/modules/flutter.el")
 
 
 (prefer-coding-system 'utf-8)

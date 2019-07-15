@@ -2,16 +2,18 @@
 ;;; Commentary:
 ;;; Code:
 
-(defcustom python-mode-hook nil
-  "Hook called by `python-mode'."
-  :type 'hook
-  :group 'python)
+;(defcustom python-mode-hook nil
+;  "Hook called by `python-mode'."
+;  :type 'hook
+;  :group 'python)
 
-(define-derived-mode python-mode prog-mode "Python"
-  (lsp)
-  )
+;(define-derived-mode python-mode prog-mode "Python"
+;  (lsp)
+;  )
 
-(add-to-list 'auto-mode-alist (cons "\\.py\\'" 'python-mode))
+;(add-to-list 'auto-mode-alist (cons "\\.py\\'" 'python-mode))
+
+(add-hook 'python-mode-hook #'lsp)
 
 (provide 'init-python)
 ;;; init-python.el ends here
