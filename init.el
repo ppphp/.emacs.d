@@ -24,7 +24,7 @@
 (require 'init-python)
 (require 'init-c)
 (require 'init-cpp)
-;(require 'init-ruby)
+(require 'init-ruby)
 (require 'init-treemacs)
 (require 'init-keymap)
 

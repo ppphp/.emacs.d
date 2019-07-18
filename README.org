@@ -1,0 +1,7 @@
+
+* my emacs configure
+
+My emacs configure consists of some main components.
+
+Layout: treemacs, tabbar
+Program: lsp, multi-term, magit
