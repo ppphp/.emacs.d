@@ -14,6 +14,8 @@
               (get-text-property 0 'dynamic-docstring-function docstring))))))
 
 (require 'multi-term)
+(setq term-eol-on-send t)
+
 (require 'eshell)
 (require 'shell)
 

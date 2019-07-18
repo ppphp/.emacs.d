@@ -6,5 +6,7 @@
 ;(treemacs-add-and-display-current-project)
 ;(treemacs-add-project projectile-project-root)
 
+(setq treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))
+
 (provide 'init-treemacs)
 ;;; init-treemacs.el ends here

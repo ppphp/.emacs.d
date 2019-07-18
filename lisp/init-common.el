@@ -32,6 +32,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/lisp")
+(add-to-list 'load-path "~/.emacs.d/modules/org-mode/contrib/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/projectile")
 (add-to-list 'load-path "~/.emacs.d/modules/hydra")
 (add-to-list 'load-path "~/.emacs.d/modules/pfuture")
