@@ -98,6 +98,9 @@
 ;(global-key-binding "<C-return>" rectangle-mark-mode)
 ;(require 'multiple-cursors)
 
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+
 (require 'hl-line)
 (global-hl-line-mode t)
 (require 'rainbow-delimiters)
