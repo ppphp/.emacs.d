@@ -190,3 +190,6 @@
 [submodule "modules/emacs-company-terraform"]
 	path = modules/emacs-company-terraform
 	url = https://github.com/rafalcieslak/emacs-company-terraform.git
+[submodule "deps/ccls"]
+	path = deps/ccls
+	url = https://github.com/MaskRay/ccls.git
