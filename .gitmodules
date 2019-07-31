@@ -193,3 +193,6 @@
 [submodule "deps/ccls"]
 	path = deps/ccls
 	url = https://github.com/MaskRay/ccls.git
+[submodule "deps/tools"]
+	path = deps/tools
+	url = https://github.com/golang/tools

@@ -28,7 +28,7 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treepy.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/with-editor:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/yasnippet:$(EMACSLOADPATH)
 
-.PHONY: all modules cask
+.PHONY: all modules cask deps
 
 all: cask modules
 
@@ -40,3 +40,7 @@ cask:
 ifeq (,$(shell command -v cask 2> /dev/null))
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 endif
+
+deps:
+	make -C deps
+

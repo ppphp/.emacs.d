@@ -1,6 +1,8 @@
 
 
-.PHONY: ccls
+.PHONY: all ccls
+all: ccls
+
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
 	    	-DCMAKE_PREFIX_PATH=/usr/lib/llvm-7 \
@@ -9,4 +11,6 @@ ccls:
 	cmake --build ccls/Release/
 	ln -s ${shell pwd}/ccls/Release/ccls ../bin/ccls
 
+gopls:
+	cd tools; go build -o ../../bin/gopls ./cmd/gopls
 
