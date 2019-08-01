@@ -17,7 +17,7 @@
 
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
-
+(setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
 
 (provide 'init-go)
 ;;; init-go.el ends here

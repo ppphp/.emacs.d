@@ -57,6 +57,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-terraform-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-hcl-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-company-terraform")
+(add-to-list 'load-path "~/.emacs.d/modules/emacs-ccls")
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)

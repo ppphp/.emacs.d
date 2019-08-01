@@ -14,5 +14,9 @@
 
 ;(add-hook 'go-mode-hook #'lsp)
 
+(require 'ccls)
+
+(setq ccls-executable (f-join user-emacs-directory "bin" "ccls"))
+
 (provide 'init-cpp)
 ;;; init-cpp.el ends here

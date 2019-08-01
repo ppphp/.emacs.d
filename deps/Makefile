@@ -1,7 +1,7 @@
 
 
-.PHONY: all ccls
-all: ccls
+.PHONY: all ccls gotools
+all: ccls gotools
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -9,8 +9,11 @@ ccls:
 	    	-DLLVM_INCLUDE_DIR=/usr/lib/llvm-7/include \
 	    	-DLLVM_BUILD_INCLUDE_DIR=/usr/include/llvm-7/
 	cmake --build ccls/Release/
-	ln -s ${shell pwd}/ccls/Release/ccls ../bin/ccls
+	ln -sf ${shell pwd}/ccls/Release/ccls ../bin/ccls
 
-gopls:
-	cd tools; go build -o ../../bin/gopls ./cmd/gopls
+gotools:
+	cd tools && \
+		go build -o ../../bin/gopls ./cmd/gopls && \
+		go build -o ../../bin/goimports ./cmd/goimports && \
+		go build -o ../../bin/gocode ./cmd/gocode
 

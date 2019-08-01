@@ -12,7 +12,9 @@
 ;(require 'go-mode)
 ;(add-to-list 'auto-mode-alist (cons "\\.c\\'" 'c-mode))
 
-(add-hook 'c-mode-hook #'lsp)
+(require 'ccls)
+
+(setq ccls-executable (f-join user-emacs-directory "bin" "ccls"))
 
 (provide 'init-c)
 ;;; init-c.el ends here
