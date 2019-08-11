@@ -14,6 +14,5 @@ ccls:
 gotools:
 	cd tools && \
 		go build -o ../../bin/gopls ./cmd/gopls && \
-		go build -o ../../bin/goimports ./cmd/goimports && \
-		go build -o ../../bin/gocode ./cmd/gocode
+		go build -o ../../bin/goimports ./cmd/goimports
 

@@ -16,6 +16,8 @@
 
 (define-key global-map "\C-cg" 'magit-status)
 
+(define-key global-map "\C-cmt" 'multi-term)
+
 (global-set-key [f12] 'multi-term-dedicated-toggle)
 (define-key term-mode-map (kbd "C-c <left>") 'multi-term-left)
 (define-key term-mode-map (kbd "C-c <right>") 'multi-term-right)

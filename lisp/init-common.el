@@ -59,6 +59,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-company-terraform")
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-ccls")
 (add-to-list 'load-path "~/.emacs.d/modules/elfeed")
+(add-to-list 'load-path "~/.emacs.d/modules/web-mode")
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
