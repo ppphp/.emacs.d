@@ -60,6 +60,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-ccls")
 (add-to-list 'load-path "~/.emacs.d/modules/elfeed")
 (add-to-list 'load-path "~/.emacs.d/modules/web-mode")
+(add-to-list 'load-path "~/.emacs.d/modules/typescript.el")
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
