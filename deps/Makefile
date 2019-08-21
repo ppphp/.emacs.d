@@ -1,7 +1,7 @@
 
 
-.PHONY: all ccls gotools terraform
-all: ccls gotools terraform
+.PHONY: all ccls gotools terraform typescript-language-server
+all: ccls gotools terraform typescript-language-server
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -19,3 +19,8 @@ gotools:
 terraform:
 	cd terraform && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
+
+typescript-language-server:
+	cd typescript-language-server && \
+		yarn && \
+		ln -sf ${shell pwd}/typescript-language-server/server/src/cli.ts ../../bin/typescript-language-server

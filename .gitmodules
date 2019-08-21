@@ -211,3 +211,9 @@
 [submodule "modules/typescript.el"]
 	path = modules/typescript.el
 	url = https://github.com/emacs-typescript/typescript.el.git
+[submodule "modules/typescript-language-server"]
+	path = modules/typescript-language-server
+	url = https://github.com/theia-ide/typescript-language-server
+[submodule "deps/typescript-language-server"]
+	path = deps/typescript-language-server
+	url = https://github.com/theia-ide/typescript-language-server
