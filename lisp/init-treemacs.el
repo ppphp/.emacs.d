@@ -7,6 +7,7 @@
 ;(treemacs-add-project projectile-project-root)
 
 (setq treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))
+(treemacs)
 
 (with-eval-after-load 'treemacs
     (with-eval-after-load 'all-the-icons

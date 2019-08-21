@@ -208,3 +208,6 @@
 [submodule "deps/terraform"]
 	path = deps/terraform
 	url = https://github.com/hashicorp/terraform
+[submodule "modules/typescript.el"]
+	path = modules/typescript.el
+	url = https://github.com/emacs-typescript/typescript.el.git
