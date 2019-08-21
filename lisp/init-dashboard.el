@@ -6,30 +6,27 @@
 (require 'dashboard)
 
 (dashboard-setup-startup-hook)
-;(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
-;; Set the title
-(setq dashboard-banner-logo-title "Hello!")
-;; Set the banner
+;; banner
+;; title
+;; time
+;; items
+;; footer
+
 (setq dashboard-startup-banner 'logo)
-;; Value can be
-;; 'official which displays the official emacs logo
-;; 'logo which displays an alternative emacs logo
-;; 1, 2 or 3 which displays one of the text banners
-;; "path/to/your/image.png" which displays whatever image you would prefer
 
-;; Content is not centered by default. To center, set
+(setq dashboard-banner-logo-title "Hello!")
+
 (setq dashboard-center-content t)
 
-;; To disable shortcut "jump" indicators for each section, set
-(setq dashboard-show-shortcuts nil)
+(setq dashboard-items '((projects . 5)
+			(recents  . 5)))
 
-(setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+(setq dashboard-set-heading-icons t)
+(setq dashboard-set-file-icons t)
 
+(setq dashboard-set-navigator t)
 
 (provide 'init-dashboard)
 

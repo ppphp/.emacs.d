@@ -205,3 +205,6 @@
 [submodule "modules/web-mode"]
 	path = modules/web-mode
 	url = https://github.com/fxbois/web-mode.git
+[submodule "deps/terraform"]
+	path = deps/terraform
+	url = https://github.com/hashicorp/terraform

@@ -1,7 +1,7 @@
 
 
-.PHONY: all ccls gotools
-all: ccls gotools
+.PHONY: all ccls gotools terraform
+all: ccls gotools terraform
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -16,3 +16,6 @@ gotools:
 		go build -o ../../bin/gopls ./cmd/gopls && \
 		go build -o ../../bin/goimports ./cmd/goimports
 
+terraform:
+	cd terraform && \
+		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
