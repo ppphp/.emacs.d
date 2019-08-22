@@ -211,3 +211,9 @@
 [submodule "modules/typescript.el"]
 	path = modules/typescript.el
 	url = https://github.com/emacs-typescript/typescript.el.git
+[submodule "modules/multi-cursors.el"]
+	path = modules/multi-cursors.el
+	url = https://github.com/magnars/multiple-cursors.el
+[submodule "deps/rls"]
+	path = deps/rls
+	url = https://github.com/rust-lang/rls

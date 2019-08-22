@@ -1,7 +1,14 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
-(dolist (n (directory-files  "~/.emacs.d/modules/")) (add-to-list 'load-path (concat "~/.emacs.d/modules/" n)))
+(dolist
+    (n (directory-files "~/.emacs.d/modules/"))
+  (unless
+   (or (eq n "..") (eq n "."))
+    (add-to-list 'load-path (concat "~/.emacs.d/modules/" n))
+  )
+)
+
 (add-to-list 'load-path "~/.emacs.d/modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/lisp")
@@ -48,8 +55,8 @@
 (setq-default major-mode 'text-mode)
 (setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
 (setq sentence-end-double-space nil)
+(require 'multiple-cursors)
 ;(global-key-binding "<C-return>" rectangle-mark-mode)
-;(require 'multiple-cursors)
 
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
