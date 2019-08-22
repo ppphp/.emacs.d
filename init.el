@@ -3,6 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(require 'init-deps)
 (require 'init-common)
 (require 'init-configfile)
 (require 'init-theme)
@@ -29,6 +30,7 @@
 (require 'init-ruby)
 (require 'init-treemacs)
 (require 'init-keymap)
+(require 'init-socks)
 
 
 ;;; init.el ends here

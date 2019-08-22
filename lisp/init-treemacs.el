@@ -7,8 +7,8 @@
 ;(treemacs-add-project projectile-project-root)
 
 (setq treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))
-(treemacs)
-
+(treemacs-follow-mode nil)
+(treemacs-tag-follow-mode nil)
 (with-eval-after-load 'treemacs
     (with-eval-after-load 'all-the-icons
       (let ((all-the-icons-default-adjust 0)
@@ -51,5 +51,6 @@
             (unless (ht-get treemacs-icons-hash (s-replace-regexp ".\\?" "" key))
               (ht-set! treemacs-icons-hash (s-replace-regexp ".\\?" "" key) value)))))))
 
+(treemacs)
 (provide 'init-treemacs)
 ;;; init-treemacs.el ends here
