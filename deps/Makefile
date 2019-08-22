@@ -1,7 +1,7 @@
 
 
-.PHONY: all ccls gotools terraform rls
-all: ccls gotools terraform rls
+.PHONY: all ccls gotools terraform rls typescript-language-server
+all: ccls gotools terraform rls typescript-language-server
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -24,3 +24,9 @@ rls:
 	cd rls && \
 		cargo build --release && \
 		ln -sf ${shell pwd}/rls/target/release/rls ../../bin/rls
+
+typescript-language-server:
+	cd typescript-language-server && \
+		yarn && \
+		ln -sf ${shell pwd}/typescript-language-server/server/src/cli.ts ../../bin/typescript-language-server
+
