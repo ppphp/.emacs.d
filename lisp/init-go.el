@@ -15,7 +15,7 @@
 
 (add-hook 'go-mode-hook #'lsp)
 
-(setq gofmt-command "goimports")
+(setq gofmt-command  (f-join user-emacs-directory "bin" "goimports"))
 (add-hook 'before-save-hook 'gofmt-before-save)
 (setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
 
