@@ -65,6 +65,10 @@
             '(
               (width . 144)
               (height . 60)))
-  ))
+      ))
+
+(setq inhibit-startup-screen t
+      initial-buffer-choice  nil)
+
 (provide 'init-common)
 ;;; init-common.el ends here

@@ -5,7 +5,7 @@
 (dolist
     (n (directory-files "~/.emacs.d/modules/"))
   (unless
-   (or (eq n "..") (eq n "."))
+   (or (equal n "..") (equal n "."))
     (add-to-list 'load-path (concat "~/.emacs.d/modules/" n))
   )
 )

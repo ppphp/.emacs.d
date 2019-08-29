@@ -2,7 +2,11 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ace-window:$(EMACSLOADPATH
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-async:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/all-the-icons.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/avy:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/company-mode:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/company-box:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/dash.el:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/doom-modeline:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-ccls:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-dashboard:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-eim:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-memoize:$(EMACSLOADPATH)
@@ -37,28 +41,46 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all ace-window avy commander company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
+.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra lsp-mode libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: helm #ace-window avy company-mode editorconfig-emacs emacs-async emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 magit org-mode projectile yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls helm lsp-mode magit org-mode projectile transient# emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 yasnippet
 
 ace-window:
 	make compile -C ace-window
 
+all-the-icons:
+	cd all-the-icons.el && emacs -Q -batch -f batch-byte-compile *.el
+
+ansi:
+	cd ansi.el && emacs -Q -batch -f batch-byte-compile *.el
+
 avy:
-	make -C avy
+	make compile -C avy
 
 commander:
-	make compile -C commander
+	cd commander && emacs -Q -batch -f batch-byte-compile commander.el
+
+company-box:
+	cd company-box && emacs -Q -batch -f batch-byte-compile *.el
+
+company-lsp:
+	cd company-lsp && emacs -Q -batch -f batch-byte-compile *.el
 
 company-mode:
 	make compile -C company-mode
+
+doom-modeline:
+	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
 
 editorconfig-emacs:
 	make -C editorconfig-emacs
 
 emacs-async:
 	make -C emacs-async
+
+emacs-ccls:
+	cd emacs-ccls && emacs -Q -batch -f batch-byte-compile *.el
 
 emacs-eim:
 	make -C emacs-eim
@@ -84,14 +106,20 @@ hydra:
 libegit2:
 	make -C libegit2
 
+lsp-mode:
+	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el
+
 magit:
-	make -C magit
+	BUILD_MAGIT_LIBGIT=false make -C magit
 
 projectile:
-	make -C projectile
+	cd projectile && emacs -Q --batch -f batch-byte-compile *.el
 
 org-mode: 
 	make -C org-mode
+
+transient:
+	make -C transient
 
 yasnippet:
 	cd  yasnippet; rake
