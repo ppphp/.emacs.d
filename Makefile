@@ -30,7 +30,7 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/yasnippet:$(EMACSLOADPATH)
 
 .PHONY: all modules cask deps
 
-all: cask modules deps
+all: modules deps
 
 modules:
 	git submodule update --init --recursive
@@ -43,4 +43,7 @@ endif
 
 deps:
 	make -C deps
+
+update:
+	git submodule update --remote
 

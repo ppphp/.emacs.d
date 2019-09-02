@@ -220,3 +220,6 @@
 [submodule "deps/typescript-language-server"]
 	path = deps/typescript-language-server
 	url = https://github.com/theia-ide/typescript-language-server
+[submodule "deps/flutter"]
+	path = deps/flutter
+	url = https://github.com/flutter/flutter

@@ -1,7 +1,7 @@
 
 
-.PHONY: all ccls gotools terraform rls typescript-language-server
-all: ccls gotools terraform rls typescript-language-server
+.PHONY: all ccls gotools terraform rls typescript-language-server flutter
+all: ccls gotools terraform rls typescript-language-server flutter
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -29,4 +29,8 @@ typescript-language-server:
 	cd typescript-language-server && \
 		yarn && \
 		ln -sf ${shell pwd}/typescript-language-server/server/src/cli.ts ../../bin/typescript-language-server
+
+flutter:
+	ln -sf ${shell pwd}/flutter/bin/flutter ../bin/flutter
+
 
