@@ -41,10 +41,10 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra lsp-mode libegit2 magit org-mode projectile transient yasnippet
+.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls helm lsp-mode magit org-mode projectile transient# emacs-eim emacs-memoize flycheck ghub helm hydra libegit2 yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck helm lsp-mode lsp-ui magit org-mode projectile transient# emacs-eim emacs-memoize ghub helm hydra libegit2 yasnippet
 
 ace-window:
 	make compile -C ace-window
@@ -92,7 +92,7 @@ ert-runner.el:
 	make compile -C ert-runner.el
 
 flycheck:
-	make compile -C flycheck
+	cd flycheck && emacs -Q -batch -f batch-byte-compile *.el
 
 ghub:
 	make -C ghub
@@ -108,6 +108,9 @@ libegit2:
 
 lsp-mode:
 	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el
+
+lsp-ui:
+	cd lsp-ui && emacs -Q -batch -f batch-byte-compile *.el
 
 magit:
 	BUILD_MAGIT_LIBGIT=false make -C magit

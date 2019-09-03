@@ -10,7 +10,8 @@
 
 (define-key global-map "\C-cs" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(define-key lsp-mode-map "\C-cl" 'lsp-find-definition)
+(define-key lsp-mode-map "\C-cfd" 'lsp-find-definition)
+(define-key lsp-mode-map "\C-cr" 'lsp-rename)
 ;(global-unset-key (kbd "<C-mouse-1>"))
 ;(global-set-key (kbd "<C-mouse-1>") 'lsp-find-definition)
 
