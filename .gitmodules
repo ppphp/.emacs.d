@@ -223,3 +223,6 @@
 [submodule "deps/flutter"]
 	path = deps/flutter
 	url = https://github.com/flutter/flutter
+[submodule "modules/prettier-emacs"]
+	path = modules/prettier-emacs
+	url = https://github.com/prettier/prettier-emacs.git

@@ -44,7 +44,7 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 .PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck helm lsp-mode lsp-ui magit org-mode projectile transient# emacs-eim emacs-memoize ghub helm hydra libegit2 yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck helm lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub helm hydra libegit2 yasnippet
 
 ace-window:
 	make compile -C ace-window
@@ -113,7 +113,7 @@ lsp-ui:
 	cd lsp-ui && emacs -Q -batch -f batch-byte-compile *.el
 
 magit:
-	BUILD_MAGIT_LIBGIT=false make -C magit
+	LIBGIT_DIR=libegit2/build/libgit2 make -C magit
 
 projectile:
 	cd projectile && emacs -Q --batch -f batch-byte-compile *.el
