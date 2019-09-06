@@ -113,7 +113,7 @@ lsp-ui:
 	cd lsp-ui && emacs -Q -batch -f batch-byte-compile *.el
 
 magit:
-	LIBGIT_DIR=libegit2/build/libgit2 make -C magit
+	BUILD_MAGIT_LIBGIT=false make -C magit # LIBGIT_DIR=libegit2/build/libgit2 make -C magit
 
 projectile:
 	cd projectile && emacs -Q --batch -f batch-byte-compile *.el

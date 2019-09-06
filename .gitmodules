@@ -226,3 +226,6 @@
 [submodule "modules/prettier-emacs"]
 	path = modules/prettier-emacs
 	url = https://github.com/prettier/prettier-emacs.git
+[submodule "modules/cider"]
+	path = modules/cider
+	url = https://github.com/clojure-emacs/cider.git
