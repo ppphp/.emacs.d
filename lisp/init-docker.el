@@ -7,7 +7,7 @@
 (add-to-list 'auto-mode-alist '("\\.Dockerfile" . dockerfile-mode))
 
 (require 'lsp-dockerfile)
-(add-hook 'dockerfile-mode-hook #'lsp-dockerfile-enable)
+(add-hook 'dockerfile-mode-hook #'lsp)
 
 
 (provide 'init-docker)
