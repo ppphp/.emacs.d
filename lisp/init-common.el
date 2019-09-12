@@ -45,7 +45,15 @@
 ;(global-key-binding "<C-return>" rectangle-mark-mode)
 
 (setq make-backup-files nil) ; stop creating backup~ files
+(setq backup-inhibited t)
 (setq auto-save-default nil) ; stop creating #autosave# files
+    (defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
+    (setq backup-directory-alist
+        `((".*" . ,emacs-tmp-dir)))
+    (setq auto-save-file-name-transforms
+        `((".*" ,emacs-tmp-dir t)))
+    (setq auto-save-list-file-prefix
+          emacs-tmp-dir)
 
 (require 'hl-line)
 (global-hl-line-mode t)

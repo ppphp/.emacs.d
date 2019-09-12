@@ -229,3 +229,12 @@
 [submodule "modules/cider"]
 	path = modules/cider
 	url = https://github.com/clojure-emacs/cider.git
+[submodule "modules/rubocop-emacs"]
+	path = modules/rubocop-emacs
+	url = https://github.com/rubocop-hq/rubocop-emacs.git
+[submodule "modules/lsp-dockerfile"]
+        path = modules/lsp-dockerfile
+        url = https://github.com/emacs-lsp-legacy/lsp-dockerfile.git
+[submodule "modules/dockerfile-mode"]
+	path = modules/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode.git

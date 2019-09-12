@@ -20,6 +20,7 @@
 (require 'init-lsp)
 (require 'init-flycheck)
 (require 'init-makefile)
+(require 'init-docker)
 (require 'init-hashicorp)
 (require 'init-web)
 (require 'init-go)

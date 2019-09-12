@@ -14,6 +14,8 @@
 ;(add-to-list 'auto-mode-alist (cons "\\.rb\\'" 'ruby-mode))
 
 (add-hook 'ruby-mode-hook #'lsp)
+(require 'rubocop)
+(add-hook 'ruby-mode-hook #'rubocop-mode)
 
 (provide 'init-ruby)
 ;;; init-ruby.el ends here
