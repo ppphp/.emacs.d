@@ -51,6 +51,5 @@
             (unless (ht-get treemacs-icons-hash (s-replace-regexp ".\\?" "" key))
               (ht-set! treemacs-icons-hash (s-replace-regexp ".\\?" "" key) value)))))))
 
-(treemacs)
 (provide 'init-treemacs)
 ;;; init-treemacs.el ends here
