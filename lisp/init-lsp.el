@@ -32,10 +32,22 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
+  "Doc."
   (setq mode-line-format nil))
 
 (require 'company-lsp)
 (push 'company-lsp company-backends)
+
+;; there is only one go language server, and it is in submodule, tweak it to be simpler
+(setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-stdio-connection
+                                   (lambda () lsp-clients-go-server))
+                  :major-modes '(go-mode)
+                  :priority 1
+                  :server-id 'gopls))
+
+
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
