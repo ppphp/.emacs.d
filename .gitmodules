@@ -238,3 +238,9 @@
 [submodule "modules/dockerfile-mode"]
 	path = modules/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "modules/formatters.el"]
+	path = modules/formatters.el
+	url = git@github.com:ppphp/formatters.el.git
+[submodule "modules/emacs-doom-themes"]
+	path = modules/emacs-doom-themes
+	url = https://github.com/hlissner/emacs-doom-themes.git
