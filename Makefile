@@ -33,7 +33,6 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/yasnippet:$(EMACSLOADPATH)
 all: modules deps
 
 modules:
-	git submodule update --init --recursive
 	make -C modules
 
 cask:
@@ -44,6 +43,9 @@ endif
 deps:
 	make -C deps
 
-update:
+remote-update:
 	git submodule update --remote
+
+update: remote-update deps modules
+ 
 

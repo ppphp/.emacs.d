@@ -18,12 +18,12 @@
 (require 'lsp-ui-imenu)
 ;(lsp-ui-doc-background ((t (:background nil))))
 (setq lsp-ui-doc-enable t
-                 lsp-ui-doc-use-webkit nil
-                 lsp-ui-doc-include-signature t
-                 lsp-ui-doc-position 'top
-                 lsp-ui-doc-border (face-foreground 'default)
-                 lsp-ui-sideline-enable nil
-                 lsp-ui-sideline-ignore-duplicate t)
+      lsp-ui-doc-use-webkit nil
+      lsp-ui-doc-include-signature t
+      lsp-ui-doc-position 'top
+      lsp-ui-doc-border (face-foreground 'default)
+      lsp-ui-sideline-enable nil
+      lsp-ui-sideline-ignore-duplicate t)
 
 (setq lsp-ui-sideline-ignore-duplicate t)
 (eldoc-mode nil)
