@@ -15,8 +15,14 @@
 
 (add-hook 'go-mode-hook #'lsp)
 
-(setq gofmt-command  (f-join user-emacs-directory "bin" "goimports"))
-(add-hook 'before-save-hook 'gofmt-before-save)
+;;(setq gofmt-command  (f-join user-emacs-directory "bin" "goimports"))
+;;(add-hook 'before-save-hook 'gofmt-before-save)
+
+(require 'formatters)
+
+(formatters-register-client
+ (make-formatters-client :command "goimports" :args nil :mode 'go-mode)
+ )
 
 (provide 'init-go)
 ;;; init-go.el ends here
