@@ -15,7 +15,7 @@
 	url = https://github.com/skeeto/emacs-memoize.git
 [submodule "modules/yaml-mode"]
 	path = modules/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
 [submodule "modules/yasnippet"]
 	path = modules/yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
