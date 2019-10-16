@@ -24,5 +24,8 @@
 (define-key term-mode-map (kbd "C-c <left>") 'multi-term-left)
 (define-key term-mode-map (kbd "C-c <right>") 'multi-term-right)
 
+(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
+(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

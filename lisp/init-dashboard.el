@@ -6,7 +6,9 @@
 (require 'dashboard)
 
 (dashboard-setup-startup-hook)
-(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+(if (display-graphic-p)
+    (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+  )
 
 ;; banner
 ;; title

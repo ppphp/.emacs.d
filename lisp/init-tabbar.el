@@ -2,14 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'tabbar)
-(tabbar-mode 1)
-(require 'tabbar-ruler)
-(tabbar-ruler-group-by-projectile-project)
+(require 'centaur-tabs)
 
-(require 'tabbar-ruler)
-(tabbar-ruler-group-by-projectile-project)
-
+(centaur-tabs-mode t)
 
 
 (provide 'init-tabbar)
