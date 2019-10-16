@@ -1,7 +1,7 @@
 
 
 .PHONY: all ccls gotools terraform rls typescript-language-server flutter
-all: ccls gotools terraform rls typescript-language-server flutter
+all: ccls gotools terraform typescript-language-server flutter # rls
 
 ccls:
 	cmake -Hccls -Bccls/Release -DCMAKE_BUILD_TYPE=Release \
@@ -20,10 +20,10 @@ terraform:
 	cd terraform && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
 
-rls:
-	cd rls && \
-		cargo build --release && \
-		ln -sf ${shell pwd}/rls/target/release/rls ../../bin/rls
+#rls:
+#	cd rls && \
+#		cargo build --release && \
+#		ln -sf ${shell pwd}/rls/target/release/rls ../../bin/rls
 
 typescript-language-server:
 	cd typescript-language-server && \

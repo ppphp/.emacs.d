@@ -1,0 +1,246 @@
+[submodule "modules/go-mode.el"]
+	path = modules/go-mode.el
+	url = https://github.com/dominikh/go-mode.el
+[submodule "modules/emacs-dashboard"]
+	path = modules/emacs-dashboard
+	url = https://github.com/emacs-dashboard/emacs-dashboard
+[submodule "modules/pages-break-lines"]
+	path = modules/pages-break-lines
+	url = https://github.com/purcell/page-break-lines
+[submodule "modules/all-the-icons.el"]
+	path = modules/all-the-icons.el
+	url = https://github.com/domtronn/all-the-icons.el
+[submodule "modules/emacs-memoize"]
+	path = modules/emacs-memoize
+	url = https://github.com/skeeto/emacs-memoize.git
+[submodule "modules/yaml-mode"]
+	path = modules/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "modules/yasnippet"]
+	path = modules/yasnippet
+	url = https://github.com/joaotavora/yasnippet.git
+[submodule "modules/treemacs"]
+	path = modules/treemacs
+	url = https://github.com/Alexander-Miller/treemacs.git
+[submodule "modules/lsp-treemacs"]
+	path = modules/lsp-treemacs
+	url = https://github.com/emacs-lsp/lsp-treemacs.git
+[submodule "modules/ace-window"]
+	path = modules/ace-window
+	url = https://github.com/abo-abo/ace-window
+[submodule "modules/avy"]
+	path = modules/avy
+	url = https://github.com/abo-abo/avy.git
+[submodule "modules/pfuture"]
+	path = modules/pfuture
+	url = https://github.com/Alexander-Miller/pfuture.git
+[submodule "modules/hydra"]
+	path = modules/hydra
+	url = https://github.com/abo-abo/hydra.git
+[submodule "modules/magit"]
+	path = modules/magit
+	url = https://github.com/magit/magit.git
+[submodule "modules/transient"]
+	path = modules/transient
+	url = https://github.com/magit/transient.git
+[submodule "modules/org-mode"]
+	path = modules/org-mode
+	url = https://code.orgmode.org/bzg/org-mode.git
+[submodule "modules/go-mode"]
+	path = modules/go-mode
+	url = https://github.com/dominikh/go-mode.el
+[submodule "modules/rust-mode"]
+	path = modules/rust-mode
+	url = https://github.com/rust-lang/rust-mode
+[submodule "modules/nyan-mode"]
+	path = modules/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule "modules/doom-modeline"]
+	path = modules/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "modules/shrink-path"]
+	path = modules/shrink-path
+	url = https://github.com/emacsmirror/shrink-path
+[submodule "modules/company-box"]
+	path = modules/company-box
+	url = https://github.com/sebastiencs/company-box
+[submodule "modules/prescient.el"]
+	path = modules/prescient.el
+	url = https://github.com/raxod502/prescient.el
+[submodule "modules/company-quickhelp"]
+	path = modules/company-quickhelp
+	url = https://github.com/expez/company-quickhelp
+[submodule "modules/rainbow-delimiters"]
+	path = modules/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters
+[submodule "modules/editorconfig-emacs"]
+	path = modules/editorconfig-emacs
+	url = https://github.com/editorconfig/editorconfig-emacs
+[submodule "modules/lsp-mode"]
+	path = modules/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode
+[submodule "modules/lsp-ui"]
+	path = modules/lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui
+[submodule "modules/dash.el"]
+	path = modules/dash.el
+	url = https://github.com/magnars/dash.el
+[submodule "modules/s.el"]
+	path = modules/s.el
+	url = https://github.com/magnars/s.el.git
+[submodule "modules/f.el"]
+	path = modules/f.el
+	url = https://github.com/rejeep/f.el
+[submodule "modules/modules/projectile"]
+	path = modules/modules/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "modules/modules/emacs-eim"]
+	path = modules/modules/emacs-eim
+	url = https://github.com/wenbinye/emacs-eim
+[submodule "modules/projectile"]
+	path = modules/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "modules/emacs-eim"]
+	path = modules/emacs-eim
+	url = https://github.com/wenbinye/emacs-eim
+[submodule "modules/popup-el"]
+	path = modules/popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "modules/emacs-async"]
+	path = modules/emacs-async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "modules/magit-popup"]
+	path = modules/magit-popup
+	url = https://github.com/magit/magit-popup
+[submodule "modules/with-editor"]
+	path = modules/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "modules/markdown-mode"]
+	path = modules/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "modules/ghub"]
+	path = modules/ghub
+	url = https://github.com/magit/ghub.git
+[submodule "modules/helm"]
+	path = modules/helm
+	url = https://github.com/emacs-helm/helm
+[submodule "modules/company-mode"]
+	path = modules/company-mode
+	url = https://github.com/company-mode/company-mode.git
+[submodule "modules/ht.el"]
+	path = modules/ht.el
+	url = https://github.com/Wilfred/ht.el.git
+[submodule "modules/spinner.el"]
+	path = modules/spinner.el
+	url = https://github.com/Malabarba/spinner.el
+[submodule "modules/dap-mode"]
+	path = modules/dap-mode
+	url = https://github.com/emacs-lsp/dap-mode.git
+[submodule "modules/company-lsp"]
+	path = modules/company-lsp
+	url = https://github.com/tigersoldier/company-lsp.git
+[submodule "modules/flycheck"]
+	path = modules/flycheck
+	url = https://github.com/flycheck/flycheck.git
+[submodule "modules/treepy.el"]
+	path = modules/treepy.el
+	url = https://github.com/volrath/treepy.el
+[submodule "modules/tabbar"]
+	path = modules/tabbar
+	url = https://github.com/dholm/tabbar.git
+[submodule "modules/multi-term"]
+	path = modules/multi-term
+	url = https://github.com/milkypostman/multi-term
+[submodule "modules/ert-runner.el"]
+	path = modules/ert-runner.el
+	url = https://github.com/rejeep/ert-runner.el.git
+[submodule "modules/emacs-htmlize"]
+	path = modules/emacs-htmlize
+	url = https://github.com/hniksic/emacs-htmlize.git
+[submodule "modules/commander"]
+	path = modules/commander
+	url = https://github.com/rejeep/commander.el.git
+[submodule "modules/libegit2"]
+	path = modules/libegit2
+	url = https://github.com/magit/libegit2.git
+[submodule "modules/ansi.el"]
+	path = modules/ansi.el
+	url = https://github.com/rejeep/ansi.el
+[submodule "modules/shut-up"]
+	path = modules/shut-up
+	url = https://github.com/cask/shut-up
+[submodule "modules/tabbar-ruler.el"]
+	path = modules/tabbar-ruler.el
+	url = https://github.com/mattfidler/tabbar-ruler.el
+[submodule "modules/mode-icons"]
+	path = modules/mode-icons
+	url = https://github.com/ryuslash/mode-icons
+[submodule "modules/flutter.el"]
+	path = modules/flutter.el
+	url = https://github.com/amake/flutter.el.git
+[submodule "modules/dart-mode"]
+	path = modules/dart-mode
+	url = https://github.com/bradyt/dart-mode.git
+[submodule "modules/emacs-hcl-mode"]
+	path = modules/emacs-hcl-mode
+	url = https://github.com/syohex/emacs-hcl-mode.git
+[submodule "modules/emacs-terraform-mode"]
+	path = modules/emacs-terraform-mode
+	url = https://github.com/syohex/emacs-terraform-mode.git
+[submodule "modules/emacs-company-terraform"]
+	path = modules/emacs-company-terraform
+	url = https://github.com/rafalcieslak/emacs-company-terraform.git
+[submodule "deps/ccls"]
+	path = deps/ccls
+	url = https://github.com/MaskRay/ccls.git
+[submodule "deps/tools"]
+	path = deps/tools
+	url = https://github.com/golang/tools
+[submodule "modules/emacs-ccls"]
+	path = modules/emacs-ccls
+	url = https://github.com/MaskRay/emacs-ccls.git
+[submodule "modules/elfeed"]
+	path = modules/elfeed
+	url = https://github.com/skeeto/elfeed.git
+[submodule "modules/web-mode"]
+	path = modules/web-mode
+	url = https://github.com/fxbois/web-mode.git
+[submodule "deps/terraform"]
+	path = deps/terraform
+	url = https://github.com/hashicorp/terraform
+[submodule "modules/typescript.el"]
+	path = modules/typescript.el
+	url = https://github.com/emacs-typescript/typescript.el.git
+[submodule "modules/multi-cursors.el"]
+	path = modules/multi-cursors.el
+	url = https://github.com/magnars/multiple-cursors.el
+[submodule "deps/rls"]
+	path = deps/rls
+	url = https://github.com/rust-lang/rls
+[submodule "deps/typescript-language-server"]
+	path = deps/typescript-language-server
+	url = https://github.com/theia-ide/typescript-language-server
+[submodule "deps/flutter"]
+	path = deps/flutter
+	url = https://github.com/flutter/flutter
+[submodule "modules/prettier-emacs"]
+	path = modules/prettier-emacs
+	url = https://github.com/prettier/prettier-emacs.git
+[submodule "modules/cider"]
+	path = modules/cider
+	url = https://github.com/clojure-emacs/cider.git
+[submodule "modules/rubocop-emacs"]
+	path = modules/rubocop-emacs
+	url = https://github.com/rubocop-hq/rubocop-emacs.git
+[submodule "modules/lsp-dockerfile"]
+	path = modules/lsp-dockerfile
+	url = https://github.com/colincarr-bcbsnc/lsp-dockerfile.git
+[submodule "modules/dockerfile-mode"]
+	path = modules/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "modules/formatters.el"]
+	path = modules/formatters.el
+	url = git@github.com:ppphp/formatters.el.git
+[submodule "modules/emacs-doom-themes"]
+	path = modules/emacs-doom-themes
+	url = https://github.com/hlissner/emacs-doom-themes.git
