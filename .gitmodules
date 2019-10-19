@@ -15,7 +15,7 @@
 	url = https://github.com/skeeto/emacs-memoize.git
 [submodule "modules/yaml-mode"]
 	path = modules/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
+	url = https://github.com/yoshiki/yaml-mode
 [submodule "modules/yasnippet"]
 	path = modules/yasnippet
 	url = https://github.com/joaotavora/yasnippet.git
@@ -246,3 +246,9 @@
 	url = https://github.com/hlissner/emacs-doom-themes.git
 
 
+[submodule "modules/centaur-tabs"]
+	path = modules/centaur-tabs
+	url = https://github.com/ema2159/centaur-tabs.git
+[submodule "modules/powerline"]
+	path = modules/powerline
+	url = https://github.com/milkypostman/powerline.git
