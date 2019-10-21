@@ -13,5 +13,7 @@
             (setq rg-cmd (format "%s --glob '!%s'" rg-cmd dir)))
           (concat "rg -0 --files --color=never --hidden" rg-cmd))))
 
+(setq projectile-completion-system 'ivy)
+
 (provide 'init-projectile)
 ;;; init-projectile.el ends here

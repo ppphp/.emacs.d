@@ -21,6 +21,7 @@
 
 (define-key global-map "\C-cms" 'magit-status)
 (define-key global-map "\C-cml" 'magit-log-all-branches)
+(define-key global-map "\C-cmcc" 'magit-commit)
 
 
 
