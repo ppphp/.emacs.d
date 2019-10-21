@@ -252,3 +252,6 @@
 [submodule "modules/powerline"]
 	path = modules/powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "modules/swiper"]
+	path = modules/swiper
+	url = https://github.com/abo-abo/swiper.git
