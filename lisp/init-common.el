@@ -114,5 +114,10 @@
 
 (setq gc-cons-threshold (if (display-graphic-p) 400000000 100000000))
 
+(defun update-my-config ()
+  "."
+  (interactive)
+  (call-process-shell-command "make" nil t t "-C" "~/.emacs.d"))
+
 (provide 'init-common)
 ;;; init-common.el ends here

@@ -19,6 +19,7 @@
 (require 'init-org)
 (require 'init-lsp)
 (require 'init-flycheck)
+(require 'init-lisp)
 (require 'init-makefile)
 (require 'init-docker)
 (require 'init-hashicorp)
