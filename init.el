@@ -11,7 +11,7 @@
 (require 'init-modeline)
 (require 'init-projectile)
 (require 'init-magit)
-(require 'init-helm)
+(require 'init-swiper)
 (require 'init-company)
 (require 'init-yasnippet)
 (require 'init-tabbar)
