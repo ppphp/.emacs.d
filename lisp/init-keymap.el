@@ -17,7 +17,7 @@
 ;(global-unset-key (kbd "<C-mouse-1>"))
 ;(global-set-key (kbd "<C-mouse-1>") 'lsp-find-definition)
 
-
+(define-key global-map "\C-cev" 'eval-buffer)
 
 (define-key global-map "\C-cms" 'magit-status)
 (define-key global-map "\C-cml" 'magit-log-all-branches)
@@ -66,8 +66,6 @@
 (global-set-key (kbd "C-c o") 'counsel-outline)
 (global-set-key (kbd "C-c t") 'counsel-load-theme)
 (global-set-key (kbd "C-c F") 'counsel-org-file)
-
-
 
 
 (provide 'init-keymap)

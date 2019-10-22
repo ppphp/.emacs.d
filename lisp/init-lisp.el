@@ -11,6 +11,5 @@
 
 (add-hook 'elisp-mode-hook #'formatters)
 
-
 (provide 'init-lisp)
 ;;; init-lisp.el ends here
