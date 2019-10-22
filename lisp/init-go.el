@@ -24,5 +24,7 @@
  (make-formatters-client :command "goimports" :args nil :mode 'go-mode)
  )
 
+(require 'dap-go)
+
 (provide 'init-go)
 ;;; init-go.el ends here

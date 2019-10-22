@@ -258,3 +258,12 @@
 [submodule "modules/counsel-projectile"]
 	path = modules/counsel-projectile
 	url = https://github.com/ericdanan/counsel-projectile.git
+[submodule "modules/highlight-defined"]
+	path = modules/highlight-defined
+	url = https://github.com/Fanael/highlight-defined.git
+[submodule "modules/tree-mode"]
+	path = modules/tree-mode
+	url = https://github.com/emacsorphanage/tree-mode.git
+[submodule "modules/bui.el"]
+	path = modules/bui.el
+	url = https://github.com/alezost/bui.el
