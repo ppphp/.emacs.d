@@ -43,7 +43,7 @@ deps:
 	make -C deps
 
 remote-update:
-	git submodule update --remote
+	git submodule update --remote --init
 
 update: remote-update deps modules
  
