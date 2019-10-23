@@ -9,7 +9,6 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-memoize:$(EMACSLOADP
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/f.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/flycheck:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ghub:$(EMACSLOADPATH)
-export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/helm:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ht.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/hydra:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-mode:$(EMACSLOADPATH)

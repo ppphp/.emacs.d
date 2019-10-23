@@ -13,7 +13,6 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-memoize:$(EMACSLOADP
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/f.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/flycheck:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ghub:$(EMACSLOADPATH)
-export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/helm:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ht.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/hydra:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-mode:$(EMACSLOADPATH)
@@ -41,10 +40,10 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub helm hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
+.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck helm lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub helm hydra libegit2 yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub hydra libegit2 yasnippet
 
 ace-window:
 	make compile -C ace-window
@@ -96,9 +95,6 @@ flycheck:
 
 ghub:
 	make -C ghub
-
-helm:
-	make -C helm
 
 hydra:
 	make compile -C hydra
