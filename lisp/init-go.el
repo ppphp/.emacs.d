@@ -21,8 +21,10 @@
 (require 'formatters)
 
 (formatters-register-client
- (make-formatters-client :command "goimports" :args nil :mode 'go-mode)
+ (make-formatters-client :command "goimports" :args '("-w" "${file}") :mode 'go-mode)
  )
+
+(add-hook 'go-mode-hook #'formatters)
 
 (require 'dap-go)
 

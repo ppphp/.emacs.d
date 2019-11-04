@@ -2,21 +2,19 @@
 ;;; Commentary:
 ;;; Code:
 
-;(add
-; )
-
-;(define-derived-mode go-mode prog-mode "Go"  
-;  (lsp-document-highlight)
-;  )
-
-;(require 'go-mode)
-;(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
-
-;(add-hook 'go-mode-hook #'lsp)
-
 (require 'ccls)
 
 (setq ccls-executable (f-join user-emacs-directory "bin" "ccls"))
+
+(add-hook 'c++-mode-hook #'lsp)
+
+(require 'formatters)
+
+(formatters-register-client
+ (make-formatters-client :command "clang-format" :args '("-i" "${file}") :mode 'c++-mode)
+ )
+
+(add-hook 'c++-mode-hook #'formatters)
 
 (provide 'init-cpp)
 ;;; init-cpp.el ends here

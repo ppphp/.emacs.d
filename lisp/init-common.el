@@ -141,5 +141,9 @@
   (interactive)
   (call-process-shell-command "make" nil t t "-C" "~/.emacs.d"))
 
+(require 'formatters)
+
+(add-hook 'before-save-hook 'formatters-before-save)
+
 (provide 'init-common)
 ;;; init-common.el ends here
