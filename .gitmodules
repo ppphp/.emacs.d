@@ -267,3 +267,9 @@
 [submodule "modules/bui.el"]
 	path = modules/bui.el
 	url = https://github.com/alezost/bui.el
+[submodule "modules/ivy-xref"]
+	path = modules/ivy-xref
+	url = https://github.com/alexmurray/ivy-xref.git
+[submodule "modules/diff-hl"]
+	path = modules/diff-hl
+	url = https://github.com/dgutov/diff-hl.git

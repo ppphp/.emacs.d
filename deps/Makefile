@@ -4,9 +4,9 @@
 all: ccls gotools terraform typescript-language-server flutter # rls
 
 ccls:
-	cd ccls && cmake .
-	make -C ccls
-	ln -sf ${shell pwd}/ccls/ccls ../bin/ccls
+	cd ccls && mkdir -p build && cd build && cmake ../
+	make -C ccls/build
+	ln -sf ${shell pwd}/ccls/build/ccls ../bin/ccls
 
 gotools:
 	cd tools && \

@@ -20,6 +20,8 @@
 
 (setq swiper-action-recenter t)
 
+;;(require 'ivy-xref)
+;;(setq xref-show-definitions-function #'ivy-xref-show-defs)
 
 
 ;; disable random freeze

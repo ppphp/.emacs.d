@@ -1,7 +1,12 @@
 
 * my emacs configure
 
-My emacs configure consists of some main components.
+My emacs configure should be consist of some main components, but I am too weak to make it to be true.
 
-Layout: treemacs, tabbar
-Program: lsp, multi-term, magit
+Layout:
+A project meta info area like treemacs frame.
+An Editable area like usual buffer.
+A repl are like multi term.
+
+Meta info and repl should be dedicated with project.
+
