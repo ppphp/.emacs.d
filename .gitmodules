@@ -273,3 +273,6 @@
 [submodule "modules/diff-hl"]
 	path = modules/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
+[submodule "snippets/yasnippet-snippets"]
+	path = snippets/yasnippet-snippets
+	url = https://github.com/AndreaCrotti/yasnippet-snippets.git

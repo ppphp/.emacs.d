@@ -10,9 +10,10 @@
 (add-hook 'js-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 
-(require 'prettier-js)
-(add-hook 'js-mode-hook 'prettier-js-mode)
-(add-hook 'typescript-mode-hook 'prettier-js-mode)
+(require 'formatters-prettier)
+
+(add-hook 'js-mode-hook #'formatters)
+(add-hook 'typescript-mode-hook #'formatters)
 
 (require 'dap-firefox)
 (require 'dap-chrome)
