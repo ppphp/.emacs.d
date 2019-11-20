@@ -2,10 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'centaur-tabs)
+(require 'tabbar)
+(require 'tabbar-ruler)
 
-(centaur-tabs-mode t)
-
+(tabbar-ruler-group-by-projectile-project)
 
 (provide 'init-tabbar)
 ;;; init-tabbar.el ends here
