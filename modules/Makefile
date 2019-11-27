@@ -37,13 +37,19 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/markdown-mode:$(EMACSLOADP
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/libegit2:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/ansi.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/shut-up:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/dap-mode:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/bui.el:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/tree-mode:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-java:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-request:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
+.PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub hydra libegit2 yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub hydra libegit2 yasnippet
 
 ace-window:
 	make compile -C ace-window
@@ -104,6 +110,9 @@ libegit2:
 
 lsp-mode:
 	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el
+
+dap-mode:
+	cd dap-mode && emacs -Q -batch -f batch-byte-compile *.el
 
 lsp-ui:
 	cd lsp-ui && emacs -Q -batch -f batch-byte-compile *.el

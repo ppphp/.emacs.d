@@ -6,7 +6,8 @@ My emacs configure should be consist of some main components, but I am too weak 
 Layout:
 A project meta info area like treemacs frame.
 An Editable area like usual buffer.
-A repl are like multi term.
+An repl are like multi term, debug tools.
+A simple message panel.
 
 Meta info and repl should be dedicated with project.
 

@@ -3,9 +3,8 @@
 ;;; Code:
 
 (require 'tabbar)
-(require 'tabbar-ruler)
 
-(tabbar-ruler-group-by-projectile-project)
+(tabbar-mode)
 
 (provide 'init-tabbar)
 ;;; init-tabbar.el ends here
