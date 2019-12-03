@@ -282,3 +282,9 @@
 [submodule "modules/emacs-request"]
 	path = modules/emacs-request
 	url = https://github.com/tkf/emacs-request.git
+[submodule "modules/evil"]
+	path = modules/evil
+	url = https://github.com/emacs-evil/evil.git
+[submodule "modules/goto-chg"]
+	path = modules/goto-chg
+	url = https://github.com/emacs-evil/goto-chg

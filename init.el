@@ -18,6 +18,7 @@
 (require 'init-term)
 (require 'init-org)
 (require 'init-lsp)
+(require 'init-evil)
 (require 'init-flycheck)
 (require 'init-lisp)
 (require 'init-makefile)
