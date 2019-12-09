@@ -31,6 +31,7 @@
 (require 'init-c)
 (require 'init-cpp)
 (require 'init-ruby)
+(require 'init-dart)
 (require 'init-treemacs)
 (require 'init-keymap)
 (require 'init-socks)
