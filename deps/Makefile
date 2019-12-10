@@ -29,5 +29,12 @@ typescript-language-server:
 
 flutter:
 	ln -sf ${shell pwd}/flutter/bin/flutter ../bin/flutter
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dart ../bin/dart
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartfmt ../bin/dartfmt
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartanalyzer ../bin/dartanalyzer
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartdoc ../bin/dartdoc
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartdevc ../bin/dartdevc
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dart2js ../bin/dart2js
+	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/pub ../bin/pub
 
 
