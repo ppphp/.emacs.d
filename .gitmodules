@@ -291,3 +291,6 @@
 [submodule "modules/major-mode-hydra.el"]
 	path = modules/major-mode-hydra.el
 	url = https://github.com/jerrypnz/major-mode-hydra.el
+[submodule "modules/emacs-libvterm"]
+	path = modules/emacs-libvterm
+	url = https://github.com/akermu/emacs-libvterm
