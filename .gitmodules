@@ -288,3 +288,6 @@
 [submodule "modules/goto-chg"]
 	path = modules/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
+[submodule "modules/major-mode-hydra.el"]
+	path = modules/major-mode-hydra.el
+	url = https://github.com/jerrypnz/major-mode-hydra.el

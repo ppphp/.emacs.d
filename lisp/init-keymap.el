@@ -2,38 +2,47 @@
 ;;; Commentary:
 ;;; Code:
 
-(define-key projectile-mode-map (kbd "s-t") 'projectile-find-file)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(require 'hydra)
+(require 'major-mode-hydra)
+
+(global-set-key (kbd "M-SPC") #'major-mode-hydra)
+
+(major-mode-hydra-define emacs-lisp-mode nil
+  ("Eval"
+   (("b" eval-buffer "buffer")
+    ("e" eval-defun "defun")
+    ("r" eval-region "region"))
+   "REPL"
+   (("I" ielm "ielm"))
+   "Test"
+   (("t" ert "prompt")
+    ("T" (ert t) "all")
+    ("F" (ert :failed) "failed"))
+   "Doc"
+   (("d" describe-foo-at-point "thing-at-pt")
+    ("f" describe-function "function")
+    ("v" describe-variable "variable")
+    ("i" info-lookup-symbol "info lookup"))))
+
+(pretty-hydra-define hydra-global
+  (:color amaranth :quit-key "q")
+  (
+   "magit"
+   (
+    ("p" magit-push "git push")
+    ("u" magit-pull "git pull(update)")
+    ("s" magit-status "git status")
+   )
+  )
+)
+
+(global-set-key (kbd "C-c") 'hydra-global/body)
 
 (global-set-key [f8] 'treemacs)
 (define-key treemacs-mode-map "tp" #'treemacs-projectile)
 (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
 
-(define-key global-map "\C-cs" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(define-key lsp-mode-map "\C-cfd" 'lsp-find-definition)
-(define-key lsp-mode-map "\C-cfr" 'lsp-find-references)
-(define-key lsp-mode-map "\C-cr" 'lsp-rename)
-;(global-unset-key (kbd "<C-mouse-1>"))
-;(global-set-key (kbd "<C-mouse-1>") 'lsp-find-definition)
-
-(define-key global-map "\C-cev" 'eval-buffer)
-
-(define-key global-map "\C-cms" 'magit-status)
-(define-key global-map "\C-cml" 'magit-log-all-branches)
-(define-key global-map "\C-cmcc" 'magit-commit)
-
-
-
-(define-key global-map "\C-cmt" 'multi-term)
 (global-set-key [f12] 'multi-term-dedicated-toggle)
-(define-key term-mode-map (kbd "C-c <left>") 'multi-term-left)
-(define-key term-mode-map (kbd "C-c <right>") 'multi-term-right)
-
-
-(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
-(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
-
 
 (global-set-key (kbd "C-s") 'swiper-isearch)
 (global-set-key (kbd "C-r") 'swiper-isearch-backward)
@@ -47,6 +56,7 @@
 (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
 (global-set-key (kbd "<f2> j") 'counsel-set-variable)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+(if nil (
 (global-set-key (kbd "C-c v") 'ivy-push-view)
 (global-set-key (kbd "C-c V") 'ivy-pop-view)
 (global-set-key (kbd "C-c c") 'counsel-compile)
@@ -66,7 +76,6 @@
 (global-set-key (kbd "C-c o") 'counsel-outline)
 (global-set-key (kbd "C-c t") 'counsel-load-theme)
 (global-set-key (kbd "C-c F") 'counsel-org-file)
-
-
+))
 (provide 'init-keymap)
 ;;; init-keymap.el ends here
