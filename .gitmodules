@@ -294,3 +294,9 @@
 [submodule "modules/emacs-libvterm"]
 	path = modules/emacs-libvterm
 	url = https://github.com/akermu/emacs-libvterm
+[submodule "modules/hydra-posframe"]
+	path = modules/hydra-posframe
+	url = https://github.com/Ladicle/hydra-posframe.git
+[submodule "modules/posframe"]
+	path = modules/posframe
+	url = https://github.com/tumashu/posframe.git
