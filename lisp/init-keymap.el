@@ -24,16 +24,35 @@
    (("d" describe-foo-at-point "thing-at-pt")
     ("f" describe-function "function")
     ("v" describe-variable "variable")
-    ("i" info-lookup-symbol "info lookup"))))
+    ("i" info-lookup-symbol "info lookup")))
+;  (hydra-global/body)
+  )
 
 (pretty-hydra-define hydra-global
-  (:color amaranth :quit-key "q")
+  (:color amaranth :quit-key "SPC")
   (
+   "move"
+   (
+    ("d" forward-char "right")
+    ("a" backward-char "left")
+    ("s" next-line "down")
+    ("w" previous-line "up")
+   )
    "magit"
    (
     ("p" magit-push "git push")
-    ("u" magit-pull "git pull(update)")
-    ("s" magit-status "git status")
+    ("o" magit-pull "git pull(update)")
+    ("i" magit-status "git status")
+   )
+   "jump"
+   (
+    ("q" xref-find-definitions "definition")
+    ("e" xref-find-references "reference")
+   )
+   "jump"
+   (
+    ("q" xref-find-definitions "definition")
+    ("e" xref-find-references "reference")
    )
   )
 )
