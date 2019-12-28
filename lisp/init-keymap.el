@@ -38,21 +38,11 @@
     ("s" next-line "down")
     ("w" previous-line "up")
    )
-   "magit"
-   (
-    ("p" magit-push "git push")
-    ("o" magit-pull "git pull(update)")
-    ("i" magit-status "git status")
-   )
    "jump"
    (
     ("q" xref-find-definitions "definition")
     ("e" xref-find-references "reference")
-   )
-   "jump"
-   (
-    ("q" xref-find-definitions "definition")
-    ("e" xref-find-references "reference")
+    ("o" origami-toggle-node "toggle")
    )
   )
 )

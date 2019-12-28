@@ -144,6 +144,8 @@
 (require 'formatters)
 
 (add-hook 'before-save-hook 'formatters-before-save)
+(require 'origami)
+(global-origami-mode)
 
 (provide 'init-common)
 ;;; init-common.el ends here
