@@ -9,8 +9,9 @@ ccls:
 	ln -sf ${shell pwd}/ccls/build/ccls ../bin/ccls
 
 gotools:
-	cd tools && \
-		GOPROXY=https://goproxy.io go build -o ../../bin/gopls ./cmd/gopls && \
+	cd tools/gopls && \
+		GOPROXY=https://goproxy.io go build -o ../../../bin/gopls ./
+	cd tools/ && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/goimports ./cmd/goimports
 
 terraform:

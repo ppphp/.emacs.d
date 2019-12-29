@@ -43,9 +43,9 @@
     ("q" xref-find-definitions "definition")
     ("e" xref-find-references "reference")
     ("o" origami-toggle-node "toggle")
-   )
+    )
   )
-)
+  )
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
 
