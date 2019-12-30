@@ -14,6 +14,11 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+(require 'ivy-posframe)
+(setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
+(ivy-posframe-mode 1)
+
 (counsel-mode 1)
 
 (setq enable-recursive-minibuffers t)

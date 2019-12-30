@@ -306,3 +306,6 @@
 [submodule "modules/origami.el"]
 	path = modules/origami.el
 	url = https://github.com/gregsexton/origami.el
+[submodule "modules/ivy-posframe"]
+	path = modules/ivy-posframe
+	url = https://github.com/tumashu/ivy-posframe.git

@@ -1,6 +1,8 @@
 
 * my emacs configure
 
+I mostly use emacs to do some stuff without database.
+
 My emacs configure should be consist of some main components, but I am too weak to make it to be true.
 
 Layout:

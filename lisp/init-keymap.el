@@ -5,7 +5,7 @@
 (require 'hydra)
 (require 'major-mode-hydra)
 (require 'hydra-posframe)
-;;(hydra-posframe-mode)
+(hydra-posframe-mode)
 
 (global-set-key (kbd "M-SPC") #'major-mode-hydra)
 
