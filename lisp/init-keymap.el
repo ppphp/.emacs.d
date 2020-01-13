@@ -5,6 +5,8 @@
 (require 'hydra)
 (require 'major-mode-hydra)
 (require 'hydra-posframe)
+
+(setq hydra-posframe-parameters nil)
 (hydra-posframe-mode)
 
 (global-set-key (kbd "M-SPC") #'major-mode-hydra)
@@ -38,11 +40,17 @@
     ("s" next-line "down")
     ("w" previous-line "up")
    )
-   "jump"
+   "syntax"
    (
     ("q" xref-find-definitions "definition")
     ("e" xref-find-references "reference")
     ("o" origami-toggle-node "toggle")
+    )
+   "project"
+   (
+    ("log" magit-log-all "git log")
+    ("fd" projectile-find-file "find")
+    ("rg" projectile-grep "grep")
     )
   )
   )

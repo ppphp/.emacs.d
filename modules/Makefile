@@ -43,6 +43,8 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/bui.el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/tree-mode:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-java:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-request:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/posframe:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-treemacs:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
