@@ -315,3 +315,9 @@
 [submodule "modules/flycheck-posframe"]
 	path = modules/flycheck-posframe
 	url = https://github.com/alexmurray/flycheck-posframe.git
+[submodule "modules/undo-tree"]
+	path = modules/undo-tree
+	url = https://github.com/emacsorphanage/undo-tree.git
+[submodule "emacs-htmlize"]
+	path = emacs-htmlize
+	url = https://github.com/hniksic/emacs-htmlize

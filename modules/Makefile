@@ -51,7 +51,7 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-treemacs:$(EMACSLOADPA
 .PHONY: all ace-window all-the-icons ansi avy commander company-box company-lsp company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize ert-runner.el flycheck ghub hydra lsp-mode lsp-ui libegit2 magit org-mode projectile transient yasnippet
 
 ## compile module codes
-all: avy all-the-icons ansi ace-window company-box company-lsp company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck lsp-mode lsp-ui magit org-mode projectile transient # emacs-eim emacs-memoize ghub hydra libegit2 yasnippet
+all: avy all-the-icons ansi ace-window company-box company-lsp company-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls flycheck hydra lsp-mode lsp-ui magit org-mode projectile transient yasnippet # emacs-eim emacs-memoize ghub libegit2 dap-mode
 
 ace-window:
 	make compile -C ace-window

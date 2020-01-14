@@ -52,10 +52,23 @@
     ("fd" projectile-find-file "find")
     ("rg" projectile-grep "grep")
     )
+   "undo"
+   (
+    ("/" undo-tree-undo "undo")
+    ("." undo-tree-redo "redo")
+    ("," undo-tree-switch-branch "switch")
+    (";" undo-tree-visualize "visual")
+    )
+   
+;  "nest"
+;  (
+;   ("m" major-mode-hydras/emacs-lisp-mode/body "major")
+;   )
   )
   )
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
+(global-set-key (kbd "C-/") #'undo-tree-undo)
 
 (global-set-key [f8] 'treemacs)
 (define-key treemacs-mode-map "tp" #'treemacs-projectile)
