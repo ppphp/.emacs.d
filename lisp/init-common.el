@@ -59,7 +59,7 @@
 (global-hl-line-mode t)
 (require 'rainbow-delimiters)
 (rainbow-delimiters-mode t)
-
+(setq-default cursor-type 'bar)
 (require 'editorconfig)
 (editorconfig-mode 1)
 (if (display-graphic-p)
