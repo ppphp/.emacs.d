@@ -82,5 +82,6 @@
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+(global-set-key (kbd "C-x o") 'ace-window)
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

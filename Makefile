@@ -43,7 +43,12 @@ deps:
 	make -C deps
 
 remote-update:
-	git submodule update --remote --init
+	git submodule foreach "git reset HEAD --hard"
+	git submodule foreach "git fetch --recurse-submodules"
+	git submodule foreach "git checkout origin/master"
+	git submodule foreach "git branch -D master"
+	git submodule foreach "git checkout -b master origin/master"
+	git submodule foreach "git checkout master"
 
 update: remote-update deps modules
  
