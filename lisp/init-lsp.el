@@ -47,6 +47,9 @@
                   :priority 1
                   :server-id 'gopls))
 
+(require 'lsp-origami)
+(add-hook 'origami-mode-hook #'lsp-origami-mode)
+
 (require 'dap-mode)
 (require 'dap-ui)
 (require 'dap-mouse)

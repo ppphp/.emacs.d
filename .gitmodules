@@ -321,3 +321,9 @@
 [submodule "emacs-htmlize"]
 	path = emacs-htmlize
 	url = https://github.com/hniksic/emacs-htmlize
+[submodule "modules/lsp-origami"]
+	path = modules/lsp-origami
+	url = https://github.com/emacs-lsp/lsp-origami
+[submodule "modules/hl-todo"]
+	path = modules/hl-todo
+	url = https://github.com/tarsius/hl-todo.git
