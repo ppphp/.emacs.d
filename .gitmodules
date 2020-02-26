@@ -327,3 +327,6 @@
 [submodule "modules/hl-todo"]
 	path = modules/hl-todo
 	url = https://github.com/tarsius/hl-todo.git
+[submodule "deps/terraform-lsp"]
+	path = deps/terraform-lsp
+	url = https://github.com/juliosueiras/terraform-lsp.git

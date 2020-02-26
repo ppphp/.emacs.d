@@ -17,6 +17,8 @@ gotools:
 terraform:
 	cd terraform && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
+	cd terraform-lsp && \
+		GOPROXY=https://goproxy.io go build -o ../../bin/terraform-lsp .
 
 #rls:
 #	cd rls && \
