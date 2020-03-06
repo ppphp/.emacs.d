@@ -57,8 +57,6 @@
 
 (require 'hl-line)
 (global-hl-line-mode t)
-(require 'rainbow-delimiters)
-(rainbow-delimiters-mode t)
 (setq-default cursor-type 'bar)
 (require 'editorconfig)
 (editorconfig-mode 1)
@@ -136,11 +134,6 @@
 (setq locale-coding-system 'utf-8
       default-process-coding-system '(utf-8 . utf-8))
 
-(defun update-my-config ()
-  "."
-  (interactive)
-  (call-process-shell-command "make" nil t t "-C" "~/.emacs.d"))
-
 (require 'formatters)
 
 (add-hook 'before-save-hook 'formatters-before-save)
@@ -156,6 +149,11 @@
         ("DEBUG:"  . "#A020F0")
         ("GOTCHA:" . "#FF4500")
         ("STUB:"   . "#1E90FF")))
+
+(setq desktop-path (list "~/.emacs.d/local/"))
+(desktop-save-mode +1)
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (provide 'init-common)
 ;;; init-common.el ends here

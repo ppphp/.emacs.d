@@ -1,4 +1,4 @@
-;;; package --- Summary
+;;; init-keymap.el --- define all my user space keymap here
 ;;; Commentary:
 ;;; Code:
 
@@ -7,7 +7,7 @@
 (require 'hydra-posframe)
 
 (setq hydra-posframe-parameters nil)
-(hydra-posframe-mode)
+(hydra-posframe-mode -1)
 
 (global-set-key (kbd "M-SPC") #'major-mode-hydra)
 
@@ -68,6 +68,8 @@
   )
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
+(global-set-key (kbd "C-c <left>") #'tabbar-backward-tab)
+(global-set-key (kbd "C-c <right>") #'tabbar-forward-tab)
 (global-set-key (kbd "C-/") #'undo-tree-undo)
 
 (global-set-key [f8] 'treemacs)
@@ -83,5 +85,6 @@
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 (global-set-key (kbd "C-x o") 'ace-window)
+
 (provide 'init-keymap)
 ;;; init-keymap.el ends here
