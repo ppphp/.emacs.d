@@ -17,6 +17,8 @@
 
 (require 'ivy-rich)
 (ivy-rich-mode 1)
+(require 'all-the-icons-ivy-rich)
+(all-the-icons-ivy-rich-mode 1)
 (require 'ivy-posframe)
 (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
 (ivy-posframe-mode 1)
