@@ -51,6 +51,8 @@
     ("log" magit-log-all "git log")
     ("fd" projectile-find-file "find")
     ("rg" projectile-grep "grep")
+    ("pull" magit-pull "git pull")
+    ("b" magit-branch "git branch")
     )
    "undo"
    (
