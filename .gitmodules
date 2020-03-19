@@ -333,3 +333,6 @@
 [submodule "modules/all-the-icons-ivy-rich"]
 	path = modules/all-the-icons-ivy-rich
 	url = https://github.com/seagle0128/all-the-icons-ivy-rich.git
+[submodule "modules/emacs-purpose"]
+	path = modules/emacs-purpose
+	url = https://github.com/bmag/emacs-purpose.git

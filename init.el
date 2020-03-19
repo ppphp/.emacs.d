@@ -15,6 +15,7 @@
 (require 'init-company)
 (require 'init-yasnippet)
 (require 'init-tabbar)
+(require 'init-window)
 (require 'init-term)
 (require 'init-org)
 (require 'init-lsp)
