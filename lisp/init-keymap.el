@@ -73,10 +73,15 @@
   )
   )
 
+(global-set-key (kbd "C-c i") #'yas-insert-snippet)
+
 (global-set-key (kbd "C-c c") #'hydra-global/body)
+
 (global-set-key (kbd "C-c <left>") #'tabbar-backward-tab)
 (global-set-key (kbd "C-c <right>") #'tabbar-forward-tab)
+
 (global-set-key (kbd "C-/") #'undo-tree-undo)
+(global-set-key (kbd "C-?") #'undo-tree-redo)
 
 (global-set-key [f8] 'treemacs)
 (define-key treemacs-mode-map "tp" #'treemacs-projectile)

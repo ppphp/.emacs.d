@@ -5,7 +5,14 @@ I mostly use emacs to do some stuff without database.
 
 My emacs configure should be consist of some main components, but I am too weak to make it to be true.
 
-Layout:
+* Basic stuff
+** posframe
+** ivy/swiper
+
+* Layout Principal
+
+I am not finding a method to make them work together well.
+
 A project meta info area like treemacs frame.
 An Editable area like usual buffer.
 An repl are like multi term, debug tools.
@@ -13,3 +20,73 @@ A simple message panel.
 
 Meta info and repl should be dedicated with project.
 
+** projectile
+Manage to find my project root, and some help function to search something from the root.
+*** binding
+no binding
+*** hydra
+projectile rg
+projectile fd
+
+** tabbar mode
+Group buffers by a first line plugin. Showing by buffer related project.
+*** binding
+C-c <left> tabbar-previous-buffer
+C-c <right> tabbar-next-buffer
+*** hydra
+no hydra
+
+* Editing Principal
+
+Most of editing related should bind a key directly, like cursor, buffer switching.
+
+There are blurred modes like editing and searching and viewing, because editing is the central but most time is used in viewing.
+
+** yasnippets
+Insert code very fast.
+*** binding
+C-c i yas-insert-snippet
+*** hydra
+no hydra
+
+** hydra
+Help me when I am viewing codes. There is too much util functions. It shows functions used more frequently than M-x but less frequent than editing.
+*** binding
+C-c c hydra-global/body
+M-<space> major-mode-hydra
+*** hydra
+no hydra
+
+* Metainfo Principal
+
+Metainfo should provide summary of a project. It is important when beginning coding.
+
+** treemacs
+Show file related to project. Tracking editing buffer sometime.
+*** binding
+<f8> treemacs
+*** hydra
+no hydra out of treemacs mode
+
+* REPL Principal
+
+Provide interactive service other than editing. Making things like serve codes, debugger and cli utility.
+
+** multi-term
+Make a dedicated term. but I use yakuake now.
+*** binding
+<f12> multi-term-dedicated-toggle
+*** hydra
+no hydra
+
+** magit
+Manage my git actions
+*** binding
+no binding
+*** hydra
+no hydra
+
+* Message Principal
+Provide regulated message, from emacs itself and its plugins, for debugging.
+
+Not things.
