@@ -244,11 +244,6 @@
 [submodule "modules/emacs-doom-themes"]
 	path = modules/emacs-doom-themes
 	url = https://github.com/hlissner/emacs-doom-themes.git
-
-
-[submodule "modules/centaur-tabs"]
-	path = modules/centaur-tabs
-	url = https://github.com/ema2159/centaur-tabs.git
 [submodule "modules/powerline"]
 	path = modules/powerline
 	url = https://github.com/milkypostman/powerline.git
@@ -336,3 +331,7 @@
 [submodule "themes/atom-one-dark-theme"]
 	path = themes/atom-one-dark-theme
 	url = https://github.com/jonathanchu/atom-one-dark-theme.git
+[submodule "modules/emacs-purpose"]
+	path = modules/emacs-purpose
+	url = https://github.com/bmag/emacs-purpose.git
+
