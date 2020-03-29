@@ -27,7 +27,6 @@
     ("f" describe-function "function")
     ("v" describe-variable "variable")
     ("i" info-lookup-symbol "info lookup")))
-;  (hydra-global/body)
   )
 
 (pretty-hydra-define hydra-global
@@ -40,19 +39,24 @@
     ("s" next-line "down")
     ("w" previous-line "up")
    )
-   "syntax"
+   "jump"
    (
     ("q" xref-find-definitions "definition")
     ("e" xref-find-references "reference")
     ("o" origami-toggle-node "toggle")
+    ("<backspace>" previous-buffer "prev buffer")
+    )
+   "scm"
+   (
+    ("log" magit-log-all "git log")
+    ("pull" magit-pull "git pull")
+    ("b" magit-branch "git branch")
     )
    "project"
    (
-    ("log" magit-log-all "git log")
     ("fd" projectile-find-file "find")
     ("rg" projectile-grep "grep")
-    ("pull" magit-pull "git pull")
-    ("b" magit-branch "git branch")
+    ("tff" treemacs-find-file "locate")
     )
    "undo"
    (
@@ -62,10 +66,10 @@
     (";" undo-tree-visualize "visual")
     )
    
-;  "nest"
-;  (
-;   ("m" major-mode-hydras/emacs-lisp-mode/body "major")
-;   )
+  "nest"
+  (
+   ("m" (let ((hydra (major-mode-hydra--body-name-for major-mode)))) "major")
+   )
   )
   )
 
@@ -78,7 +82,7 @@
 (define-key treemacs-mode-map "tp" #'treemacs-projectile)
 (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
 
-(global-set-key [f12] 'multi-term-dedicated-toggle)
+(global-set-key [f12] 'multi-term-dedicated-toggle) ;; deprecated by yakuake
 
 (global-set-key (kbd "C-s") 'swiper-isearch)
 (global-set-key (kbd "C-r") 'swiper-isearch-backward)

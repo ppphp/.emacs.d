@@ -333,3 +333,6 @@
 [submodule "modules/all-the-icons-ivy-rich"]
 	path = modules/all-the-icons-ivy-rich
 	url = https://github.com/seagle0128/all-the-icons-ivy-rich.git
+[submodule "themes/atom-one-dark-theme"]
+	path = themes/atom-one-dark-theme
+	url = https://github.com/jonathanchu/atom-one-dark-theme.git

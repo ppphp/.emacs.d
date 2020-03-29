@@ -26,6 +26,7 @@
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.hpp")  "hpp" "hxx")
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.rs")  "rs")
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.dart")  "dart")
+   (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.clj")  "clj" "cljscript")
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.o")  "o")
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.a")  "a")
    (treemacs-define-custom-icon (all-the-icons-icon-for-file "name.s")  "s")

@@ -27,3 +27,6 @@ eshell/*
 .ccls-cache
 
 .dap-breakpoints
+
+*.elc
+session.*

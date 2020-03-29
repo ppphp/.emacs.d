@@ -9,6 +9,10 @@
 Return a list of one element based on major mode."
     (list
      (cond
+      ((numberp (string-match (buffer-name)
+               "\\.\\*terminal\\.\\*"))
+       "Term"
+       )
       ((or (get-buffer-process (current-buffer))
            ;; Check if the major mode derives from `comint-mode' or
            ;; `compilation-mode'.
