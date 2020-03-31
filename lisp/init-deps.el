@@ -17,6 +17,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/elisp")
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/extra")
 
+(require 'straight)
+
 
 (provide 'init-deps)
 ;;; init-deps.el ends here
