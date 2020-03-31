@@ -5,6 +5,7 @@
 
 (require 'init-deps)
 (require 'init-common)
+(require 'init-layout)
 (require 'init-configfile)
 (require 'init-theme)
 (require 'init-dashboard)

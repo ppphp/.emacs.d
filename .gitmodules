@@ -335,3 +335,15 @@
 	path = modules/emacs-purpose
 	url = https://github.com/bmag/emacs-purpose.git
 
+[submodule "modules/perspective-el"]
+	path = modules/perspective-el
+	url = https://github.com/nex3/perspective-el
+[submodule "modules/imenu-list"]
+	path = modules/imenu-list
+	url = https://github.com/bmag/imenu-list
+[submodule "modules/smex"]
+	path = modules/smex
+	url = https://github.com/nonsequitur/smex
+[submodule "modules/straight.el"]
+	path = modules/straight.el
+	url = https://github.com/ppphp/straight.el

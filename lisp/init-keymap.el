@@ -48,15 +48,15 @@
     )
    "scm"
    (
-    ("log" magit-log-all "git log")
-    ("pull" magit-pull "git pull")
+    ("l" magit-log-all "git log")
+    ("p" magit-pull "git pull")
     ("b" magit-branch "git branch")
     )
    "project"
    (
-    ("fd" projectile-find-file "find")
-    ("rg" projectile-grep "grep")
-    ("tff" treemacs-find-file "locate")
+    ("f" projectile-find-file "find")
+    ("r" projectile-grep "grep")
+    ("t" treemacs-find-file "locate")
     )
    "undo"
    (

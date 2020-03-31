@@ -150,8 +150,8 @@
         ("GOTCHA:" . "#FF4500")
         ("STUB:"   . "#1E90FF")))
 
-(setq desktop-path (list "~/.emacs.d/local/"))
-(desktop-save-mode +1)
+;;(setq desktop-path (list "~/.emacs.d/local/"))
+;;(desktop-save-mode +1)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
