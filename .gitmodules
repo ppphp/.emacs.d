@@ -335,7 +335,9 @@
 	path = modules/emacs-purpose
 	url = https://github.com/bmag/emacs-purpose.git
 
-[submodule "modules/perspective-el"]
+[submodule "modules/handlebars-mode"]
+	path = modules/handlebars-mode
+	url = https://github.com/ppphp/handlebars-mode
 	path = modules/perspective-el
 	url = https://github.com/nex3/perspective-el
 [submodule "modules/imenu-list"]
