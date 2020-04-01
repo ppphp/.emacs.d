@@ -2,9 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 (require 'typescript-mode)
-(require 'web-mode)
+(require 'handlebars-mode)
 
-(add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . handlebars-mode))
 
 
 (add-hook 'js-mode-hook #'lsp)

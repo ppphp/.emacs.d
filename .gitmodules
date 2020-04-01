@@ -335,3 +335,6 @@
 	path = modules/emacs-purpose
 	url = https://github.com/bmag/emacs-purpose.git
 
+[submodule "modules/handlebars-mode"]
+	path = modules/handlebars-mode
+	url = https://github.com/ppphp/handlebars-mode
