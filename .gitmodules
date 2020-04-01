@@ -344,6 +344,6 @@
 [submodule "modules/smex"]
 	path = modules/smex
 	url = https://github.com/nonsequitur/smex
-[submodule "modules/straight.el"]
-	path = modules/straight.el
-	url = https://github.com/ppphp/straight.el
+[submodule "modules/subpackage.el"]
+	path = modules/subpackage.el
+	url = git@github.com:ppphp/subpackage.el.git
