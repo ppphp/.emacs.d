@@ -338,6 +338,7 @@
 [submodule "modules/handlebars-mode"]
 	path = modules/handlebars-mode
 	url = https://github.com/ppphp/handlebars-mode
+[submodule "modules/perspective-el"]
 	path = modules/perspective-el
 	url = https://github.com/nex3/perspective-el
 [submodule "modules/imenu-list"]
