@@ -11,7 +11,19 @@
 
 (global-set-key (kbd "M-SPC") #'major-mode-hydra)
 
-(major-mode-hydra-define emacs-lisp-mode nil
+(defmacro major-mode-hydra-define+ (mode body heads-plist)
+  "Rewrite macro MODE BODY HEADS-PLIST."
+  (declare (indent defun))
+  (while mode
+    (if (listp mode)
+	`(progn
+           ,@(-map (lambda (m) (major-mode-hydra--generate m body (copy-tree heads-plist)))
+                   mode))
+      (major-mode-hydra--generate mode body heads-plist)))
+  (setq mode (get mode 'derived-mode-parent)))
+
+(major-mode-hydra-define+ emacs-lisp-mode
+  (:color amaranth :quit-key "SPC")
   ("Eval"
    (("b" eval-buffer "buffer")
     ("e" eval-defun "defun")
@@ -29,7 +41,7 @@
     ("i" info-lookup-symbol "info lookup")))
   )
 
-(pretty-hydra-define hydra-global
+(major-mode-hydra-define+ prog-mode
   (:color amaranth :quit-key "SPC")
   (
    "move"
@@ -66,10 +78,6 @@
     (";" undo-tree-visualize "visual")
     )
    
-  "nest"
-  (
-   ("m" (let ((hydra (major-mode-hydra--body-name-for major-mode)))) "major")
-   )
   )
   )
 
@@ -80,6 +88,9 @@
 (global-set-key (kbd "C-c <left>") #'tabbar-backward-tab)
 (global-set-key (kbd "C-c <right>") #'tabbar-forward-tab)
 
+(global-set-key (kbd "C-c <PageUp>") #'eyebrowse-next-window-config)
+(global-set-key (kbd "C-c <PageDown>") #'eyebrowse-previous-Window-ConfiG)
+
 (global-set-key (kbd "C-/") #'undo-tree-undo)
 (global-set-key (kbd "C-?") #'undo-tree-redo)
 
@@ -87,7 +98,7 @@
 (define-key treemacs-mode-map "tp" #'treemacs-projectile)
 (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
 
-(global-set-key [f12] 'multi-term-dedicated-toggle) ;; deprecated by yakuake
+(global-set-key [f12] 'multi-term-dedicated-toggle)
 
 (global-set-key (kbd "C-s") 'swiper-isearch)
 (global-set-key (kbd "C-r") 'swiper-isearch-backward)

@@ -10,9 +10,7 @@
 
 (purpose-x-magit-single-on)
 
-(require 'perspective)
-
-(persp-mode)
+(require 'eyebrowse)
 
 (provide 'init-layout)
 ;;; init-layout.el ends here

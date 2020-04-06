@@ -338,15 +338,12 @@
 [submodule "modules/handlebars-mode"]
 	path = modules/handlebars-mode
 	url = https://github.com/ppphp/handlebars-mode
-[submodule "modules/perspective-el"]
-	path = modules/perspective-el
-	url = https://github.com/nex3/perspective-el
-[submodule "modules/imenu-list"]
-	path = modules/imenu-list
-	url = https://github.com/bmag/imenu-list
 [submodule "modules/smex"]
 	path = modules/smex
 	url = https://github.com/nonsequitur/smex
 [submodule "modules/subpackage.el"]
 	path = modules/subpackage.el
 	url = git@github.com:ppphp/subpackage.el.git
+[submodule "modules/eyebrowse"]
+	path = modules/eyebrowse
+	url = https://github.com/wasamasa/eyebrowse

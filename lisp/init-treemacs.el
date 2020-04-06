@@ -3,7 +3,7 @@
 ;;; Code:
 (require 'treemacs)
 (require 'treemacs-projectile)
-
+(require 'treemacs-magit)
 (treemacs-follow-mode -1)
 (treemacs-git-mode 'deferred)
 (treemacs-fringe-indicator-mode nil)
