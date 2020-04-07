@@ -11,19 +11,7 @@
 
 (global-set-key (kbd "M-SPC") #'major-mode-hydra)
 
-(defmacro major-mode-hydra-define+ (mode body heads-plist)
-  "Rewrite macro MODE BODY HEADS-PLIST."
-  (declare (indent defun))
-  (while mode
-    (if (listp mode)
-	`(progn
-           ,@(-map (lambda (m) (major-mode-hydra--generate m body (copy-tree heads-plist)))
-                   mode))
-      (major-mode-hydra--generate mode body heads-plist)))
-  (setq mode (get mode 'derived-mode-parent)))
-
-(major-mode-hydra-define+ emacs-lisp-mode
-  (:color amaranth :quit-key "SPC")
+(major-mode-hydra-define+ emacs-lisp-mode nil
   ("Eval"
    (("b" eval-buffer "buffer")
     ("e" eval-defun "defun")
@@ -41,7 +29,7 @@
     ("i" info-lookup-symbol "info lookup")))
   )
 
-(major-mode-hydra-define+ prog-mode
+(pretty-hydra-define hydra-global
   (:color amaranth :quit-key "SPC")
   (
    "move"
@@ -51,12 +39,21 @@
     ("s" next-line "down")
     ("w" previous-line "up")
    )
-   "jump"
+   "syntax"
    (
     ("q" xref-find-definitions "definition")
     ("e" xref-find-references "reference")
     ("o" origami-toggle-node "toggle")
-    ("<backspace>" previous-buffer "prev buffer")
+    ("i" yas-insert-snippet "snippet")
+    )
+   "buffer"
+   (
+    ("<left>" tabbar-backward-tab "left buffer")
+    ("<right>" tabbar-forward-tab "right buffer")
+    ("<up>" eyebrowse-next-window-config "left layout")
+    ("<down>" eyebrowse-prev-window-config "right layout")
+    ("C-<left>" previous-buffer "prev buffer")
+    ("C-<up>" eyebrowse-last-window-config "prev layout")
     )
    "scm"
    (
@@ -70,26 +67,10 @@
     ("r" projectile-grep "grep")
     ("t" treemacs-find-file "locate")
     )
-   "undo"
-   (
-    ("/" undo-tree-undo "undo")
-    ("." undo-tree-redo "redo")
-    ("," undo-tree-switch-branch "switch")
-    (";" undo-tree-visualize "visual")
-    )
-   
   )
   )
-
-(global-set-key (kbd "C-c i") #'yas-insert-snippet)
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
-
-(global-set-key (kbd "C-c <left>") #'tabbar-backward-tab)
-(global-set-key (kbd "C-c <right>") #'tabbar-forward-tab)
-
-(global-set-key (kbd "C-c <PageUp>") #'eyebrowse-next-window-config)
-(global-set-key (kbd "C-c <PageDown>") #'eyebrowse-previous-Window-ConfiG)
 
 (global-set-key (kbd "C-/") #'undo-tree-undo)
 (global-set-key (kbd "C-?") #'undo-tree-redo)

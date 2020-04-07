@@ -10,7 +10,13 @@
 
 (purpose-x-magit-single-on)
 
-(require 'eyebrowse)
+(require 'perspective)
+
+(persp-mode)
+
+(require 'persp-projectile)
+
+(define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project)
 
 (provide 'init-layout)
 ;;; init-layout.el ends here

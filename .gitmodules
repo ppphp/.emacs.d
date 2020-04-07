@@ -344,6 +344,12 @@
 [submodule "modules/subpackage.el"]
 	path = modules/subpackage.el
 	url = git@github.com:ppphp/subpackage.el.git
-[submodule "modules/eyebrowse"]
-	path = modules/eyebrowse
-	url = https://github.com/wasamasa/eyebrowse
+[submodule "modules/persp-projectile"]
+	path = modules/persp-projectile
+	url = https://github.com/bbatsov/persp-projectile
+[submodule "modules/imenu-list"]
+	path = modules/imenu-list
+	url = https://github.com/bmag/imenu-list
+[submodule "modules/perspective-el"]
+	path = modules/perspective-el
+	url = https://github.com/nex3/perspective-el
