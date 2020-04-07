@@ -3,72 +3,36 @@
 ;;; Code:
 
 (require 'hydra)
-(require 'major-mode-hydra)
 (require 'hydra-posframe)
 
 (setq hydra-posframe-parameters nil)
 (hydra-posframe-mode -1)
 
-(global-set-key (kbd "M-SPC") #'major-mode-hydra)
+(defhydra hydra-global (:exit t :hint nil)
+  "
+ Switch^^               Server^^                   Symbol
+-------------------------------------------------------------------------------------
+ [_b_] buffer           [_M-r_] restart            [_d_] declaration  [_i_] implementation  [_o_] documentation
+ [_w_] workspace        [_S_]   shutdown           [_D_] definition   [_t_] type            [_r_] rename
+                        [_M-s_] describe session   [_R_] references   [_s_] signature"
 
-(major-mode-hydra-define+ emacs-lisp-mode nil
-  ("Eval"
-   (("b" eval-buffer "buffer")
-    ("e" eval-defun "defun")
-    ("r" eval-region "region"))
-   "REPL"
-   (("I" ielm "ielm"))
-   "Test"
-   (("t" ert "prompt")
-    ("T" (ert t) "all")
-    ("F" (ert :failed) "failed"))
-   "Doc"
-   (("d" describe-foo-at-point "thing-at-pt")
-    ("f" describe-function "function")
-    ("v" describe-variable "variable")
-    ("i" info-lookup-symbol "info lookup")))
-  )
+  
+  
+  ("d" lsp-find-declaration)
+  ("D" lsp-ui-peek-find-definitions)
+  ("R" lsp-ui-peek-find-references)
+  ("i" lsp-ui-peek-find-implementation)
+  ("t" lsp-find-type-definition)
+  ("s" lsp-signature-help)
+  ("o" lsp-describe-thing-at-point)
+  ("r" lsp-rename)
 
-(pretty-hydra-define hydra-global
-  (:color amaranth :quit-key "SPC")
-  (
-   "move"
-   (
-    ("d" forward-char "right")
-    ("a" backward-char "left")
-    ("s" next-line "down")
-    ("w" previous-line "up")
-   )
-   "syntax"
-   (
-    ("q" xref-find-definitions "definition")
-    ("e" xref-find-references "reference")
-    ("o" origami-toggle-node "toggle")
-    ("i" yas-insert-snippet "snippet")
-    )
-   "buffer"
-   (
-    ("<left>" tabbar-backward-tab "left buffer")
-    ("<right>" tabbar-forward-tab "right buffer")
-    ("<up>" eyebrowse-next-window-config "left layout")
-    ("<down>" eyebrowse-prev-window-config "right layout")
-    ("C-<left>" previous-buffer "prev buffer")
-    ("C-<up>" eyebrowse-last-window-config "prev layout")
-    )
-   "scm"
-   (
-    ("l" magit-log-all "git log")
-    ("p" magit-pull "git pull")
-    ("b" magit-branch "git branch")
-    )
-   "project"
-   (
-    ("f" projectile-find-file "find")
-    ("r" projectile-grep "grep")
-    ("t" treemacs-find-file "locate")
-    )
-  )
-  )
+  ("b" projectile-switch-to-buffer)
+  ("w" projectile-switch-project)
+
+  ("M-s" lsp-describe-session)
+  ("M-r" lsp-restart-workspace)
+  ("S" lsp-shutdown-workspace))
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
 

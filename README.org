@@ -25,16 +25,15 @@ A simple message panel.
 Meta info and repl should be dedicated with project.
 
 ** purpose
-TBD
-**perspective
-TBD
+WIP
+** perspective
+Work with projectile
 ** projectile
 Manage to find my project root, and some help function to search something from the root.
 *** binding
 no binding
 *** hydra
-projectile rg
-projectile fd
+projectile-switch-project
 ** tabbar mode
 Group buffers by a first line plugin. Showing by buffer related project.
 *** binding
