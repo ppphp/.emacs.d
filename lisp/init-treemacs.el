@@ -9,6 +9,7 @@
 (treemacs-fringe-indicator-mode nil)
 
 (add-hook 'projectile-after-switch-project-hook 'treemacs-find-file)
+(add-hook 'find-file-hook 'treemacs-find-file)
 
 (setq treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))
 

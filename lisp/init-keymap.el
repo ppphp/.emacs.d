@@ -8,31 +8,55 @@
 (setq hydra-posframe-parameters nil)
 (hydra-posframe-mode -1)
 
+(defhydra hydra-flycheck
+    (:pre (flycheck-list-errors)
+     :post (quit-windows-on "*Flycheck errors*")
+     :hint nil)
+  "Errors"
+  ("f" flycheck-error-list-set-filter "Filter")
+  ("j" flycheck-next-error "Next")
+  ("k" flycheck-previous-error "Previous")
+  ("gg" flycheck-first-error "First")
+  ("G" (progn (goto-char (point-max)) (flycheck-previous-error)) "Last")
+  ("q" nil))
+
+(defhydra hydra-yasnippet (:color blue :hint nil)
+  "
+              ^YASnippets^
+--------------------------------------------
+  Modes:    Load/Visit:    Actions:
+
+ _g_lobal  _d_irectory    _i_nsert
+ _m_inor   _f_ile         _t_ryout
+ _e_xtra   _l_ist         _n_ew
+         _a_ll
+"
+  ("d" yas-load-directory)
+  ("e" yas-activate-extra-mode)
+  ("i" yas-insert-snippet)
+  ("f" yas-visit-snippet-file :color blue)
+  ("n" yas-new-snippet)
+  ("t" yas-tryout-snippet)
+  ("l" yas-describe-tables)
+  ("g" yas/global-mode)
+  ("m" yas/minor-mode)
+  ("a" yas-reload-all))
+
 (defhydra hydra-global (:exit t :hint nil)
   "
- Switch^^               Server^^                   Symbol
--------------------------------------------------------------------------------------
- [_b_] buffer           [_M-r_] restart            [_d_] declaration  [_i_] implementation  [_o_] documentation
- [_w_] workspace        [_S_]   shutdown           [_D_] definition   [_t_] type            [_r_] rename
-                        [_M-s_] describe session   [_R_] references   [_s_] signature"
-
-  
-  
-  ("d" lsp-find-declaration)
-  ("D" lsp-ui-peek-find-definitions)
-  ("R" lsp-ui-peek-find-references)
-  ("i" lsp-ui-peek-find-implementation)
-  ("t" lsp-find-type-definition)
-  ("s" lsp-signature-help)
-  ("o" lsp-describe-thing-at-point)
-  ("r" lsp-rename)
+ Switch^^             Mode^^
+----------------------------------
+ [_b_] buffer        [_!_] flycheck
+ [_w_] workspace     [_&_] yas
+"
 
   ("b" projectile-switch-to-buffer)
   ("w" projectile-switch-project)
 
-  ("M-s" lsp-describe-session)
-  ("M-r" lsp-restart-workspace)
-  ("S" lsp-shutdown-workspace))
+  ("!" hydra-flycheck/body)
+  ("&" hydra-yasnippet/body)
+  )
+
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
 
@@ -40,7 +64,6 @@
 (global-set-key (kbd "C-?") #'undo-tree-redo)
 
 (global-set-key [f8] 'treemacs)
-(define-key treemacs-mode-map "tp" #'treemacs-projectile)
 (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
 
 (global-set-key [f12] 'multi-term-dedicated-toggle)
