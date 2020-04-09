@@ -32,6 +32,16 @@
 
 (require 'persp-projectile)
 
+(defmacro projectile-persp-bridge (func-name)
+  "Create advice to create a perspective before invoking function FUNC-NAME.
+The advice provides bridge between perspective and projectile
+functions when switch between projects.  After switching to a new
+project, this advice creates a new perspective for that project."
+  `(defadvice ,func-name (after projectile-create-perspective-after-switching-projects activate)
+     "Create a dedicated perspective for current project's window after switching projects."
+     (let ((project-name (projectile-project-name)))
+       (when (and persp-mode (projectile-project-p))
+         (persp-switch project-name)))))
 (projectile-persp-bridge find-file)
 
 (provide 'init-layout)

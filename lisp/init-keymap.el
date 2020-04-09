@@ -51,7 +51,7 @@
 "
 
   ("b" projectile-switch-to-buffer)
-  ("w" projectile-switch-project)
+  ("w" persp-switch)
 
   ("!" hydra-flycheck/body)
   ("&" hydra-yasnippet/body)
