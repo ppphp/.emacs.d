@@ -353,3 +353,6 @@
 [submodule "modules/perspective-el"]
 	path = modules/perspective-el
 	url = https://github.com/nex3/perspective-el
+[submodule "modules/all-the-icons-dired"]
+	path = modules/all-the-icons-dired
+	url = https://github.com/jtbm37/all-the-icons-dired
