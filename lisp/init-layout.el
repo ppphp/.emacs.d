@@ -9,12 +9,13 @@
 (require 'window-purpose-x)
 
 (defvar code2-purpose-config
-  (purpose-conf "purpose-x-code1"
+  (purpose-conf "code2"
                 :mode-purposes
                 '((dired-mode . meta)
                   (term-mode . repl)
                   (message-mode . message)
                   (magit-status-mode . repl)
+                  (magit-diff-mode . repl)
 		  (imenu-list-major-mode . meta)
 		  )))
 
@@ -110,7 +111,7 @@
   "."
   (interactive)
   (purpose-set-extension-configuration :purpose-x-code2 code2-purpose-config)
-  (term "/bin/bash")
+  (multi-term)
   (code2-update-dired)
   (imenu-list-minor-mode)
   (frame-or-buffer-changed-p 'code2-buffers-changed)
@@ -118,7 +119,9 @@
   (code2-update-layout)
   )
 
-(code2-setup)
+(defadvice find-file (after code2-layout-setup activate)
+  "Create a dedicated perspective for current project's window after switching projects."
+  (code2-setup))
 
 (require 'perspective)
 

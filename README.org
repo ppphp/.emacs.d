@@ -29,7 +29,6 @@
   A simple message panel.
   
   Meta info and repl should be dedicated with project.
-  
 ** purpose
    WIP
 ** perspective

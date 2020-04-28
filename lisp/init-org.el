@@ -9,4 +9,4 @@
 (setq org-log-done t)
 
 (provide 'init-org)
-;;; init-org.el ends here
+;;; init-dashboard.el ends here

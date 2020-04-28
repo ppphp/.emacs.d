@@ -356,3 +356,21 @@
 [submodule "modules/all-the-icons-dired"]
 	path = modules/all-the-icons-dired
 	url = https://github.com/jtbm37/all-the-icons-dired
+[submodule "modules/ox-gfm"]
+	path = modules/ox-gfm
+	url = https://github.com/larstvei/ox-gfm
+[submodule "modules/org-bullets"]
+	path = modules/org-bullets
+	url = https://github.com/sabof/org-bullets
+[submodule "modules/org-rich-yank"]
+	path = modules/org-rich-yank
+	url = https://github.com/unhammer/org-rich-yank
+[submodule "modules/toc-org"]
+	path = modules/toc-org
+	url = https://github.com/snosov1/toc-org
+[submodule "modules/org-preview-html"]
+	path = modules/org-preview-html
+	url = https://github.com/lujun9972/org-preview-html
+[submodule "modules/org-roam"]
+	path = modules/org-roam
+	url = https://github.com/jethrokuan/org-roam

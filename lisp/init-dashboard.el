@@ -105,7 +105,7 @@
 	 ))
       
       dashboard-center-content t
-      dashboard-items '((projects . 5)
+      dashboard-items '((projects . 20)
 			(recents  . 5)
 			(agenda . t))
       dashboard-set-heading-icons t
