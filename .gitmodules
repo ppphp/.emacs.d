@@ -374,3 +374,6 @@
 [submodule "modules/org-roam"]
 	path = modules/org-roam
 	url = https://github.com/jethrokuan/org-roam
+[submodule "notes"]
+	path = notes
+	url = git@github.com:ppphp/ppphp.github.io
