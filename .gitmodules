@@ -148,9 +148,6 @@
 [submodule "modules/tabbar"]
 	path = modules/tabbar
 	url = https://github.com/dholm/tabbar.git
-[submodule "modules/multi-term"]
-	path = modules/multi-term
-	url = https://github.com/milkypostman/multi-term
 [submodule "modules/ert-runner.el"]
 	path = modules/ert-runner.el
 	url = https://github.com/rejeep/ert-runner.el.git
@@ -377,3 +374,6 @@
 [submodule "notes"]
 	path = notes
 	url = git@github.com:ppphp/ppphp.github.io
+[submodule "modules/multi-term"]
+	path = modules/multi-term
+	url = git@github.com:ppphp/multi-term
