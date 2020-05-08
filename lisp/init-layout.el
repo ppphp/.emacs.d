@@ -135,5 +135,7 @@
     (when (and persp-mode (projectile-project-p))
       (persp-switch project-name))))
 
+(add-hook 'persp-created-hook (lambda()(kill-buffer (format "*scratch* (%s)" (persp-current-name)))))
+
 (provide 'init-layout)
 ;;; init-layout.el ends here
