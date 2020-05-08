@@ -5,15 +5,12 @@
 ;; global company init
 (require 'org)
 
-(setq org-agenda-files (list (f-join user-emacs-directory "org")))
+(setq org-agenda-files (list (f-join user-emacs-directory "local" "agenda")))
 
 (setq org-log-done t)
 
 (setq org-agenda-include-diary t)
-(setq org-agenda-diary-file (f-join user-emacs-directory "org" "diary.org"))
-(setq diary-file (f-join user-emacs-directory "org" "diary.org"))
-
-
+(setq org-agenda-diary-file (f-join user-emacs-directory "local" "diary.org"))
 
 (setq calendar-longitude 121.4737)
 (setq calendar-latitude 31.2304)
