@@ -5,7 +5,7 @@
 ;; global company init
 (require 'org)
 
-(setq org-agenda-files (list (f-join user-emacs-directory "org")))
+(setq org-agenda-files (list (f-join user-emacs-directory "local" "agenda.org")))
 
 (setq org-log-done t)
 
