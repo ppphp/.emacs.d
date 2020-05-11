@@ -13,9 +13,10 @@
                 :mode-purposes
                 '((dired-mode . meta)
                   (term-mode . repl)
-                  (message-mode . message)
-                  (magit-status-mode . repl)
-                  (magit-diff-mode . repl)
+                  (magit-status-mode . message)
+                  (magit-diff-mode . message)
+		  (messages-buffer-mode . message)
+		  (help-mode . message)
 		  (imenu-list-major-mode . meta)
 		  )))
 
@@ -38,12 +39,12 @@
 		     :edges (0.16666666666666666 0.0 1.0138888888888888 0.7142857142857143)))
 	  (nil
 	   (0 40 146 55)
-	   (:purpose repl
+	   (:purpose message
 		     :purpose-dedicated t
 		     :width 0.4930555555555556
 		     :height 0.26785714285714285
 		     :edges (0.0 0.7142857142857143 0.4930555555555556 0.9821428571428571))
-	   (:purpose message
+	   (:purpose repl
 		     :purpose-dedicated t
 		     :width 0.5208333333333334
 		     :height 0.26785714285714285
@@ -111,7 +112,8 @@
   "."
   (interactive)
   (purpose-set-extension-configuration :purpose-x-code2 code2-purpose-config)
-  (multi-term)
+  (unless multi-term-buffer-list
+    (multi-term))
   (code2-update-dired)
   (imenu-list-minor-mode)
   (frame-or-buffer-changed-p 'code2-buffers-changed)

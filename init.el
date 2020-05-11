@@ -38,4 +38,5 @@
 (require 'init-keymap)
 (require 'init-socks)
 
-
+(provide 'init)
+;;; init.el ends here

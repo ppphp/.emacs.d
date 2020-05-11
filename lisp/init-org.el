@@ -47,5 +47,8 @@
                                     (800 1000 1200 1400 1600 1800 2000)
                                     "......" "----------------"))))
 
+(eval-after-load "org"
+  '(require 'ox-gfm nil t))
+
 (provide 'init-org)
 ;;; init-dashboard.el ends here
