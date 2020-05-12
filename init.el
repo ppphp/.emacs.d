@@ -3,24 +3,33 @@
 ;;; Code:
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; basic stuff
 (require 'init-deps)
-(require 'init-common)
-(require 'init-layout)
-(require 'init-configfile)
 (require 'init-theme)
+(require 'init-common)
+(require 'init-swiper)
+(require 'init-projectile)
+(require 'init-socks)
+
+;; layout stuff
+(require 'init-layout)
+(require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
-(require 'init-projectile)
+(require 'init-window)
+(require 'init-tabbar)
+(require 'init-treemacs)
+
+;; repl stuff
+(require 'init-configfile)
 (require 'init-magit)
-(require 'init-swiper)
+
+;; editor stuff
 (require 'init-company)
 (require 'init-yasnippet)
-(require 'init-tabbar)
-(require 'init-window)
-(require 'init-term)
 (require 'init-org)
 (require 'init-lsp)
-(require 'init-evil)
+;(require 'init-evil)
 (require 'init-flycheck)
 (require 'init-lisp)
 (require 'init-makefile)
@@ -34,9 +43,9 @@
 (require 'init-cpp)
 (require 'init-ruby)
 (require 'init-dart)
-(require 'init-treemacs)
+
+;; after all
 (require 'init-keymap)
-(require 'init-socks)
 
 (provide 'init)
 ;;; init.el ends here
