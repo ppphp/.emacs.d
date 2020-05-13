@@ -377,3 +377,6 @@
 [submodule "modules/multi-term"]
 	path = modules/multi-term
 	url = git@github.com:ppphp/multi-term
+[submodule "modules/lsp-ivy"]
+	path = modules/lsp-ivy
+	url = https://github.com/emacs-lsp/lsp-ivy

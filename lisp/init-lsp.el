@@ -35,8 +35,8 @@
   "Doc."
   (setq mode-line-format nil))
 
-(require 'company-lsp)
-(push 'company-lsp company-backends)
+(require 'company-capf)
+(push 'company-capf company-backends)
 
 ;; there is only one go language server, and it is in submodule, tweak it to be simpler
 (setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
