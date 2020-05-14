@@ -10,6 +10,7 @@
 (require 'init-swiper)
 (require 'init-projectile)
 (require 'init-socks)
+(require 'init-i18n)
 
 ;; layout stuff
 (require 'init-layout)

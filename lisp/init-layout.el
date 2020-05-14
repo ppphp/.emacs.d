@@ -105,7 +105,8 @@
   "."
   (when (frame-or-buffer-changed-p 'code2-buffers-changed)
     (code2-update-dired)
-    (imenu-list-update-safe)))
+    ;(imenu-list-update-safe)
+    ))
 
 ;;;###autoload
 (defun code2-setup ()
