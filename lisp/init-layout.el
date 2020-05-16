@@ -105,7 +105,7 @@
   "."
   (when (frame-or-buffer-changed-p 'code2-buffers-changed)
     (code2-update-dired)
-    ;(imenu-list-update-safe)
+    (imenu-list-update-safe)
     ))
 
 ;;;###autoload
@@ -122,9 +122,7 @@
   (code2-update-layout)
   )
 
-(defadvice find-file (after code2-layout-setup activate)
-  "Create a dedicated perspective for current project's window after switching projects."
-  (code2-setup))
+(add-hook 'find-file-hook #'code2-setup)
 
 (require 'perspective)
 
