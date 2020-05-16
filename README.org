@@ -33,7 +33,7 @@
    WIP
 ** perspective
    Work with projectile
-** tabbar mode
+** tabbar mode (!!! very slow, deprecated !!!)
    Group buffers by a first line plugin. Showing by buffer related project.
 *** binding
     C-c <left> tabbar-previous-buffer

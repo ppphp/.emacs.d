@@ -153,6 +153,9 @@
 ;;(setq desktop-path (list "~/.emacs.d/local/"))
 ;;(desktop-save-mode +1)
 
+(require 'undo-tree)
+(undo-tree-mode t)
+
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (provide 'init-common)

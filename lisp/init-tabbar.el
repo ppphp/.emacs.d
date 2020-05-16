@@ -60,7 +60,7 @@ Return a list of one element based on major mode."
          (symbol-name major-mode))
        ))))
 
-(tabbar-mode)
+(tabbar-mode -1)
 
 (scroll-bar-mode -1)
 
