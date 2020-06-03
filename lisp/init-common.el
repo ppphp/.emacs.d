@@ -154,7 +154,7 @@
 ;;(desktop-save-mode +1)
 
 (require 'undo-tree)
-(undo-tree-mode t)
+(global-undo-tree-mode)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 

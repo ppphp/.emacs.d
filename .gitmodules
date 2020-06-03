@@ -386,3 +386,6 @@
 [submodule "modules/google-translate"]
 	path = modules/google-translate
 	url = https://github.com/atykhonov/google-translate
+[submodule "modules/leetcode.el"]
+	path = modules/leetcode.el
+	url = https://github.com/kaiwk/leetcode.el
