@@ -114,7 +114,6 @@
   (unless multi-term-buffer-list
     (multi-term))
   (code2-update-dired)
-  (imenu-list-minor-mode)
   (frame-or-buffer-changed-p 'code2-buffers-changed)
   (add-hook 'post-command-hook #'code2-update-changed)
   (code2-update-layout)
