@@ -389,3 +389,6 @@
 [submodule "modules/leetcode.el"]
 	path = modules/leetcode.el
 	url = https://github.com/kaiwk/leetcode.el
+[submodule "modules/flx"]
+	path = modules/flx
+	url = https://github.com/lewang/flx.git

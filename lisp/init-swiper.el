@@ -25,13 +25,15 @@
 
 (counsel-mode 1)
 
+(setq ivy-count-format "(%d/%d) ")
+(setq ivy-extra-directories nil)
+
 (setq enable-recursive-minibuffers t)
 
 (setq swiper-action-recenter t)
 
 ;;(require 'ivy-xref)
 ;;(setq xref-show-definitions-function #'ivy-xref-show-defs)
-
 
 ;; disable random freeze
 (defun my-minibuffer-setup-hook ()
