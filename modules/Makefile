@@ -59,7 +59,12 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/tabbar:$(EMACSLOADPATH)
 .PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-mode lsp-ui libegit2 magit multi-term org-mode perspective posframe projectile rust-mode s swiper tabbar transient yasnippet undo-tree
 
 ## compile module codes
-all: ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-mode lsp-ui magit multi-term org-mode perspective posframe projectile rust-mode s swiper tabbar transient yasnippet undo-tree
+all: clean build
+
+build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-mode lsp-ui magit multi-term org-mode perspective posframe projectile rust-mode s swiper tabbar transient yasnippet undo-tree
+
+clean:
+	find -name *.elc|xargs rm
 
 ace-window:
 	make compile -C ace-window
