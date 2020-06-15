@@ -392,3 +392,9 @@
 [submodule "modules/flx"]
 	path = modules/flx
 	url = https://github.com/lewang/flx.git
+[submodule "modules/emacsql"]
+	path = modules/emacsql
+	url = https://github.com/skeeto/emacsql
+[submodule "modules/emacsql-sqlite3"]
+	path = modules/emacsql-sqlite3
+	url = https://github.com/cireu/emacsql-sqlite3

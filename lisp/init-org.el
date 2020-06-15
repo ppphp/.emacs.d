@@ -2,9 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-;; global company init
 (require 'org)
 
+;; agenda
 (setq org-agenda-files (list (f-join user-emacs-directory "local" "agenda")))
 
 (setq org-log-done t)
@@ -47,8 +47,11 @@
                                     (800 1000 1200 1400 1600 1800 2000)
                                     "......" "----------------"))))
 
-(eval-after-load "org"
-  '(require 'ox-gfm nil t))
+;; github export
+(require 'ox-gfm)
+
+;; org-roam
+(require 'org-roam)
 
 (provide 'init-org)
 ;;; init-dashboard.el ends here
