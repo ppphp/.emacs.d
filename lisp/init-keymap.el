@@ -5,6 +5,8 @@
 (require 'hydra)
 (require 'hydra-posframe)
 
+(require 'major-mode-hydra)
+
 (setq hydra-posframe-parameters nil)
 (hydra-posframe-mode -1)
 
@@ -124,10 +126,10 @@ _vr_ reset      ^^                       ^^                 ^^
 
 (defhydra hydra-global (:exit t :hint nil)
   "
- Switch^^             Mode^^              Org
-----------------------------------------------
- [_b_] buffer        [_!_] flycheck       [_a_] agenda
- [_w_] workspace     [_&_] yas
+ Switch^^             Mode^^              Agenda^^         Major^^
+--------------------------------------------------------------------
+ [_b_] buffer        [_!_] flycheck       [_f_] file       [_m_]
+ [_w_] workspace     [_&_] yas            [_a_] agenda
 "
 
   ("b" projectile-switch-to-buffer)
@@ -136,9 +138,28 @@ _vr_ reset      ^^                       ^^                 ^^
   ("!" hydra-flycheck/body)
   ("&" hydra-yasnippet/body)
 
-  ("a" org-cycle-agenda-files)
+  ("f" org-cycle-agenda-files)
+  ("a" org-agenda)
+
+  ("m" major-mode-hydra)
   )
 
+(major-mode-hydra-define emacs-lisp-mode nil
+  ("Eval"
+   (("b" eval-buffer "buffer")
+    ("e" eval-defun "defun")
+    ("r" eval-region "region"))
+   "REPL"
+   (("I" ielm "ielm"))
+   "Test"
+   (("t" ert "prompt")
+    ("T" (ert t) "all")
+    ("F" (ert :failed) "failed"))
+   "Doc"
+   (("d" describe-foo-at-point "thing-at-pt")
+    ("f" describe-function "function")
+    ("v" describe-variable "variable")
+    ("i" info-lookup-symbol "info lookup"))))
 
 (global-set-key (kbd "C-c c") #'hydra-global/body)
 
@@ -157,6 +178,7 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 (global-set-key (kbd "C-x o") 'ace-window)
+
 
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

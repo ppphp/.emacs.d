@@ -6,11 +6,23 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(modify-coding-system-alist 'process "*" 'utf-8)
+(set-file-name-coding-system 'utf-8)
+
+(setq locale-coding-system 'utf-8
+      default-process-coding-system '(utf-8 . utf-8))
+
 (custom-set-variables
  '(inhibit-startup-screen t))
 (custom-set-faces
  )
+
 (setq debug-on-error t)
+
 (when (window-system)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
@@ -36,7 +48,6 @@
            (format " in [%s]" project-name))))))
 
 (setq auto-save-default nil)
-(prefer-coding-system 'utf-8)
 (setq delete-by-moving-to-trash t)
 (setq-default major-mode 'text-mode)
 (setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
@@ -116,23 +127,6 @@
 ;; UTF-8 as the default coding system
 (when (fboundp 'set-charset-priority)
   (set-charset-priority 'unicode))
-
-;; Explicitly set the prefered coding systems to avoid annoying prompt
-;; from emacs (especially on Microsoft Windows)
-(prefer-coding-system 'utf-8)
-
-(set-language-environment 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-buffer-file-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-selection-coding-system 'utf-8)
-(modify-coding-system-alist 'process "*" 'utf-8)
-(set-file-name-coding-system 'utf-8)
-
-(setq locale-coding-system 'utf-8
-      default-process-coding-system '(utf-8 . utf-8))
 
 (require 'formatters)
 

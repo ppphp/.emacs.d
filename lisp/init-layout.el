@@ -106,6 +106,7 @@
   (when (frame-or-buffer-changed-p 'code2-buffers-changed)
     (code2-update-dired)
     (imenu-list-update-safe)))
+
 ;;;###autoload
 (defun code2-setup ()
   "."
@@ -132,6 +133,10 @@
   (let ((project-name (projectile-project-name)))
     (when (and persp-mode (projectile-project-p))
       (persp-switch project-name))))
+
+(defadvice multi-term (after multi-term-at-localization activate)
+  "Make multi-term at the point."
+  (code2-setup))
 
 (add-hook 'persp-created-hook (lambda()(kill-buffer (format "*scratch* (%s)" (persp-current-name)))))
 
