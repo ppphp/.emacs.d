@@ -404,3 +404,6 @@
 [submodule "modules/jenkinsfile-mode"]
 	path = modules/jenkinsfile-mode
 	url = https://github.com/john2x/jenkinsfile-mode
+[submodule "modules/org-pomodoro"]
+	path = modules/org-pomodoro
+	url = https://github.com/marcinkoziej/org-pomodoro
