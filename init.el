@@ -44,6 +44,7 @@
 (require 'init-cpp)
 (require 'init-ruby)
 (require 'init-dart)
+(require 'init-jvm)
 
 ;; after all
 (require 'init-keymap)

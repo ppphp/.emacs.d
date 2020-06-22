@@ -398,3 +398,9 @@
 [submodule "modules/emacsql-sqlite3"]
 	path = modules/emacsql-sqlite3
 	url = https://github.com/cireu/emacsql-sqlite3
+[submodule "modules/groovy-emacs-modes"]
+	path = modules/groovy-emacs-modes
+	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes
+[submodule "modules/jenkinsfile-mode"]
+	path = modules/jenkinsfile-mode
+	url = https://github.com/john2x/jenkinsfile-mode
