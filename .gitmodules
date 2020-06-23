@@ -407,3 +407,24 @@
 [submodule "modules/org-pomodoro"]
 	path = modules/org-pomodoro
 	url = https://github.com/marcinkoziej/org-pomodoro
+[submodule "modules/auctex"]
+	path = modules/auctex
+	url = https://git.savannah.gnu.org/git/auctex.git
+[submodule "modules/GoTests-Emacs"]
+	path = modules/GoTests-Emacs
+	url = https://github.com/damienlevin/GoTests-Emacs
+[submodule "modules/flycheck-golangci-lint"]
+	path = modules/flycheck-golangci-lint
+	url = https://github.com/weijiangan/flycheck-golangci-lint
+[submodule "modules/go-gen-test"]
+	path = modules/go-gen-test
+	url = https://github.com/s-kostyaev/go-gen-test
+[submodule "modules/go-fill-struct"]
+	path = modules/go-fill-struct
+	url = https://github.com/s-kostyaev/go-fill-struct
+[submodule "modules/emacs-go-tag"]
+	path = modules/emacs-go-tag
+	url = https://github.com/brantou/emacs-go-tag
+[submodule "modules/go-imple.el"]
+	path = modules/go-imple.el
+	url = https://github.com/dominikh/go-impl.el

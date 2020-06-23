@@ -52,16 +52,15 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/rust-mode:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/perspective-el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/imenu-list:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-purpose:$(EMACSLOADPATH)
-export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/tabbar:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
-.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-mode lsp-ui libegit2 magit multi-term org-mode perspective posframe projectile rust-mode s swiper tabbar transient yasnippet undo-tree
+.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-mode lsp-ui libegit2 magit multi-term org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
 ## compile module codes
 all: clean build
 
-build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-mode lsp-ui magit multi-term org-mode perspective posframe projectile rust-mode s swiper tabbar transient yasnippet undo-tree
+build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-mode lsp-ui magit multi-term org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
 clean:
 	find -name *.elc|xargs rm
@@ -164,9 +163,6 @@ s:
 
 swiper:
 	cd swiper && emacs -Q --batch -f batch-byte-compile *.el
-
-tabbar:
-	cd tabbar && emacs -Q --batch -f batch-byte-compile *.el
 
 org-mode: 
 	make -C org-mode

@@ -49,6 +49,7 @@ remote-update:
 	git submodule foreach "git branch -D master"
 	git submodule foreach "git checkout -b master origin/master"
 	git submodule foreach "git checkout master"
+	git submodule foreach "git submodule update --init --recursive"
 
 update: remote-update deps modules
 
