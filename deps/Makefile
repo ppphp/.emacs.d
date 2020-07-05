@@ -2,7 +2,7 @@
 all: ccls gotools impl gotests fillstruct gomodifytags terraform typescript-language-server flutter # rls
 
 ccls:
-	cd ccls && mkdir -p build && cd build && cmake ../
+	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
 	make -C ccls/build
 	ln -sf ${shell pwd}/ccls/build/ccls ../bin/ccls
 
