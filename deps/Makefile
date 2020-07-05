@@ -1,7 +1,5 @@
-
-
-.PHONY: all ccls gotools terraform rls typescript-language-server flutter
-all: ccls gotools terraform typescript-language-server flutter # rls
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rls typescript-language-server flutter
+all: ccls gotools impl gotests fillstruct gomodifytags terraform typescript-language-server flutter # rls
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../
@@ -13,6 +11,22 @@ gotools:
 		GOPROXY=https://goproxy.io go build -o ../../../bin/gopls ./
 	cd tools/ && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/goimports ./cmd/goimports
+
+impl:
+	cd impl && \
+		GOPROXY=https://goproxy.io go build -o ../../../bin/impl ./
+
+gotests:
+	cd gotests && \
+		GOPROXY=https://goproxy.io go build -o ../../../bin/gotests ./
+
+fillstruct:
+	cd fillstruct && \
+		GOPROXY=https://goproxy.io go build -o ../../../bin/fillstruct ./cmd/fillstruct
+
+gomodifytags:
+	cd gomodifytags && \
+		GOPROXY=https://goproxy.io go build -o ../../../bin/gomodifytags ./
 
 terraform:
 	cd terraform && \

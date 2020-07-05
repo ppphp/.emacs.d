@@ -52,6 +52,7 @@
 
 ;; org-roam
 (require 'org-roam)
+(setq org-roam-directory (f-join user-emacs-directory "notes" "org-roam"))
 
 (provide 'init-org)
 ;;; init-dashboard.el ends here

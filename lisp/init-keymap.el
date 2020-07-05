@@ -126,10 +126,11 @@ _vr_ reset      ^^                       ^^                 ^^
 
 (defhydra hydra-global (:exit t :hint nil)
   "
- Switch^^             Mode^^              Agenda^^         Major^^
+ Switch^^             Mode^^              Org^^         Major^^
 --------------------------------------------------------------------
  [_b_] buffer        [_!_] flycheck       [_f_] file       [_m_]
  [_w_] workspace     [_&_] yas            [_a_] agenda
+                                          [_r_] roam
 "
 
   ("b" projectile-switch-to-buffer)
@@ -140,6 +141,7 @@ _vr_ reset      ^^                       ^^                 ^^
 
   ("f" org-cycle-agenda-files)
   ("a" org-agenda)
+  ("r" org-roam-find-file)
 
   ("m" major-mode-hydra)
   )
@@ -161,7 +163,10 @@ _vr_ reset      ^^                       ^^                 ^^
     ("v" describe-variable "variable")
     ("i" info-lookup-symbol "info lookup"))))
 
-(global-set-key (kbd "C-c c") #'hydra-global/body)
+(require 'which-key)
+(which-key-mode)
+
+(global-set-key (kbd "M-p") #'hydra-global/body)
 
 (global-set-key (kbd "C-/") #'undo-tree-undo)
 (global-set-key (kbd "C-?") #'undo-tree-redo)

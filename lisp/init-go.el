@@ -26,6 +26,23 @@
 (require 'go-gen-test)
 (require 'go-tag)
 (require 'go-impl)
+(require 'go-playground)
+
+(require 'major-mode-hydra)
+
+(major-mode-hydra-define go-mode nil
+  ("gen test"
+   (("a" go-gen-test-all "gen")
+    ("e" go-gen-test-exported "function")
+    ("b" go-gen-test-dwim "dwim"))
+   "run test"
+   (("t" go-test-current-test "function")
+    ("f" go-test-current-file "file")
+    ("p" go-test-current-project "project"))
+  "play"
+   (("l" go-playground))
+  "coverage"
+   (("c" go-coverage))))
 
 
 ;; debug protocol

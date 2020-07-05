@@ -428,3 +428,27 @@
 [submodule "modules/go-imple.el"]
 	path = modules/go-imple.el
 	url = https://github.com/dominikh/go-impl.el
+[submodule "deps/gomodifytags"]
+	path = deps/gomodifytags
+	url = https://github.com/fatih/gomodifytags
+[submodule "deps/impl"]
+	path = deps/impl
+	url = https://github.com/josharian/impl
+[submodule "deps/fillstruct"]
+	path = deps/fillstruct
+	url = https://github.com/davidrjenni/reftools/
+[submodule "deps/gotests"]
+	path = deps/gotests
+	url = https://github.com/cweill/gotests
+[submodule "modules/go-playground"]
+	path = modules/go-playground
+	url = https://github.com/grafov/go-playground
+[submodule "modules/gotest.el"]
+	path = modules/gotest.el
+	url = https://github.com/nlamirault/gotest.el
+[submodule "modules/org-projectile"]
+	path = modules/org-projectile
+	url = https://github.com/IvanMalison/org-projectile
+[submodule "modules/emacs-which-key"]
+	path = modules/emacs-which-key
+	url = https://github.com/justbur/emacs-which-key/

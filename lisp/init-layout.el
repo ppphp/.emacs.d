@@ -13,6 +13,7 @@
                 :mode-purposes
                 '((dired-mode . meta)
                   (term-mode . repl)
+                  (go-test-mode . message)
                   (magit-status-mode . message)
                   (magit-diff-mode . message)
 		  (messages-buffer-mode . message)

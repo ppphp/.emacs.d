@@ -25,5 +25,9 @@
 (require 'company-prescient)
 (company-prescient-mode 1)
 
+;; company box update again
+(require 'company-box)
+(add-hook 'company-mode-hook 'company-box-mode)
+
 (provide 'init-company)
 ;;; init-company.el ends here
