@@ -4,6 +4,28 @@
 
 (require 'org)
 
+;; beautify
+(require 'org-bullets)
+(add-hook 'org-mode-hook #'org-bullets-mode)
+
+;; shortcut
+(require 'org-tempo)
+
+;; babel
+(require 'ob-async)
+(require 'ob-elixir)
+(require 'ob-go)
+;(require 'ob-ipython)
+(require 'ob-lilypond)
+(require 'ob-mermaid)
+(require 'ob-rust)
+(require 'ob-swift)
+
+;; journal
+(setq org-journal-dir "~/.emacs.d/notes/journal")
+(setq org-journal-date-format "%d %B %Y")
+(require 'org-journal)
+
 ;; agenda
 (setq org-agenda-files (list (f-join user-emacs-directory "local" "agenda")))
 
@@ -49,6 +71,7 @@
 
 ;; github export
 (require 'ox-gfm)
+(add-to-list 'org-export-backends 'md)
 
 ;; org-roam
 (require 'org-roam)

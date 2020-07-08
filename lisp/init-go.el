@@ -9,6 +9,7 @@
 
 ;; format on save
 (require 'formatters-goimports)
+(setq goimports "~/.emacs.d/bin/goimports")
 
 (add-hook 'go-mode-hook #'formatters)
 

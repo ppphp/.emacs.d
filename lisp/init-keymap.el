@@ -130,8 +130,9 @@ _vr_ reset      ^^                       ^^                 ^^
 --------------------------------------------------------------------
  [_b_] buffer        [_!_] flycheck     [_c_] capture    [_m_]
  [_w_] workspace     [_&_] yas          [_a_] agenda
-                                        [_r_] roam
-                                        [_s_] store-link
+ ^^                  ^^                 [_r_] roam
+ ^^                  ^^                 [_s_] store-link
+ ^^                  ^^                 [_j_] journal
 "
 
   ("b" projectile-switch-to-buffer)
@@ -144,6 +145,7 @@ _vr_ reset      ^^                       ^^                 ^^
   ("r" org-roam-find-file)
   ("c" org-capture)
   ("s" org-store-link)
+  ("j" org-journal-new-entry)
 
   ("m" major-mode-hydra)
   )

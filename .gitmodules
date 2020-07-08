@@ -452,3 +452,33 @@
 [submodule "modules/emacs-which-key"]
 	path = modules/emacs-which-key
 	url = https://github.com/justbur/emacs-which-key/
+[submodule "modules/ob-go"]
+	path = modules/ob-go
+	url = https://github.com/pope/ob-go
+[submodule "modules/ob-ipython"]
+	path = modules/ob-ipython
+	url = https://github.com/gregsexton/ob-ipython
+[submodule "modules/ob-async"]
+	path = modules/ob-async
+	url = https://github.com/astahlman/ob-async
+[submodule "modules/ob-mermaid"]
+	path = modules/ob-mermaid
+	url = https://github.com/arnm/ob-mermaid
+[submodule "modules/ob-elixir"]
+	path = modules/ob-elixir
+	url = https://github.com/zweifisch/ob-elixir
+[submodule "modules/ob-swift"]
+	path = modules/ob-swift
+	url = https://github.com/zweifisch/ob-swift
+[submodule "modules/ob-rust"]
+	path = modules/ob-rust
+	url = https://github.com/zweifisch/ob-rust
+[submodule "modules/ob-lilypond"]
+	path = modules/ob-lilypond
+	url = https://github.com/mjago/ob-lilypond
+[submodule "modules/org-journal"]
+	path = modules/org-journal
+	url = https://github.com/bastibe/org-journal
+[submodule "modules/org-super-agenda"]
+	path = modules/org-super-agenda
+	url = https://github.com/alphapapa/org-super-agenda
