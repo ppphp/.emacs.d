@@ -482,3 +482,6 @@
 [submodule "modules/org-super-agenda"]
 	path = modules/org-super-agenda
 	url = https://github.com/alphapapa/org-super-agenda
+[submodule "modules/helpful"]
+	path = modules/helpful
+	url = https://github.com/Wilfred/helpful
