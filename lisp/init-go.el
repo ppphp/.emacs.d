@@ -8,8 +8,8 @@
 (add-hook 'go-mode-hook #'lsp)
 
 ;; format on save
-(require 'formatters-goimports)
 (setq goimports "~/.emacs.d/bin/goimports")
+(require 'formatters-goimports)
 
 (add-hook 'go-mode-hook #'formatters)
 

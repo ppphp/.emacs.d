@@ -152,5 +152,7 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(setenv "PATH" (format "~/.emacs.d/bin:%s" (getenv "PATH")))
+
 (provide 'init-common)
 ;;; init-common.el ends here
