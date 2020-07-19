@@ -497,3 +497,6 @@
 [submodule "deps/hover"]
 	path = deps/hover
 	url = https://github.com/go-flutter-desktop/hover
+[submodule "modules/lsp-dart"]
+	path = modules/lsp-dart
+	url = https://github.com/emacs-lsp/lsp-dart

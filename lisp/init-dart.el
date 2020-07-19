@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'lsp-dart)
 (require 'dart-mode)
 
 (add-hook 'dart-mode-hook #'lsp)
