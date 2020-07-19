@@ -54,4 +54,6 @@ flutter:
 	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dart2js ../bin/dart2js
 	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/pub ../bin/pub
 
-
+hover:
+	cd hover && \
+		GOPROXY=https://goproxy.io go build -o ../../bin/hover .

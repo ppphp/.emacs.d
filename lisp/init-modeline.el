@@ -18,7 +18,9 @@
 (nyan-mode 1)
 (doom-modeline-mode 1)
 
+(require 'parrot)
+(parrot-mode)
+
 (provide 'init-modeline)
 
 ;;; init-modeline.el ends here
-

@@ -20,5 +20,8 @@
   (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
   (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
 
+(require 'hover)
+
+
 (provide 'init-dart)
 ;;; init-dart.el ends here

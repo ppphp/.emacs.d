@@ -485,3 +485,15 @@
 [submodule "modules/helpful"]
 	path = modules/helpful
 	url = https://github.com/Wilfred/helpful
+[submodule "modules/org-tree-slide"]
+	path = modules/org-tree-slide
+	url = https://github.com/takaxp/org-tree-slide
+[submodule "modules/hover.el"]
+	path = modules/hover.el
+	url = https://github.com/ericdallo/hover.el
+[submodule "modules/parrot"]
+	path = modules/parrot
+	url = https://github.com/dp12/parrot
+[submodule "deps/hover"]
+	path = deps/hover
+	url = https://github.com/go-flutter-desktop/hover
