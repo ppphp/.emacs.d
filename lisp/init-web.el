@@ -12,8 +12,8 @@
 
 (require 'formatters-prettier)
 
-(add-hook 'js-mode-hook #'formatters)
-(add-hook 'typescript-mode-hook #'formatters)
+(add-hook 'js-mode-hook #'lsp-format-buffer)
+(add-hook 'typescript-mode-hook #'lsp-format-buffer)
 
 (require 'dap-firefox)
 (require 'dap-chrome)

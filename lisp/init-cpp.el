@@ -8,13 +8,7 @@
 
 (add-hook 'c++-mode-hook #'lsp)
 
-(require 'formatters)
-
-(formatters-register-client
- (make-formatters-client :command "clang-format" :args '("-i" "${file}") :mode 'c++-mode)
- )
-
-(add-hook 'c++-mode-hook #'formatters)
+(add-hook 'c++-mode-hook #'lsp-format-buffer)
 
 (provide 'init-cpp)
 ;;; init-cpp.el ends here
