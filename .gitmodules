@@ -503,3 +503,9 @@
 [submodule "deps/rust-analyzer"]
 	path = deps/rust-analyzer
 	url = https://github.com/rust-analyzer/rust-analyzer
+[submodule "modules/olivetti"]
+	path = modules/olivetti
+	url = https://github.com/rnkn/olivetti
+[submodule "modules/fountain-mode"]
+	path = modules/fountain-mode
+	url = https://github.com/rnkn/fountain-mode
