@@ -500,3 +500,6 @@
 [submodule "modules/lsp-dart"]
 	path = modules/lsp-dart
 	url = https://github.com/emacs-lsp/lsp-dart
+[submodule "deps/rust-analyzer"]
+	path = deps/rust-analyzer
+	url = https://github.com/rust-analyzer/rust-analyzer
