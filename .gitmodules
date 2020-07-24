@@ -509,3 +509,9 @@
 [submodule "modules/fountain-mode"]
 	path = modules/fountain-mode
 	url = https://github.com/rnkn/fountain-mode
+[submodule "modules/elisp-refs"]
+	path = modules/elisp-refs
+	url = https://github.com/Wilfred/elisp-refs
+[submodule "modules/loop.el"]
+	path = modules/loop.el
+	url = https://github.com/Wilfred/loop.el

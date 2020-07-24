@@ -11,7 +11,7 @@
 (setq goimports "~/.emacs.d/bin/goimports")
 (require 'formatters-goimports)
 
-(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'lsp-format-buffer)))
+(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'lsp-format-buffer t t)))
 
 ;; generate go test from function code
 
