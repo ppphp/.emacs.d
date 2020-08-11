@@ -128,6 +128,8 @@
     (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
   )
 
+(add-hook 'dashboard-mode-hook (lambda () (setq mode-line-format nil)))
+
 (dashboard-setup-startup-hook)
 
 (provide 'init-dashboard)
