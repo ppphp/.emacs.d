@@ -16,6 +16,8 @@
 (require 'multi-term)
 (setq term-eol-on-send t)
 
+(add-hook 'term-mode-hook (lambda () (setq mode-line-format nil)))
+
 (require 'eshell)
 (require 'shell)
 
