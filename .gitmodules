@@ -515,3 +515,6 @@
 [submodule "modules/loop.el"]
 	path = modules/loop.el
 	url = https://github.com/Wilfred/loop.el
+[submodule "modules/hungry-delete"]
+	path = modules/hungry-delete
+	url = https://github.com/nflath/hungry-delete

@@ -152,7 +152,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(setenv "PATH" (format "~/.emacs.d/bin:%s" (getenv "PATH")))
+(delete-selection-mode 1)
+
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 
 (provide 'init-common)
 ;;; init-common.el ends here
