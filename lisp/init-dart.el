@@ -4,6 +4,7 @@
 
 (require 'lsp-dart)
 (require 'dart-mode)
+(require 'f)
 
 (add-hook 'dart-mode-hook #'lsp)
 

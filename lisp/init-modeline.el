@@ -24,6 +24,9 @@
 (nyan-mode 1)
 (doom-modeline-mode 1)
 
+
+(add-hook 'messages-buffer-mode-hook (lambda () (setq mode-line-format nil)))
+
 (require 'parrot)
 (parrot-mode)
 (setq parrot-num-rotations 10000)
