@@ -197,5 +197,7 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "C-h F") #'helpful-function)
 (global-set-key (kbd "C-h C") #'helpful-command)
 
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
 (provide 'init-keymap)
 ;;; init-keymap.el ends here
