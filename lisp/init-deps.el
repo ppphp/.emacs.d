@@ -16,6 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/contrib/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/elisp")
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/extra")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp-mode/clients")
 
 					; TODO: elegant bootstrap here
 (require 'subpackage) ;; require once and use every where

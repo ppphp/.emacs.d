@@ -4,7 +4,7 @@
 
 ;; lsp-mode init
 (require 'lsp-mode)
-(require 'lsp-clients)
+(require 'lsp-modeline)
 (require 'lsp-go)
 (setq lsp-auto-guess-root t)
 (setq lsp-prefer-flymake nil)
