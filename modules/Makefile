@@ -52,6 +52,8 @@ export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/rust-mode:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/perspective-el:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/imenu-list:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/emacs-purpose:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/frame-local:$(EMACSLOADPATH)
+export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/lsp-powershell:$(EMACSLOADPATH)
 
 #export PATH:="/home/ppphp/.cask/bin:$(PATH)"
 
