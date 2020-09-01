@@ -524,3 +524,13 @@
 [submodule "modules/epl"]
 	path = modules/epl
 	url = https://github.com/cask/epl
+[submodule "modules/frame-local"]
+	path = modules/frame-local
+	url = https://github.com/sebastiencs/frame-local
+[submodule "modules/lsp-powershell"]
+	path = modules/lsp-powershell
+	url = https://github.com/kiennq/lsp-powershell
+[submodule "modules/emacs-yakuake"]
+	path = modules/emacs-yakuake
+	url = https://github.com/SleepyBag/emacs-yakuake
+

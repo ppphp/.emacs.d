@@ -13,7 +13,7 @@
 (require 'init-i18n)
 
 ;; layout stuff
-(require 'init-layout)
+;;(require 'init-layout)
 (require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
