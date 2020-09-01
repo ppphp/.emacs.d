@@ -518,3 +518,9 @@
 [submodule "modules/hungry-delete"]
 	path = modules/hungry-delete
 	url = https://github.com/nflath/hungry-delete
+[submodule "modules/pkg-info"]
+	path = modules/pkg-info
+	url = https://github.com/emacsorphanage/pkg-info
+[submodule "modules/epl"]
+	path = modules/epl
+	url = https://github.com/cask/epl

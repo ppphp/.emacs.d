@@ -130,13 +130,14 @@ _vr_ reset      ^^                       ^^                 ^^
 --------------------------------------------------------------------
  [_b_] buffer        [_!_] flycheck     [_c_] capture    [_m_]
  [_w_] workspace     [_&_] yas          [_a_] agenda
- ^^                  ^^                 [_r_] roam
+ [_l_] layout        ^^                 [_r_] roam
  ^^                  ^^                 [_s_] store-link
  ^^                  ^^                 [_j_] journal
 "
 
   ("b" projectile-switch-to-buffer)
   ("w" persp-switch)
+  ("l" code2-setup)
 
   ("!" hydra-flycheck/body)
   ("&" hydra-yasnippet/body)

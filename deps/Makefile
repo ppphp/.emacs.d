@@ -1,5 +1,5 @@
-.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rls typescript-language-server flutter
-all: ccls gotools impl gotests fillstruct gomodifytags terraform typescript-language-server flutter # rls
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rls typescript-language-server
+all: ccls gotools impl gotests fillstruct gomodifytags terraform typescript-language-server # rls
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
@@ -43,16 +43,6 @@ typescript-language-server:
 	cd typescript-language-server && \
 		yarn && \
 		ln -sf ${shell pwd}/typescript-language-server/server/src/cli.ts ../../bin/typescript-language-server
-
-flutter:
-	ln -sf ${shell pwd}/flutter/bin/flutter ../bin/flutter
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dart ../bin/dart
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartfmt ../bin/dartfmt
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartanalyzer ../bin/dartanalyzer
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartdoc ../bin/dartdoc
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dartdevc ../bin/dartdevc
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/dart2js ../bin/dart2js
-	ln -sf ${shell pwd}/flutter/bin/cache/dart-sdk/bin/pub ../bin/pub
 
 hover:
 	cd hover && \
