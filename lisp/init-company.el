@@ -9,14 +9,14 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; tweak backends
+
 (setq company-backends
-      '(company-elisp
-        ;; company-semantic
+      '(company-files          ; files & directory
+        company-keywords       ; keywords
         company-capf
-        (company-dabbrev-code company-gtags company-etags
-         company-keywords)
-        company-files
-        company-dabbrev))
+        company-yasnippet
+        (company-dabbrev-code company-gtags company-etags company-keywords)
+        company-oddmuse company-dabbrev))
 
 ;; 1 char to complete
 (setq company-minimum-prefix-length 1)

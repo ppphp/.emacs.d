@@ -17,9 +17,9 @@
 (require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
-(require 'init-window)
+;(require 'init-window)
 ;(require 'init-tabbar)
-(require 'init-treemacs)
+;(require 'init-treemacs)
 
 ;; repl stuff
 (require 'init-configfile)

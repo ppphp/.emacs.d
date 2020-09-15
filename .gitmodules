@@ -524,6 +524,3 @@
 [submodule "modules/lsp-powershell"]
 	path = modules/lsp-powershell
 	url = https://github.com/kiennq/lsp-powershell
-[submodule "modules/emacs-yakuake"]
-	path = modules/emacs-yakuake
-	url = https://github.com/SleepyBag/emacs-yakuake
