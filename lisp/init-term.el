@@ -21,7 +21,7 @@
 (require 'eshell)
 (require 'shell)
 
-(require 'emacs-yakuake)
+;(require 'emacs-yakuake)
 
 (provide 'init-term)
 ;;; init-term.el ends here
