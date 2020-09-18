@@ -21,6 +21,8 @@
 (require 'use-package)
 (require 'straight)
 
+;(straight-use-package 'use-package)
+
 
 (provide 'init-deps)
 ;;; init-deps.el ends here
