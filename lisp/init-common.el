@@ -69,8 +69,9 @@
       emacs-tmp-dir)
 
 ;; highlight the line where the cursor is on.
-(require 'hl-line)
-(global-hl-line-mode t)
+(use-package hl-line
+  :config
+  (global-hl-line-mode t))
 
 (setq-default cursor-type 'bar)
 
@@ -135,8 +136,9 @@
 
 (add-hook 'before-save-hook 'formatters-before-save)
 
-(require 'origami)
-(global-origami-mode)
+(use-package origami
+  :config
+  (global-origami-mode))
 
 ;; never used
 ;(require 'hl-todo)
@@ -151,16 +153,18 @@
 ;;(setq desktop-path (list "~/.emacs.d/local/"))
 ;;(desktop-save-mode +1)
 
-(require 'undo-tree)
-(global-undo-tree-mode)
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; delete until not blank character
 (delete-selection-mode 1)
 
-(require 'hungry-delete)
-(global-hungry-delete-mode)
+(use-package hungry-delete
+  :config
+  (global-hungry-delete-mode))
 
 (provide 'init-common)
 ;;; init-common.el ends here

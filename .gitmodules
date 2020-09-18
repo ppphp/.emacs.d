@@ -530,3 +530,6 @@
 [submodule "modules/use-package"]
 	path = modules/use-package
 	url = https://github.com/jwiegley/use-package
+[submodule "modules/git-modes"]
+	path = modules/git-modes
+	url = https://github.com/magit/git-modes
