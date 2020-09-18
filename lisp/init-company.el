@@ -17,7 +17,7 @@
         company-yasnippet
         (company-dabbrev-code company-gtags company-etags company-keywords)
         company-oddmuse company-dabbrev))
-
+;(setq company-backends '(company-capf))
 ;; 1 char to complete
 (setq company-minimum-prefix-length 1)
 

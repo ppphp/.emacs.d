@@ -524,3 +524,9 @@
 [submodule "modules/lsp-powershell"]
 	path = modules/lsp-powershell
 	url = https://github.com/kiennq/lsp-powershell
+[submodule "modules/straight.el"]
+	path = modules/straight.el
+	url = https://github.com/raxod502/straight.el
+[submodule "modules/use-package"]
+	path = modules/use-package
+	url = https://github.com/jwiegley/use-package
