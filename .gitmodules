@@ -534,3 +534,6 @@
 	path = modules/emacs-yakuake
 	url = https://github.com/SleepyBag/emacs-yakuake
 
+[submodule "modules/dart-server"]
+	path = modules/dart-server
+	url = https://github.com/bradyt/dart-server

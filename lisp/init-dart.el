@@ -5,6 +5,7 @@
 (require 'lsp)
 (require 'lsp-dart)
 (require 'dart-mode)
+(require 'dart-server)
 (require 'f)
 
 (add-hook 'dart-mode-hook #'lsp)
