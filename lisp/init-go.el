@@ -11,7 +11,7 @@
 (setq goimports "~/.emacs.d/bin/goimports")
 (require 'formatters-goimports)
 
-(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'lsp-format-buffer t t)))
+(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters)))
 
 ;; generate go test from function code
 
@@ -25,6 +25,8 @@
 ;; coding helpers
 (require 'go-fill-struct)
 (require 'go-gen-test)
+(setq go-gen-test-executable "~/.emacs.d/bin/gotests")
+
 (require 'go-tag)
 (require 'go-impl)
 (require 'go-playground)

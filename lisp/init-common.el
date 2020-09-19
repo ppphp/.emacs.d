@@ -16,19 +16,22 @@
 (setq locale-coding-system 'utf-8
       default-process-coding-system '(utf-8 . utf-8))
 
+(when (fboundp 'set-charset-priority)
+  (set-charset-priority 'unicode))
+
 (custom-set-variables
  '(inhibit-startup-screen t))
-(custom-set-faces
- )
 
 (setq debug-on-error t)
 
 (when (window-system)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (menu-bar-mode -1)
-  )
-
+  (menu-bar-mode -1))
+(require 'f)
+(use-package recentf
+  :custom
+  (recentf-save-file (f-join user-emacs-directory "local/recentf")))
 (require 'savehist)
 (setq enable-recursive-minibuffers t
              history-length 1000
@@ -52,25 +55,33 @@
 (setq-default major-mode 'text-mode)
 (setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
 (setq sentence-end-double-space nil)
-(require 'multiple-cursors)
+
+;; i dont know how to use it
+;(require 'multiple-cursors)
 ;(global-key-binding "<C-return>" rectangle-mark-mode)
 
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq backup-inhibited t)
-(setq auto-save-default nil) ; stop creating #autosave# files
-    (defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
-    (setq backup-directory-alist
-        `((".*" . ,emacs-tmp-dir)))
-    (setq auto-save-file-name-transforms
-        `((".*" ,emacs-tmp-dir t)))
-    (setq auto-save-list-file-prefix
-          emacs-tmp-dir)
 
-(require 'hl-line)
-(global-hl-line-mode t)
+(defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
+(setq backup-directory-alist
+      `((".*" . ,emacs-tmp-dir)))
+(setq auto-save-file-name-transforms
+      `((".*" ,emacs-tmp-dir t)))
+(setq auto-save-list-file-prefix
+      emacs-tmp-dir)
+
+;; highlight the line where the cursor is on.
+(use-package hl-line
+  :config
+  (global-hl-line-mode t))
+
 (setq-default cursor-type 'bar)
-(require 'editorconfig)
-(editorconfig-mode 1)
+
+;; editor config is no longer popular
+;(require 'editorconfig)
+;(editorconfig-mode 1)
+
 (if (display-graphic-p)
     (progn
       (setq initial-frame-alist
@@ -85,7 +96,7 @@
       ))
 
 (setq inhibit-startup-screen t
-      initial-buffer-choice  nil)
+      initial-buffer-choice nil)
 
 
 ;; copy from centaur
@@ -121,41 +132,42 @@
   (string-equal "root" (getenv "USER"))
   "Are you using ROOT user?")
 
+;; prevent the editor blocking frequently
 (setq gc-cons-threshold (if (display-graphic-p) 400000000 100000000))
-
-;; Encoding
-;; UTF-8 as the default coding system
-(when (fboundp 'set-charset-priority)
-  (set-charset-priority 'unicode))
 
 (require 'formatters)
 
 (add-hook 'before-save-hook 'formatters-before-save)
 
-(require 'origami)
-(global-origami-mode)
+(use-package origami
+  :config
+  (global-origami-mode))
 
-(require 'hl-todo)
-(add-hook 'prog-mode-hook 'hl-todo-mode)
-(setq hl-todo-keyword-faces
-      '(("TODO:"   . "#FF0000")
-        ("FIXME:"  . "#FF0000")
-        ("DEBUG:"  . "#A020F0")
-        ("GOTCHA:" . "#FF4500")
-        ("STUB:"   . "#1E90FF")))
+;; never used
+;(require 'hl-todo)
+;(add-hook 'prog-mode-hook 'hl-todo-mode)
+;(setq hl-todo-keyword-faces
+;      '(("TODO:"   . "#FF0000")
+;        ("FIXME:"  . "#FF0000")
+;        ("DEBUG:"  . "#A020F0")
+;        ("GOTCHA:" . "#FF4500")
+;        ("STUB:"   . "#1E90FF")))
 
 ;;(setq desktop-path (list "~/.emacs.d/local/"))
 ;;(desktop-save-mode +1)
 
-(require 'undo-tree)
-(global-undo-tree-mode)
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; delete until not blank character
 (delete-selection-mode 1)
 
-(require 'hungry-delete)
-(global-hungry-delete-mode)
+(use-package hungry-delete
+  :config
+  (global-hungry-delete-mode))
 
 (provide 'init-common)
 ;;; init-common.el ends here

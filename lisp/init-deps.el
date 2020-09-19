@@ -18,9 +18,11 @@
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/extra")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode/clients")
 
-					; TODO: elegant bootstrap here
-(require 'subpackage) ;; require once and use every where
-(require 'use-subpackage) ;; require once and use every where
+(require 'use-package)
+(require 'straight)
+
+;(straight-use-package 'use-package)
+
 
 (provide 'init-deps)
 ;;; init-deps.el ends here

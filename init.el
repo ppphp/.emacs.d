@@ -9,17 +9,17 @@
 (require 'init-common)
 (require 'init-swiper)
 (require 'init-projectile)
-(require 'init-socks)
-(require 'init-i18n)
+;(require 'init-socks)
+;(require 'init-i18n)
 
 ;; layout stuff
-;;(require 'init-layout)
-(require 'init-term)
+;(require 'init-layout)
+;(require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
-(require 'init-window)
+;(require 'init-window)
 ;(require 'init-tabbar)
-(require 'init-treemacs)
+;(require 'init-treemacs)
 
 ;; repl stuff
 (require 'init-configfile)

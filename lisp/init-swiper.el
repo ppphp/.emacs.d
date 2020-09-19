@@ -2,11 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-;; global helm init
-;;(require 'helm)
-;;(require 'helm-config)
-;;(helm-mode 1)
-
 (require 'ivy)
 (require 'counsel)
 (require 'swiper)

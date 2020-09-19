@@ -3,6 +3,7 @@
 ;;; Code:
 
 ;; lsp-mode init
+<<<<<<< HEAD
 (require 'lsp)
 (require 'lsp-modeline)
 (require 'lsp-go)
@@ -12,31 +13,44 @@
 (setq lsp-enable-snippet t)
 (setq lsp-eldoc-render-all t)
 (setq flymake-fringe-indicator-position 'right-fringe)
+=======
+>>>>>>> 3e3b1e88aa4a1582340463a175fa871a29835e34
 
+(require 'f)
+(use-package lsp-mode
+  :custom
+  (lsp-auto-guess-root t)
+  (lsp-prefer-flymake nil)
+  (lsp-enable-completion-at-point t)
+  (lsp-enable-snippet t)
+  (lsp-eldoc-render-all t)
+  (flymake-fringe-indicator-position 'right-fringe)
+  (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
+  :config
+  (use-package lsp-modeline)
+  (require 'lsp-go)
 
-(require 'lsp-ui)
-(require 'lsp-ui-imenu)
-;(lsp-ui-doc-background ((t (:background nil))))
-(setq lsp-ui-doc-enable t
-      lsp-ui-doc-use-webkit nil
-      lsp-ui-doc-include-signature t
-      lsp-ui-doc-position 'top
-      lsp-ui-doc-border (face-foreground 'default)
-      lsp-ui-sideline-enable nil
-      lsp-ui-sideline-ignore-duplicate t)
+  (use-package lsp-ui
+    :custom
+    (lsp-ui-doc-enable t)
+    (lsp-ui-doc-use-webkit nil)
+    (lsp-ui-doc-include-signature t)
+    (lsp-ui-doc-position 'top)
+    (lsp-ui-doc-border (face-foreground 'default))
+    (lsp-ui-sideline-enable nil)
+    (lsp-ui-sideline-ignore-duplicate t)
+    (lsp-ui-flycheck-enable t)
+    :hook (lsp-mode . lsp-ui-mode)
+    :config
+    (use-package lsp-ui-imenu)
 
-(setq lsp-ui-sideline-ignore-duplicate t)
 (eldoc-mode nil)
 (global-eldoc-mode -1)
-(setq lsp-ui-flycheck-enable t)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
   "Doc."
   (setq mode-line-format nil))
-
-(require 'company-capf)
-(push 'company-capf company-backends)
+)
 
 ;; there is only one go language server, and it is in submodule, tweak it to be simpler
 (setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
@@ -62,6 +76,9 @@
 ;; use tooltips for mouse hover
 ;; if it is not enabled `dap-mode' will use the minibuffer.
 (tooltip-mode 1)
+
+(setq dap-breakpoints-file (f-join user-emacs-directory "local/.dap-breakpoints"))
+)
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
