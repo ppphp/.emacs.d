@@ -28,7 +28,10 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode -1))
-
+(require 'f)
+(use-package recentf
+  :custom
+  (recentf-save-file (f-join user-emacs-directory "local/recentf")))
 (require 'savehist)
 (setq enable-recursive-minibuffers t
              history-length 1000

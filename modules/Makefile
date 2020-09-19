@@ -3,12 +3,12 @@ export EMACSLOADPATH := $(shell printf "%s\n" /home/$(USER)/.emacs.d/modules/*/ 
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
 
-.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
+.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
 ## compile module codes
 all: clean build
 
-build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-mode lsp-ui magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
+build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
 clean:
 	find -name *.elc|xargs rm
@@ -45,6 +45,9 @@ dap-mode:
 
 dash:
 	cd dash.el && emacs -Q -batch -f batch-byte-compile *.el
+
+dart-mode:
+	cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
 
 doom-modeline:
 	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
@@ -93,6 +96,9 @@ hydra:
 
 libegit2:
 	make -C libegit2
+
+lsp-dart:
+	cd lsp-dart && emacs -Q -batch -f batch-byte-compile *.el
 
 lsp-mode:
 	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el
