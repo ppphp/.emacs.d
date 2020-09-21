@@ -1,13 +1,13 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
-(require 'dockerfile-mode)
-
-(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
-(add-to-list 'auto-mode-alist '("\\.Dockerfile" . dockerfile-mode))
-
-(require 'lsp-dockerfile)
-(add-hook 'dockerfile-mode-hook #'lsp)
+(use-package dockerfile-mode
+  :config
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+  (add-to-list 'auto-mode-alist '("\\.Dockerfile" . dockerfile-mode))
+  (use-package lsp-dockerfile
+    :hook
+    (dockerfile-mode . lsp)))
 
 
 (provide 'init-docker)

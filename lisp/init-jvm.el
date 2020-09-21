@@ -30,7 +30,7 @@
 
 ;;; Code:
 
-(require 'jenkinsfile-mode)
+(use-package jenkinsfile-mode)
 
 (provide 'init-jvm)
 
