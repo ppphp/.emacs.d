@@ -2,10 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'hcl-mode)
-(require 'terraform-mode)
-(require 'company-terraform)
-(company-terraform-init)
+(use-package hcl-mode
+  :config
+  (use-package terraform-mode)
+  (use-package company-terraform
+    :after (company)
+    :config
+    (company-terraform-init)))
 
 (require 'formatters)
 (formatters-register-client
