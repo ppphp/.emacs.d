@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package rainbow-delimiters
-  :hook (elisp-mode . rainbow-delimiters-mode))
+  :hook (emacs-lisp-mode . rainbow-delimiters-mode))
 
 (provide 'init-lisp)
 ;;; init-lisp.el ends here

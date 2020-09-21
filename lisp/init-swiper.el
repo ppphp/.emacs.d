@@ -2,30 +2,34 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'ivy)
-(require 'counsel)
-(require 'swiper)
+(use-package counsel
+  :config
+  (counsel-mode 1))
 
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
+(use-package swiper
+  :custom
+  (swiper-action-recenter t))
+
+(use-package ivy
+  :custom
+  (ivy-use-virtual-buffers t)
+  (ivy-count-format "(%d/%d) ")
+  (ivy-extra-directories nil)
+  :config
+  (ivy-mode 1)
+  (use-package ivy-rich
+    :config
+    (ivy-rich-mode 1)
+    (use-package all-the-icons-ivy-rich
+      :config
+      (all-the-icons-ivy-rich-mode 1)))
+  (use-package ivy-posframe
+    :custom
+    (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
+    :config
+    (ivy-posframe-mode 1)))
+
 (setq enable-recursive-minibuffers t)
-
-(require 'ivy-rich)
-(ivy-rich-mode 1)
-(require 'all-the-icons-ivy-rich)
-(all-the-icons-ivy-rich-mode 1)
-(require 'ivy-posframe)
-(setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
-(ivy-posframe-mode 1)
-
-(counsel-mode 1)
-
-(setq ivy-count-format "(%d/%d) ")
-(setq ivy-extra-directories nil)
-
-(setq enable-recursive-minibuffers t)
-
-(setq swiper-action-recenter t)
 
 ;;(require 'ivy-xref)
 ;;(setq xref-show-definitions-function #'ivy-xref-show-defs)

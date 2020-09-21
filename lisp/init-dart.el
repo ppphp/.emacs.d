@@ -2,16 +2,24 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'lsp)
-(require 'lsp-dart)
-(require 'dart-mode)
 (require 'dart-server)
-(require 'f)
+(use-package dart-mode
+  :config
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
+    (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
 
-(add-hook 'dart-mode-hook #'lsp)
+  (use-package lsp-dart
+    :hook (dart-mode . lsp))
 
-(add-to-list 'auto-mode-alist '("\\.dart\\'" . dart-mode))
-(autoload 'dart-mode "dart-mode")
+  (use-package flutter)
+  (use-package flutter-l10n-flycheck
+    :after flutter
+    :config
+    (flutter-l10n-flycheck-setup))
+
+  (use-package hover))
+
 
 (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk/")
 
@@ -20,13 +28,6 @@
 ;;  (make-formatters-client :command "dartfmt" :args '("-w" "${file}") :mode 'dart-mode))
 ;; (add-hook 'dart-mode-hook #'formatters)
 
-(require 'flutter)
-
-(with-eval-after-load "projectile"
-  (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
-  (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
-
-(require 'hover)
 
 
 (provide 'init-dart)

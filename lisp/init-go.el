@@ -3,38 +3,13 @@
 ;;; Code:
 
 ;; major mode
-(require 'go-mode)
 
-(add-hook 'go-mode-hook #'lsp)
-
-;; format on save
-(setq goimports "~/.emacs.d/bin/goimports")
-(require 'formatters-goimports)
-
-(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters)))
-
-;; generate go test from function code
-
-;; flycheck
-(require 'flycheck-golangci-lint)
-(eval-after-load 'flycheck                                       
-  '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
-(setq flycheck-golangci-lint-fast t)
-(setq flycheck-golangci-lint-enable-all t)
-
-;; coding helpers
-(require 'go-fill-struct)
-(require 'go-gen-test)
-(setq go-gen-test-executable "~/.emacs.d/bin/gotests")
-
-(require 'go-tag)
-(require 'go-impl)
-(require 'go-playground)
-
-(require 'major-mode-hydra)
-
-(major-mode-hydra-define go-mode nil
-  ("gen test"
+(require 'pretty-hydra)
+(use-package go-mode
+  :if (executable-find "go")
+  :pretty-hydra
+  (()
+   ("gen test"
    (("a" go-gen-test-all "gen")
     ("e" go-gen-test-exported "function")
     ("b" go-gen-test-dwim "dwim"))
@@ -46,7 +21,28 @@
    (("l" go-playground))
   "coverage"
    (("c" go-coverage))))
+  :config
+  (use-package flycheck-golangci-lint
+    :after (flycheck)
+    :hook (flycheck-mode . flycheck-golangci-lint-setup)
+    :custom
+    (flycheck-golangci-lint-fast t)
+    (flycheck-golangci-lint-enable-all nil))
+  (use-package go-fill-struct)
+  (use-package go-gen-test
+    :custom
+    (go-gen-test-executable "~/.emacs.d/bin/gotests"))
+  (use-package go-tag)
+  (use-package go-impl)
+  (use-package go-playground))
 
+(add-hook 'go-mode-hook #'lsp)
+
+;; format on save
+(setq goimports "~/.emacs.d/bin/goimports")
+(require 'formatters-goimports)
+
+(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters)))
 
 ;; debug protocol
 (require 'dap-go)
