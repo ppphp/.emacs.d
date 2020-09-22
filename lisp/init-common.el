@@ -78,6 +78,8 @@
 
 (setq-default cursor-type 'bar)
 
+(show-paren-mode 1)
+
 ;; editor config is no longer popular
 ;(require 'editorconfig)
 ;(editorconfig-mode 1)

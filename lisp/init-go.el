@@ -4,11 +4,11 @@
 
 ;; major mode
 
-(require 'pretty-hydra)
+(require 'major-mode-hydra)
+
 (use-package go-mode
-  :if (executable-find "go")
-  :pretty-hydra
-  (()
+  :mode "\\.go\\'"
+  :mode-hydra
    ("gen test"
    (("a" go-gen-test-all "gen")
     ("e" go-gen-test-exported "function")
@@ -20,10 +20,9 @@
   "play"
    (("l" go-playground))
   "coverage"
-   (("c" go-coverage))))
+   (("c" go-coverage)))
   :config
   (use-package flycheck-golangci-lint
-    :after (flycheck)
     :hook (flycheck-mode . flycheck-golangci-lint-setup)
     :custom
     (flycheck-golangci-lint-fast t)
@@ -34,7 +33,8 @@
     (go-gen-test-executable "~/.emacs.d/bin/gotests"))
   (use-package go-tag)
   (use-package go-impl)
-  (use-package go-playground))
+  (use-package go-playground
+    :diminish))
 
 (add-hook 'go-mode-hook #'lsp)
 
