@@ -1,7 +1,7 @@
 
-export EMACSLOADPATH := $(shell printf "%s\n" /home/$(USER)/.emacs.d/modules/*/ | tr "\n" ":")
-export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
-export EMACSLOADPATH :=/home/$(USER)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
+export EMACSLOADPATH := $(shell printf "%s\n" $(HOME)/.emacs.d/modules/*/ | tr "\n" ":")
+export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
+export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
 
 .PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
