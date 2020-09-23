@@ -34,7 +34,10 @@
   (use-package go-tag)
   (use-package go-impl)
   (use-package go-playground
-    :diminish))
+    :diminish)
+  (use-package lsp-go
+    :custom
+    (lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))))
 
 (add-hook 'go-mode-hook #'lsp)
 
@@ -45,7 +48,8 @@
 (add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters)))
 
 ;; debug protocol
-(require 'dap-go)
+(use-package dap-go
+  :defer)
 
 (provide 'init-go)
 ;;; init-go.el ends here

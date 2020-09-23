@@ -3,8 +3,9 @@
 ;;; Code:
 
 (add-hook 'ruby-mode-hook #'lsp)
-(require 'rubocop)
-(add-hook 'ruby-mode-hook #'rubocop-mode)
+(use-package rubocop
+  :hook
+  (ruby-mode . rubocop-mode))
 
 (provide 'init-ruby)
 ;;; init-ruby.el ends here

@@ -3,7 +3,6 @@
 ;;; Code:
 
 (require 'all-the-icons)
-(require 'dashboard)
 
 (defcustom centaur-icon (display-graphic-p)
   "Display icons or not."
@@ -75,19 +74,18 @@
       ;; Jump to the first section
       (dashboard-goto-recent-files))
 
-;; banner
-;; title
-;; time
-;; items
-;; footer
 
-(setq dashboard-startup-banner 'logo
-      dashboard-banner-logo-title "Hello!"
-      
-      dashboard-set-navigator t
-      ;; Format: "(icon title help action face prefix suffix)"
-      dashboard-navigator-buttons
-      `(;; line1
+(use-package dashboard
+  :custom
+  ;; banner
+  ;; title
+  ;; time
+  ;; items
+  ;; footer
+  (dashboard-startup-banner 'logo)
+  (dashboard-banner-logo-title "Hello!")
+  (dashboard-set-navigator t)
+  (dashboard-navigator-buttons `(;; line1
         ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
          "Github"
          "Github homepage"
@@ -102,35 +100,30 @@
           "Linkedin"
           ""
           (lambda (&rest _) (browse-url "https://www.linkedin.com/in/%E5%87%AF%E6%96%87-%E5%88%98-36909814a/")))
-	 ))
-      
-      dashboard-center-content t
-      dashboard-items '((projects . 20)
+	 )))
+  (dashboard-center-content t)
+  (dashboard-items '((projects . 20)
 			(recents  . 5)
-			(agenda . t))
-      dashboard-set-heading-icons t
-      dashboard-set-file-icons t
-      show-week-agenda-p t
-      dashboard-org-agenda-categories '("Tasks" "Appointments")
-      
-      dashboard-set-footer t
-      dashboard-footer-messages '("随便啦")
-      dashboard-footer-icon (cond ((icons-displayable-p)
+			(agenda . t)))
+  (dashboard-set-heading-icons t)
+  (dashboard-set-file-icons t)
+  (show-week-agenda-p t)
+  (dashboard-org-agenda-categories '("Tasks" "Appointments"))
+  (dashboard-set-footer t)
+  (dashboard-footer-messages '("随便啦"))
+  (dashboard-footer-icon (cond ((icons-displayable-p)
                                    (all-the-icons-faicon "heart"
                                                          :height 1.1
                                                          :v-adjust -0.05
                                                          :face 'error))
                                   ((char-displayable-p ?🧡) "🧡 ")
-                                  (t (propertize ">" 'face 'dashboard-footer)))
-      )
-
-(if (display-graphic-p)
-    (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
-  )
-
-(add-hook 'dashboard-mode-hook (lambda () (setq mode-line-format nil)))
-
-(dashboard-setup-startup-hook)
+                                  (t (propertize ">" 'face 'dashboard-footer))))
+  :hook
+  (dashboard-mode . (lambda () (setq mode-line-format nil)))
+  :config
+  (if (display-graphic-p)
+      (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))))
+  (dashboard-setup-startup-hook))
 
 (provide 'init-dashboard)
 

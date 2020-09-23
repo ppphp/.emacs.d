@@ -17,7 +17,6 @@
 ;(require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
-;(require 'init-window)
 ;(require 'init-tabbar)
 ;(require 'init-treemacs)
 

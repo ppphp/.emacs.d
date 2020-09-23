@@ -4,6 +4,7 @@
 
 (require 'f)
 (use-package yasnippet
+  :defer
   :config
   (yas-global-mode 1)
   (yas-load-directory (f-join user-emacs-directory "snippets" "yasnippet-snippets" "snippets")))

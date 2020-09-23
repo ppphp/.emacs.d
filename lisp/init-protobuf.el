@@ -30,7 +30,7 @@
 
 ;;; Code:
 
-(require 'protobuf-mode)
+(use-package protobuf-mode)
 
 (provide 'init-protobuf)
 

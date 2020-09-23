@@ -1,6 +1,6 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
-(require 'elfeed)
+(use-package elfeed)
 
 ;;; init-elfeed.el ends here

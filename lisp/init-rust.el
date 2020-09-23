@@ -9,7 +9,7 @@
 
 ;(add-to-list 'auto-mode-alist (cons "\\.rs\\'" 'rust-mode))
 
-(require 'rust-mode)
+(use-package rust-mode)
 
 (add-hook 'rust-mode-hook #'lsp)
 

@@ -3,18 +3,6 @@
 ;;; Code:
 
 ;; lsp-mode init
-<<<<<<< HEAD
-(require 'lsp)
-(require 'lsp-modeline)
-(require 'lsp-go)
-(setq lsp-auto-guess-root t)
-(setq lsp-prefer-flymake nil)
-(setq lsp-enable-completion-at-point t)
-(setq lsp-enable-snippet t)
-(setq lsp-eldoc-render-all t)
-(setq flymake-fringe-indicator-position 'right-fringe)
-=======
->>>>>>> 3e3b1e88aa4a1582340463a175fa871a29835e34
 
 (require 'f)
 (use-package lsp-mode
@@ -28,7 +16,6 @@
   (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
   :config
   (use-package lsp-modeline)
-  (require 'lsp-go)
 
   (use-package lsp-ui
     :custom
@@ -43,42 +30,32 @@
     :hook (lsp-mode . lsp-ui-mode)
     :config
     (use-package lsp-ui-imenu)
+    (eldoc-mode nil)
+    (global-eldoc-mode -1)
 
-(eldoc-mode nil)
-(global-eldoc-mode -1)
+    (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
+      "Doc."
+      (setq mode-line-format nil)))
+  (use-package lsp-origami
+    :hook
+    (origami-mode . lsp-origami-mode))
 
-(defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
-  "Doc."
-  (setq mode-line-format nil))
-)
+  (use-package dap-mode
+    :custom
+    (dap-breakpoints-file (f-join user-emacs-directory "local/.dap-breakpoints"))
+    :defer
+    :config
+    (dap-mode 1)
+    (use-package dap-ui
+      :config
+      (dap-ui-mode 1))
+    (use-package dap-mouse)
+    ;; enables mouse hover support
+    (dap-tooltip-mode 1))
 
-;; there is only one go language server, and it is in submodule, tweak it to be simpler
-(setq lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
-(lsp-register-client
- (make-lsp-client :new-connection (lsp-stdio-connection
-                                   (lambda () lsp-clients-go-server))
-                  :major-modes '(go-mode)
-                  :priority 1
-                  :server-id 'gopls))
-
-(require 'lsp-origami)
-(add-hook 'origami-mode-hook #'lsp-origami-mode)
-
-(require 'dap-mode)
-(require 'dap-ui)
-(require 'dap-mouse)
-
-
-(dap-mode 1)
-(dap-ui-mode 1)
-;; enables mouse hover support
-(dap-tooltip-mode 1)
-;; use tooltips for mouse hover
-;; if it is not enabled `dap-mode' will use the minibuffer.
-(tooltip-mode 1)
-
-(setq dap-breakpoints-file (f-join user-emacs-directory "local/.dap-breakpoints"))
-)
+  ;; use tooltips for mouse hover
+  ;; if it is not enabled `dap-mode' will use the minibuffer.
+  (tooltip-mode 1))
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here

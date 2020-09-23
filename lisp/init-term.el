@@ -13,15 +13,13 @@
          (and (stringp docstring)
               (get-text-property 0 'dynamic-docstring-function docstring))))))
 
-(require 'multi-term)
+(use-package multi-term
+  :hook
+  (term-mode . (lambda () (setq mode-line-format nil))))
 (setq term-eol-on-send t)
 
-(add-hook 'term-mode-hook (lambda () (setq mode-line-format nil)))
-
-(require 'eshell)
-(require 'shell)
-
-;(require 'emacs-yakuake)
+(use-package eshell)
+(use-package shell)
 
 (provide 'init-term)
 ;;; init-term.el ends here

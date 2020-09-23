@@ -2,11 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'window-purpose)
-
-(purpose-mode t)
-
-(require 'window-purpose-x)
+(use-package window-purpose
+  :config
+  (purpose-mode t)
+  (use-package window-purpose-x))
 
 (defvar code2-purpose-config
   (purpose-conf "code2"
@@ -123,11 +122,10 @@
 
 (add-hook 'find-file-hook #'code2-setup)
 
-(require 'perspective)
-
-(persp-mode)
-
-(require 'persp-projectile)
+(use-package perspective
+  :config
+  (persp-mode)
+  (use-package persp-projectile))
 
 (defadvice find-file (after projectile-create-perspective-after-switching-projects activate)
   "Create a dedicated perspective for current project's window after switching projects."
