@@ -11,7 +11,7 @@ all: clean build
 build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit multi-term nyan-mode org-mode perspective posframe projectile rust-mode s swiper transient yasnippet undo-tree
 
 clean:
-	find -name *.elc|xargs rm
+	find . -name *.elc|xargs rm
 
 ace-window:
 	make compile -C ace-window
