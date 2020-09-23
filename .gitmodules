@@ -557,3 +557,6 @@
 [submodule "modules/alert"]
 	path = modules/alert
 	url = https://github.com/jwiegley/alert
+[submodule "modules/pos-tip"]
+	path = modules/pos-tip
+	url = https://github.com/syohex/pos-tip
