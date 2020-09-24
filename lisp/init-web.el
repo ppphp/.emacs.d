@@ -13,9 +13,12 @@
 (add-hook 'js-mode-hook #'lsp-format-buffer)
 (add-hook 'typescript-mode-hook #'lsp-format-buffer)
 
-(use-package dap-firefox)
-(use-package dap-chrome)
-(use-package dap-node)
+(use-package dap-firefox
+  :defer)
+(use-package dap-chrome
+  :defer)
+(use-package dap-node
+  :defer)
 
 (provide 'init-web)
 ;;; init-web.el ends here
