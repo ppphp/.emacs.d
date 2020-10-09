@@ -171,5 +171,9 @@
   :config
   (global-hungry-delete-mode))
 
+(use-package so-long
+  :hook (after-init . global-so-long-mode)
+  :config (setq so-long-threshold 400))
+
 (provide 'init-common)
 ;;; init-common.el ends here
