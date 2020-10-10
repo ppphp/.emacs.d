@@ -3,7 +3,7 @@ export EMACSLOADPATH := $(shell printf "%s\n" $(HOME)/.emacs.d/modules/*/ | tr "
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
 
-.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi avy cider commander company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-journal org-mode org-super-agenda perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
 ## compile module codes
 all: clean build
@@ -132,6 +132,9 @@ org-journal:
 
 org-mode: 
 	make -C org-mode
+
+org-super-agenda:
+	cd org-super-agenda && emacs -Q --batch -f batch-byte-compile *.el
 
 perspective: 
 	cd perspective-el && emacs -Q --batch -f batch-byte-compile *.el

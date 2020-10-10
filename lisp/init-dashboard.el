@@ -100,6 +100,10 @@
           "Linkedin"
           ""
           (lambda (&rest _) (browse-url "https://www.linkedin.com/in/%E5%87%AF%E6%96%87-%E5%88%98-36909814a/")))
+	 (,(all-the-icons-material "timer" :height 1.1 :v-adjust 0.0)
+          "Bench-init"
+          ""
+          (lambda (&rest _) (benchmark-init/show-durations-tree)))
 	 )))
   (dashboard-center-content t)
   (dashboard-items '((projects . 20)

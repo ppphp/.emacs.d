@@ -581,3 +581,9 @@
 [submodule "modules/pcre2el"]
 	path = modules/pcre2el
 	url = https://github.com/joddie/pcre2el
+[submodule "modules/benchmark-init-el"]
+	path = modules/benchmark-init-el
+	url = https://github.com/dholm/benchmark-init-el
+[submodule "modules/ts.el"]
+	path = modules/ts.el
+	url = https://github.com/alphapapa/ts.el

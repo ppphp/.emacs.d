@@ -1,6 +1,11 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
+(use-package benchmark-init
+  :config
+  ;; To disable collection of benchmark data after init is done.
+  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+(use-package benchmark-init-modes)
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)

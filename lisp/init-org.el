@@ -15,8 +15,7 @@
   (use-package org-journal
     :custom
     (org-journal-dir "~/.emacs.d/notes/journal")
-    (org-journal-date-format "%d %B %Y")
-    (use-package org-super-agenda))
+    (org-journal-date-format "%d %B %Y"))
 
   ;; babel
   (use-package ob
@@ -94,7 +93,8 @@
 				   (800 1000 1200 1400 1600 1800 2000)
 				   "......" "----------------"))))
   
-)
+    )
+  (require 'org-super-agenda)
 
   (use-package org-pomodoro)
   
