@@ -24,6 +24,9 @@
 
 (setq debug-on-error t)
 
+(when (eq system-type 'darwin)
+    (setq mac-option-modifier 'meta))
+
 (when (window-system)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
