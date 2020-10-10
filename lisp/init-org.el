@@ -108,7 +108,8 @@
   :hook
   (after-init . org-roam-mode)
   :custom
-  (org-roam-directory (f-join user-emacs-directory "notes" "org-roam")))
+  (org-roam-directory (f-join user-emacs-directory "notes" "org-roam"))
+  (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam" "org-roam.db")))
 
   (use-package org-roam-server
     :functions xwidget-buffer xwidget-webkit-current-session

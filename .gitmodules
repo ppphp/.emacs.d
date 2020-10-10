@@ -560,3 +560,24 @@
 [submodule "modules/pos-tip"]
 	path = modules/pos-tip
 	url = https://github.com/syohex/pos-tip
+[submodule "modules/forge"]
+	path = modules/forge
+	url = https://github.com/magit/forge
+[submodule "modules/rustic"]
+	path = modules/rustic
+	url = https://github.com/brotzeit/rustic
+[submodule "modules/xterm-color"]
+	path = modules/xterm-color
+	url = https://github.com/atomontage/xterm-color
+[submodule "modules/emacs-so-long"]
+	path = modules/emacs-so-long
+	url = https://github.com/hlissner/emacs-so-long
+[submodule "modules/closql"]
+	path = modules/closql
+	url = https://github.com/emacscollective/closql
+[submodule "modules/magit-todos"]
+	path = modules/magit-todos
+	url = https://github.com/alphapapa/magit-todos
+[submodule "modules/pcre2el"]
+	path = modules/pcre2el
+	url = https://github.com/joddie/pcre2el
