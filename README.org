@@ -6,8 +6,6 @@
   My emacs configure should be consist of some main components, but I am too weak to make it to be true.
 
 * Basic stuff
-** subpackage.el(WIP)
-   My own package manager to be compatible with use-package, git submodule and my submodules
 ** posframe
    Make subframe for certain information.
 ** ivy/swiper
@@ -33,13 +31,6 @@
    WIP
 ** perspective
    Work with projectile
-** tabbar mode (!!! very slow, deprecated !!!)
-   Group buffers by a first line plugin. Showing by buffer related project.
-*** binding
-    C-c <left> tabbar-previous-buffer
-    C-c <right> tabbar-next-buffer
-*** hydra
-    no hydra
 
 * Editing Principal
   Most of editing related should bind a key directly, like cursor, buffer switching.
