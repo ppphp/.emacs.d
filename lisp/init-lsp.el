@@ -14,6 +14,7 @@
   (lsp-eldoc-render-all t)
   (flymake-fringe-indicator-position 'right-fringe)
   (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
+  (lsp-log-io t)
   :config
   (use-package lsp-modeline)
 
@@ -43,6 +44,7 @@
   (use-package dap-mode
     :custom
     (dap-breakpoints-file (f-join user-emacs-directory "local/.dap-breakpoints"))
+    (dap-print-io t)
     :defer
     :config
     (dap-mode 1)

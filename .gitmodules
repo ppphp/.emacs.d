@@ -587,3 +587,6 @@
 [submodule "modules/ts.el"]
 	path = modules/ts.el
 	url = https://github.com/alphapapa/ts.el
+[submodule "modules/org-krita"]
+	path = modules/org-krita
+	url = https://github.com/lepisma/org-krita

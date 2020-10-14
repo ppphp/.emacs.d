@@ -6,6 +6,7 @@
   :config
   (use-package terraform-mode)
   (use-package company-terraform
+    :defer
     :after (company)
     :config
     (company-terraform-init)))

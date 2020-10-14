@@ -6,21 +6,19 @@
 
 (use-package company
   :hook (after-init . global-company-mode)
-  :init
-  (setq company-backends '(company-files          ; files & directory
-			   company-keywords       ; keywords
-			   (company-capf :with company-yasnippet)
-			   (company-dabbrev-code company-gtags company-etags company-keywords)
-			   company-oddmuse company-dabbrev)
-	company-minimum-prefix-length 1) ; 1 char to complete
-
-  
+  :custom
+  (company-backends '((company-capf :with company-yasnippet) ; when lsp use capf first
+		      company-keywords                       ; keywords
+		      company-files                          ; files & directory
+		      (company-dabbrev-code company-gtags company-etags company-keywords)
+		      company-oddmuse company-dabbrev))
+  (company-minimum-prefix-length 1) ; 1 char to complete
+  :config
   (defun my-company-yasnippet ()
     "Hide the current completeions and show snippets."
     (interactive)
     (company-cancel)
     (call-interactively 'company-yasnippet))
-  :config
   ;; beautiful drop-down menu
   (use-package company-prescient
     :init (setq company-prescient-mode 1))
