@@ -6,6 +6,7 @@
 
 (require 'f)
 (use-package lsp-mode
+  :defer
   :custom
   (lsp-auto-guess-root t)
   (lsp-prefer-flymake nil)

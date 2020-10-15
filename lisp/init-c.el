@@ -4,6 +4,7 @@
 
 (require 'f)
 (use-package ccls
+  :defer
   :custom
   (ccls-executable (f-join user-emacs-directory "bin" "ccls")))
 
