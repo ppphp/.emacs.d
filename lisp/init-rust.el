@@ -9,9 +9,9 @@
 
 ;(add-to-list 'auto-mode-alist (cons "\\.rs\\'" 'rust-mode))
 
-(use-package rustic)
-
-(add-hook 'rust-mode-hook #'lsp)
+(use-package rustic
+  :defer
+  :hook (rustic-mode . lsp))
 
 (provide 'init-rust)
 ;;; init-rust.el ends here

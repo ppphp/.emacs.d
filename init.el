@@ -12,6 +12,8 @@
 ;(require 'init-socks)
 ;(require 'init-i18n)
 
+(require 'init-my-commands)
+
 ;; layout stuff
 ;(require 'init-layout)
 ;(require 'init-term)

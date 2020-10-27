@@ -151,42 +151,9 @@ _vr_ reset      ^^                       ^^                 ^^
   ("m" major-mode-hydra)
   )
 
-(major-mode-hydra-define emacs-lisp-mode nil
-  ("Eval"
-   (("b" eval-buffer "buffer")
-    ("e" eval-defun "defun")
-    ("r" eval-region "region"))
-   "REPL"
-   (("I" ielm "ielm"))
-   "Test"
-   (("t" ert "prompt")
-    ("T" (ert t) "all")
-    ("F" (ert :failed) "failed"))
-   "Doc"
-   (("d" describe-foo-at-point "thing-at-pt")
-    ("f" describe-function "function")
-    ("v" describe-variable "variable")
-    ("i" info-lookup-symbol "info lookup"))))
-
-(major-mode-hydra-define dart-mode nil
-  ("Eval"
-   (("b" eval-buffer "buffer")
-    ("e" eval-defun "defun")
-    ("r" eval-region "region"))
-   "REPL"
-   (("I" ielm "ielm"))
-   "Test"
-   (("t" ert "prompt")
-    ("T" (ert t) "all")
-    ("F" (ert :failed) "failed"))
-   "Doc"
-   (("d" describe-foo-at-point "thing-at-pt")
-    ("f" describe-function "function")
-    ("v" describe-variable "variable")
-    ("i" info-lookup-symbol "info lookup"))))
-
-(require 'which-key)
-(which-key-mode)
+(use-package which-key
+  :config
+  (which-key-mode))
 
 (global-set-key (kbd "M-p") #'hydra-global/body)
 (global-set-key (kbd "M-<space>") #'major-mode-hydra)
@@ -194,8 +161,9 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "C-/") #'undo-tree-undo)
 (global-set-key (kbd "C-?") #'undo-tree-redo)
 
-(global-set-key [f8] 'treemacs)
-(define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
+(with-eval-after-load "treemacs"
+  (global-set-key [f8] 'treemacs)
+  (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
 
 (global-set-key [f12] 'multi-term-dedicated-toggle)
 
@@ -207,13 +175,14 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 (global-set-key (kbd "C-x o") 'ace-window)
 
-(require 'helpful)
-(global-set-key (kbd "C-h f") #'helpful-callable)
-(global-set-key (kbd "C-h v") #'helpful-variable)
-(global-set-key (kbd "C-h k") #'helpful-key)
-(global-set-key (kbd "C-c C-d") #'helpful-at-point)
-(global-set-key (kbd "C-h F") #'helpful-function)
-(global-set-key (kbd "C-h C") #'helpful-command)
+(use-package helpful
+  :config
+  (global-set-key (kbd "C-h f") #'helpful-callable)
+  (global-set-key (kbd "C-h v") #'helpful-variable)
+  (global-set-key (kbd "C-h k") #'helpful-key)
+  (global-set-key (kbd "C-c C-d") #'helpful-at-point)
+  (global-set-key (kbd "C-h F") #'helpful-function)
+  (global-set-key (kbd "C-h C") #'helpful-command))
 
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

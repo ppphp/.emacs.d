@@ -3,6 +3,7 @@
 ;;; Code:
 
 (use-package hcl-mode
+  :defer
   :config
   (use-package terraform-mode)
   (use-package company-terraform

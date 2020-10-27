@@ -13,5 +13,10 @@
   (interactive)
   )
 
+(defun ppphp/open-config ()
+  "."
+  (interactive)
+  (counsel-find-file (f-join user-emacs-directory "lisp/")))
 
+(provide 'init-my-commands)
 ;;; init-my-commands.el ends here

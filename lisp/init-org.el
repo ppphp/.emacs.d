@@ -3,6 +3,7 @@
 ;;; Code:
 
 (use-package org
+  :defer
   :config
   ;; beautify
   (use-package org-bullets
@@ -19,6 +20,7 @@
 
   ;; babel
   (use-package ob
+    :defer
     :config
     (defvar load-language-list '((emacs-lisp . t)
 				 (perl . t)
@@ -91,22 +93,22 @@
     (org-agenda-diary-file (f-join user-emacs-directory "local" "diary.org"))
     (org-agenda-time-grid (quote (((daily today require-timed)
 				   (800 1000 1200 1400 1600 1800 2000)
-				   "......" "----------------"))))
-  
-    )
-  (require 'org-super-agenda)
+				   "......" "----------------")))))
+  (use-package org-super-agenda)
 
   (use-package org-pomodoro)
   
   ;; github export
   (use-package ox-gfm
+    :defer
     :config
     (add-to-list 'org-export-backends 'md)))
 
 ;; org-roam
 (use-package org-roam
-  :hook
-  (after-init . org-roam-mode)
+  ;; :hook
+  ;; (after-init . org-roam-mode)
+  :defer
   :custom
   (org-roam-directory (f-join user-emacs-directory "notes" "org-roam"))
   (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam" "org-roam.db")))

@@ -3,6 +3,7 @@
 ;;; Code:
 
 (use-package magit
+  :defer
   :custom
   (transient-history-file (f-join user-emacs-directory "local/transient/history.el"))
   (transient-levels-file (f-join user-emacs-directory "local/transient/levels.el"))
@@ -12,6 +13,7 @@
   (when (executable-find "cc")
     (use-package forge
       :demand
+      :defer
       :init (setq forge-topic-list-columns
                   '(("#" 5 t (:right-align t) number nil)
                     ("Title" 60 t nil title  nil)
@@ -25,13 +27,17 @@
     (magit-todos-mode 1)))
 
 (use-package diff-hl
+  :defer
   :hook
   (after-init . global-diff-hl-mode)
   (dired-mode . diff-hl-dired-mode))
 
-(use-package gitattributes-mode)
-(use-package gitconfig-mode)
-(use-package gitignore-mode)
+(use-package gitattributes-mode
+  :defer)
+(use-package gitconfig-mode
+  :defer)
+(use-package gitignore-mode
+  :defer)
 
 (provide 'init-magit)
 ;;; init-magit.el ends here

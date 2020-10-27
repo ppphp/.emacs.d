@@ -3,12 +3,12 @@ export EMACSLOADPATH := $(shell printf "%s\n" $(HOME)/.emacs.d/modules/*/ | tr "
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
 
-.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi auctex avy cider commander company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-journal org-mode org-super-agenda perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+.PHONY: all ace-window all-the-icons all-the-icons-ivy-rich ansi auctex avy cider commander company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit multi-term nyan-mode org-journal org-mode org-super-agenda perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
 ## compile module codes
 all: clean build
 
-build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode dart-mode dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+build:  ace-window all-the-icons all-the-icons-ivy-rich ansi avy company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
 clean:
 	find . -name *.elc|xargs rm
@@ -50,6 +50,9 @@ dash:
 
 dart-mode:
 	cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
+
+dart-server:
+	cd dart-server && emacs -Q -batch -f batch-byte-compile *.el
 
 doom-modeline:
 	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
@@ -109,7 +112,7 @@ lsp-ui:
 	cd lsp-ui && emacs -Q -batch -f batch-byte-compile *.el
 
 magit:
-	BUILD_MAGIT_LIBGIT=false make -C magit # LIBGIT_DIR=libegit2/build/libgit2 make -C magit
+	BUILD_MAGIT_LIBGIT=false make -C magit lisp # LIBGIT_DIR=libegit2/build/libgit2 make -C magit
 
 multi-term:
 	cd multi-term && emacs -Q --batch -f batch-byte-compile *.el

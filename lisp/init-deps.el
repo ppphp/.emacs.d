@@ -20,7 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode/clients")
 
 (require 'use-package)
-(require 'straight)
+;(require 'straight)
 
 ;(straight-use-package 'use-package)
 

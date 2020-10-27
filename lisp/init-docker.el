@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (use-package dockerfile-mode
+  :defer
   :config
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
   (add-to-list 'auto-mode-alist '("\\.Dockerfile" . dockerfile-mode))

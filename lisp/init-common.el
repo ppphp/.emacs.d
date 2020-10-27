@@ -1,10 +1,11 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
+
 (use-package benchmark-init
-  :config
   ;; To disable collection of benchmark data after init is done.
-  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+  :hook (after-init . benchmark-init/deactivate))
+
 (use-package benchmark-init-modes)
 
 (prefer-coding-system 'utf-8)
@@ -40,15 +41,18 @@
 (use-package recentf
   :custom
   (recentf-save-file (f-join user-emacs-directory "local/recentf")))
-(require 'savehist)
+
+(use-package savehist
+  :custom
+  (savehist-additional-variables '(mark-ring
+				   global-mark-ring
+				   search-ring
+				   regexp-search-ring
+				   extended-command-history))
+  (savehist-autosave-interval 300))
+
 (setq enable-recursive-minibuffers t
-             history-length 1000
-             savehist-additional-variables '(mark-ring
-                                             global-mark-ring
-                                             search-ring
-                                             regexp-search-ring
-                                             extended-command-history)
-             savehist-autosave-interval 300)
+      history-length 1000)
 
 (setq frame-title-format
     '(""
@@ -181,7 +185,19 @@
 
 (use-package so-long
   :hook (after-init . global-so-long-mode)
-  :config (setq so-long-threshold 400))
+  :custom
+  (so-long-threshold 400))
+
+(use-package olivetti
+  :defer
+  :hook
+  (org-mode . olivetti-mode)
+  (texinfo-mode . olivetti-mode)
+  :custom
+  (olivetti-body-with 80))
+
+(use-package fountain-mode
+  :defer)
 
 (provide 'init-common)
 ;;; init-common.el ends here
