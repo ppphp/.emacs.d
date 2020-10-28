@@ -31,7 +31,7 @@
 ;;; Code:
 
 (use-package jenkinsfile-mode
-  :defer)
+  :mode "Jenkinsfile")
 
 (provide 'init-jvm)
 

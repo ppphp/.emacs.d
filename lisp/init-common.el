@@ -171,6 +171,8 @@
 ;;(desktop-save-mode +1)
 
 (use-package undo-tree
+  :bind (("C-/" . undo-tree-undo)
+	 ("C-?" . undo-tree-redo))
   :config
   (global-undo-tree-mode))
 

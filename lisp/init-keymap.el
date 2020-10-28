@@ -148,8 +148,7 @@ _vr_ reset      ^^                       ^^                 ^^
   ("s" org-store-link)
   ("j" org-journal-new-entry)
 
-  ("m" major-mode-hydra)
-  )
+  ("m" major-mode-hydra))
 
 (use-package which-key
   :config
@@ -157,9 +156,6 @@ _vr_ reset      ^^                       ^^                 ^^
 
 (global-set-key (kbd "M-p") #'hydra-global/body)
 (global-set-key (kbd "M-<space>") #'major-mode-hydra)
-
-(global-set-key (kbd "C-/") #'undo-tree-undo)
-(global-set-key (kbd "C-?") #'undo-tree-redo)
 
 (with-eval-after-load "treemacs"
   (global-set-key [f8] 'treemacs)
@@ -173,16 +169,15 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
-(global-set-key (kbd "C-x o") 'ace-window)
 
 (use-package helpful
-  :config
-  (global-set-key (kbd "C-h f") #'helpful-callable)
-  (global-set-key (kbd "C-h v") #'helpful-variable)
-  (global-set-key (kbd "C-h k") #'helpful-key)
-  (global-set-key (kbd "C-c C-d") #'helpful-at-point)
-  (global-set-key (kbd "C-h F") #'helpful-function)
-  (global-set-key (kbd "C-h C") #'helpful-command))
+  :bind
+  (("C-h f" . helpful-callable)
+   ("C-h v" . helpful-variable)
+   ("C-h k" . helpful-key)
+   ("C-c C-d" . helpful-at-point)
+   ("C-h F" . helpful-function)
+   ("C-h C" . helpful-command)))
 
 (provide 'init-keymap)
 ;;; init-keymap.el ends here

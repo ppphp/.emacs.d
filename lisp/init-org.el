@@ -109,6 +109,7 @@
   ;; :hook
   ;; (after-init . org-roam-mode)
   :defer
+  :commands (org-roam-find-file)
   :custom
   (org-roam-directory (f-join user-emacs-directory "notes" "org-roam"))
   (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam" "org-roam.db")))

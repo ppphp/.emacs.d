@@ -2,19 +2,17 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package hcl-mode
-  :defer
+(use-package terraform-mode
+  :mode ("\\.tf\\'")
   :config
-  (use-package terraform-mode)
   (use-package company-terraform
-    :defer
-    :after (company)
     :config
     (company-terraform-init)))
 
 (require 'formatters)
 (formatters-register-client
  (make-formatters-client :command "terraform" :args '("fmt" "${file}") :mode 'terraform-mode))
+
 (add-hook 'terraform-mode-hook #'formatters)
 
 (provide 'init-hashicorp)

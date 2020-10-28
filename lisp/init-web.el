@@ -1,7 +1,9 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
-(use-package typescript-mode)
+(use-package typescript-mode
+  :mode ("\\.ts\\'"))
+
 (use-package handlebars-mode
   :mode "\\.hbs\\'")
 
@@ -9,9 +11,6 @@
 (add-hook 'typescript-mode-hook #'lsp)
 
 (require 'formatters-prettier)
-
-(add-hook 'js-mode-hook #'lsp-format-buffer)
-(add-hook 'typescript-mode-hook #'lsp-format-buffer)
 
 (use-package dap-firefox
   :defer)

@@ -7,7 +7,6 @@
 (require 'major-mode-hydra)
 
 (use-package go-mode
-  :defer
   :mode "\\.go\\'"
   :mode-hydra
    ("gen test"

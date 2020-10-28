@@ -2,13 +2,15 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-hook 'ruby-mode-hook #'lsp)
-(use-package rubocop
-  :hook
-  (ruby-mode . rubocop-mode))
+(use-package ruby-mode
+  :mode ("\\.rb\\'" "\\Rakefile\\'" "\\Gemfile\\.")
+  :config
+  (use-package rubocop
+    :hook
+    (ruby-mode . rubocop-mode))
 
-(use-package lsp-solargraph
-  :defer t)
+  (use-package lsp-solargraph
+    :hook (ruby-mode . lsp)))
 
 (provide 'init-ruby)
 ;;; init-ruby.el ends here

@@ -6,6 +6,7 @@
 
 (require 'f)
 (use-package lsp-mode
+  :commands (lsp)
   :defer
   :custom
   (lsp-auto-guess-root t)
