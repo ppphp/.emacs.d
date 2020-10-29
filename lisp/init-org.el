@@ -106,29 +106,26 @@
 
 ;; org-roam
 (use-package org-roam
-  ;; :hook
-  ;; (after-init . org-roam-mode)
-  :defer
   :commands (org-roam-find-file)
   :custom
   (org-roam-directory (f-join user-emacs-directory "notes" "org-roam"))
   (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam" "org-roam.db")))
 
-  (use-package org-roam-server
-    :functions xwidget-buffer xwidget-webkit-current-session
-    :hook (org-roam-server-mode . org-roam-server-browse)
-    :init
-    (defun org-roam-server-browse ()
-      (when org-roam-server-mode
-        (let ((url (format "http://%s:%d" org-roam-server-host org-roam-server-port)))
-          (if (featurep 'xwidget-internal)
-              (progn
-                (xwidget-webkit-browse-url url)
-                (let ((buf (xwidget-buffer (xwidget-webkit-current-session))))
-                  (when (buffer-live-p buf)
-                    (and (eq buf (current-buffer)) (quit-window))
-                    (pop-to-buffer buf))))
-            (browse-url url))))))
+(use-package org-roam-server
+  :functions xwidget-buffer xwidget-webkit-current-session
+  :hook (org-roam-server-mode . org-roam-server-browse)
+  :init
+  (defun org-roam-server-browse ()
+    (when org-roam-server-mode
+      (let ((url (format "http://%s:%d" org-roam-server-host org-roam-server-port)))
+	(if (featurep 'xwidget-internal)
+	    (progn
+	      (xwidget-webkit-browse-url url)
+	      (let ((buf (xwidget-buffer (xwidget-webkit-current-session))))
+		(when (buffer-live-p buf)
+		  (and (eq buf (current-buffer)) (quit-window))
+		  (pop-to-buffer buf))))
+	  (browse-url url))))))
 
 (provide 'init-org)
 ;;; init-dashboard.el ends here
