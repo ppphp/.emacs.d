@@ -37,8 +37,8 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode -1))
-(require 'f)
 (use-package recentf
+  :after (f)
   :custom
   (recentf-save-file (f-join user-emacs-directory "local/recentf")))
 
@@ -191,7 +191,6 @@
   (so-long-threshold 400))
 
 (use-package olivetti
-  :defer
   :hook
   (org-mode . olivetti-mode)
   (texinfo-mode . olivetti-mode)

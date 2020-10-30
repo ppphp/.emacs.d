@@ -337,7 +337,7 @@
 	url = https://github.com/bbatsov/persp-projectile
 [submodule "modules/imenu-list"]
 	path = modules/imenu-list
-	url = https://github.com/bmag/imenu-list
+	url = https://github.com/ppphp/imenu-list
 [submodule "modules/perspective-el"]
 	path = modules/perspective-el
 	url = https://github.com/nex3/perspective-el

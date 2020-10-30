@@ -2,8 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'all-the-icons)
-
 (defcustom centaur-icon (display-graphic-p)
   "Display icons or not."
   :group 'centaur
@@ -76,6 +74,7 @@
 
 
 (use-package dashboard
+  :after (all-the-icons)
   :custom
   ;; banner
   ;; title
