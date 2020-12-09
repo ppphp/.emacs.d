@@ -181,6 +181,8 @@
 ;; delete until not blank character
 (delete-selection-mode 1)
 
+(setq create-lockfiles nil)
+
 (use-package hungry-delete
   :config
   (global-hungry-delete-mode))

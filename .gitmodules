@@ -310,9 +310,6 @@
 [submodule "modules/hl-todo"]
 	path = modules/hl-todo
 	url = https://github.com/tarsius/hl-todo.git
-[submodule "deps/terraform-lsp"]
-	path = deps/terraform-lsp
-	url = https://github.com/juliosueiras/terraform-lsp.git
 [submodule "modules/all-the-icons-ivy-rich"]
 	path = modules/all-the-icons-ivy-rich
 	url = https://github.com/seagle0128/all-the-icons-ivy-rich.git
@@ -581,3 +578,6 @@
 [submodule "modules/org-krita"]
 	path = modules/org-krita
 	url = https://github.com/lepisma/org-krita
+[submodule "deps/terraform-ls"]
+	path = deps/terraform-ls
+	url = https://github.com/hashicorp/terraform-ls

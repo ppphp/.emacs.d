@@ -1,5 +1,5 @@
-.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rls
-all: ccls gotools impl gotests fillstruct gomodifytags terraform # rls
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls rls
+all: ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls # rls
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
@@ -31,8 +31,8 @@ gomodifytags:
 terraform:
 	cd terraform && \
 		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
-	cd terraform-lsp && \
-		GOPROXY=https://goproxy.io go build -o ../../bin/terraform-lsp .
+	cd terraform-ls && \
+		GOPROXY=https://goproxy.io go build -o ../../bin/terraform-ls .
 
 #rls:
 #	cd rls && \

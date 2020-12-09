@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (use-package typescript-mode
-  :mode ("\\.ts\\'"))
+  :mode ("\\.tsx?\\'"))
 
 (use-package handlebars-mode
   :mode "\\.hbs\\'")
@@ -10,7 +10,7 @@
 (add-hook 'js-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 
-(require 'formatters-prettier)
+;(require 'formatters-prettier)
 
 (use-package dap-firefox
   :defer)

@@ -10,7 +10,7 @@
 ;(add-to-list 'auto-mode-alist (cons "\\.rs\\'" 'rust-mode))
 
 (use-package rustic
-  :defer
+  :mode ("\\.rs\\'" . rustic-mode)
   :hook (rustic-mode . lsp))
 
 (provide 'init-rust)

@@ -34,11 +34,7 @@
     :config
     (use-package lsp-ui-imenu)
     (eldoc-mode nil)
-    (global-eldoc-mode -1)
-
-    (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
-      "Doc."
-      (setq mode-line-format nil)))
+    (global-eldoc-mode -1))
   (use-package lsp-origami
     :hook
     (origami-mode . lsp-origami-mode))
