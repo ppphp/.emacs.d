@@ -578,6 +578,3 @@
 [submodule "modules/org-krita"]
 	path = modules/org-krita
 	url = https://github.com/lepisma/org-krita
-[submodule "deps/terraform-ls"]
-	path = deps/terraform-ls
-	url = https://github.com/hashicorp/terraform-ls

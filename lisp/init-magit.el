@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package magit
-  :defer
   :custom
   (transient-history-file (f-join user-emacs-directory "local/transient/history.el"))
   (transient-levels-file (f-join user-emacs-directory "local/transient/levels.el"))
