@@ -259,9 +259,6 @@
 [submodule "modules/diff-hl"]
 	path = modules/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
-[submodule "snippets/yasnippet-snippets"]
-	path = snippets/yasnippet-snippets
-	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
 [submodule "modules/lsp-java"]
 	path = modules/lsp-java
 	url = https://github.com/emacs-lsp/lsp-java.git
@@ -578,3 +575,6 @@
 [submodule "modules/org-krita"]
 	path = modules/org-krita
 	url = https://github.com/lepisma/org-krita
+[submodule "deps/terraform-ls"]
+	path = deps/terraform-ls
+	url = https://github.com/hashicorp/terraform-ls

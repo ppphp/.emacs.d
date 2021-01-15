@@ -1,5 +1,5 @@
-.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls rls
-all: ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls # rls
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls rls hover
+all: ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls hover # rls
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
