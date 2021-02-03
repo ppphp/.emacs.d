@@ -1,5 +1,5 @@
-.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls rls hover
-all: ccls gotools impl gotests fillstruct gomodifytags terraform terraform-ls hover # rls
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rust-analyzer hover
+all: ccls gotools impl gotests fillstruct gomodifytags terraform hover rust-analyzer
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
@@ -30,14 +30,11 @@ gomodifytags:
 
 terraform:
 	cd terraform && \
-		GOPROXY=https://goproxy.io go build -o ../../bin/terraform .
-	cd terraform-ls && \
-		GOPROXY=https://goproxy.io go build -o ../../bin/terraform-ls .
+		go build -o ../../bin/terraform .
 
-#rls:
-#	cd rls && \
-#		cargo build --release && \
-#		ln -sf ${shell pwd}/rls/target/release/rls ../../bin/rls
+rust-analyzer:
+	cd rust-analyzer && \
+		cargo xtask install --server 
 
 hover:
 	cd hover && \
