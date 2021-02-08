@@ -353,9 +353,6 @@
 [submodule "modules/org-roam"]
 	path = modules/org-roam
 	url = https://github.com/jethrokuan/org-roam
-[submodule "notes"]
-	path = notes
-	url = git@github.com:ppphp/ppphp.github.io
 [submodule "modules/multi-term"]
 	path = modules/multi-term
 	url = git@github.com:ppphp/multi-term
@@ -572,3 +569,6 @@
 [submodule "modules/org-krita"]
 	path = modules/org-krita
 	url = https://github.com/lepisma/org-krita
+[submodule "notes"]
+	path = notes
+	url = git@github.com:ppphp/notes.git
