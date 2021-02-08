@@ -1,5 +1,5 @@
-.PHONY: all ccls gotools impl gotests fillstruct gomodifytags terraform rust-analyzer hover
-all: ccls gotools impl gotests fillstruct gomodifytags terraform hover rust-analyzer
+.PHONY: all ccls gotools impl gotests fillstruct gomodifytags rust-analyzer hover
+all: ccls gotools impl gotests fillstruct gomodifytags hover rust-analyzer
 
 ccls:
 	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
@@ -27,10 +27,6 @@ fillstruct:
 gomodifytags:
 	cd gomodifytags && \
 		GOPROXY=https://goproxy.io go build -o ../../../bin/gomodifytags ./
-
-terraform:
-	cd terraform && \
-		go build -o ../../bin/terraform .
 
 rust-analyzer:
 	cd rust-analyzer && \

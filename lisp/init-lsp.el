@@ -19,6 +19,7 @@
   (lsp-log-io t)
   :config
   (use-package lsp-modeline)
+  (use-package lsp-headerline)
 
   (use-package lsp-ui
     :custom

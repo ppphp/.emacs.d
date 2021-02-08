@@ -25,5 +25,10 @@
 ;(straight-use-package 'use-package)
 
 
+;; require some basic lib
+(require 's)
+(require 'f)
+(require 'page-break-lines)
+
 (provide 'init-deps)
 ;;; init-deps.el ends here

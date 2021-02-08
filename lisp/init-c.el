@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'f)
 (use-package ccls
   :defer
   :custom
