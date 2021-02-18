@@ -24,6 +24,11 @@
 
 ;(straight-use-package 'use-package)
 
+(dolist
+    (n (directory-files user-emacs-directory "subpackage"))
+  (unless
+      (or (equal n "..") (equal n "."))
+    (add-to-list 'load-path (concat user-emacs-directory "subpackage" n))))
 
 ;; require some basic lib
 (require 's)
