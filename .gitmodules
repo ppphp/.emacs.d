@@ -199,9 +199,6 @@
 [submodule "modules/web-mode"]
 	path = modules/web-mode
 	url = https://github.com/fxbois/web-mode.git
-[submodule "deps/terraform"]
-	path = deps/terraform
-	url = https://github.com/hashicorp/terraform
 [submodule "modules/typescript.el"]
 	path = modules/typescript.el
 	url = https://github.com/emacs-typescript/typescript.el.git
@@ -259,9 +256,6 @@
 [submodule "modules/diff-hl"]
 	path = modules/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
-[submodule "snippets/yasnippet-snippets"]
-	path = snippets/yasnippet-snippets
-	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
 [submodule "modules/lsp-java"]
 	path = modules/lsp-java
 	url = https://github.com/emacs-lsp/lsp-java.git
@@ -310,9 +304,6 @@
 [submodule "modules/hl-todo"]
 	path = modules/hl-todo
 	url = https://github.com/tarsius/hl-todo.git
-[submodule "deps/terraform-lsp"]
-	path = deps/terraform-lsp
-	url = https://github.com/juliosueiras/terraform-lsp.git
 [submodule "modules/all-the-icons-ivy-rich"]
 	path = modules/all-the-icons-ivy-rich
 	url = https://github.com/seagle0128/all-the-icons-ivy-rich.git
@@ -362,9 +353,6 @@
 [submodule "modules/org-roam"]
 	path = modules/org-roam
 	url = https://github.com/jethrokuan/org-roam
-[submodule "notes"]
-	path = notes
-	url = git@github.com:ppphp/ppphp.github.io
 [submodule "modules/multi-term"]
 	path = modules/multi-term
 	url = git@github.com:ppphp/multi-term
@@ -581,3 +569,9 @@
 [submodule "modules/org-krita"]
 	path = modules/org-krita
 	url = https://github.com/lepisma/org-krita
+[submodule "notes"]
+	path = notes
+	url = git@github.com:ppphp/notes.git
+[submodule "modules/queue"]
+	path = modules/queue
+	url = https://github.com/emacs-straight/queue

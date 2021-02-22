@@ -30,6 +30,7 @@
 
 (setq debug-on-error t)
 
+;; command is alt
 (when (eq system-type 'darwin)
     (setq mac-option-modifier 'meta))
 
@@ -37,8 +38,8 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode -1))
+
 (use-package recentf
-  :after (f)
   :custom
   (recentf-save-file (f-join user-emacs-directory "local/recentf")))
 
@@ -180,6 +181,8 @@
 
 ;; delete until not blank character
 (delete-selection-mode 1)
+
+(setq create-lockfiles nil)
 
 (use-package hungry-delete
   :config

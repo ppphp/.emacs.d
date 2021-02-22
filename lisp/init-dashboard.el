@@ -72,7 +72,6 @@
       ;; Jump to the first section
       (dashboard-goto-recent-files))
 
-
 (use-package dashboard
   :after (all-the-icons)
   :custom
