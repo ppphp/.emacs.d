@@ -30,3 +30,6 @@ eshell/*
 
 *.elc
 session.*
+
+eln-cache
+

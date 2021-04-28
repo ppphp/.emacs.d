@@ -4,7 +4,14 @@
 
 (use-package benchmark-init
   ;; To disable collection of benchmark data after init is done.
-  :hook (after-init . benchmark-init/deactivate))
+  :hook (after-init . benchmark-init/deactivate)
+  :init
+  (define-advice define-obsolete-function-alias (:filter-args (ll) fix-obsolete)
+  (let ((obsolete-name (pop ll))
+        (current-name (pop ll))
+        (when (if ll (pop ll) "1"))
+        (docstring (if ll (pop ll) nil)))
+    (list obsolete-name current-name when docstring))))
 
 (use-package benchmark-init-modes)
 
@@ -34,10 +41,10 @@
 (when (eq system-type 'darwin)
     (setq mac-option-modifier 'meta))
 
-(when (window-system)
+;;(when (window-system)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (menu-bar-mode -1))
+  (menu-bar-mode -1);;)
 
 (use-package recentf
   :custom
@@ -174,6 +181,8 @@
 (use-package undo-tree
   :bind (("C-/" . undo-tree-undo)
 	 ("C-?" . undo-tree-redo))
+  :custom
+  (undo-tree-auto-save-history nil)
   :config
   (global-undo-tree-mode))
 
@@ -185,6 +194,7 @@
 (setq create-lockfiles nil)
 
 (use-package hungry-delete
+  :disabled
   :config
   (global-hungry-delete-mode))
 
@@ -200,8 +210,15 @@
   :custom
   (olivetti-body-with 80))
 
-(use-package fountain-mode
-  :defer)
+(use-package fountain-mode)
+
+(setq word-wrap-by-category t)
+
+(jit-lock-mode nil)
+
+(use-package markdown-mode)
+
+(setq comp-deferred-compilation t)
 
 (provide 'init-common)
 ;;; init-common.el ends here

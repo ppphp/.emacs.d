@@ -575,3 +575,12 @@
 [submodule "modules/queue"]
 	path = modules/queue
 	url = https://github.com/emacs-straight/queue
+[submodule "modules/emacs-gdscript-mode"]
+	path = modules/emacs-gdscript-mode
+	url = https://github.com/godotengine/emacs-gdscript-mode
+[submodule "modules/ripgrep.el"]
+	path = modules/ripgrep.el
+	url = https://github.com/nlamirault/ripgrep.el
+[submodule "modules/emacs-emojify"]
+	path = modules/emacs-emojify
+	url = https://github.com/iqbalansari/emacs-emojify

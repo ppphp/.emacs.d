@@ -1,5 +1,14 @@
 .PHONY: all modules cask deps
 
+NPROCS:=1
+OS:=$(shell uname -s)
+ifeq ($(OS),Linux)
+	NPROCS:=$(shell grep -c ^processor /proc/cpuinfo)
+endif
+ifeq ($(OS),Darwin) # Assume Mac OS X
+	NPROCS:=$(shell system_profiler | awk '/Number Of CPUs/{print $4}{next;}')
+endif
+
 all: modules deps
 
 modules:
@@ -14,13 +23,13 @@ deps:
 	make -C deps
 
 remote-update:
-	git submodule foreach "git reset HEAD --hard"
-	git submodule foreach "git fetch --recurse-submodules --prune"
-	git submodule foreach "git checkout origin/master"
-	git submodule foreach "git branch -D master"
-	git submodule foreach "git checkout -b master origin/master"
-	git submodule foreach "git checkout master"
-	git submodule foreach "git submodule update --init --recursive"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git reset HEAD --hard"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git fetch --recurse-submodules --prune"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout origin/master"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git branch -D master"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout -b master origin/master"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout master"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git submodule update --init --recursive"
 
 update: remote-update deps modules
 
