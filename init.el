@@ -19,7 +19,6 @@
 ;(require 'init-term)
 (require 'init-dashboard)
 (require 'init-modeline)
-;(require 'init-tabbar)
 (require 'init-treemacs)
 
 ;; repl stuff
@@ -41,8 +40,7 @@
 (require 'init-go)
 (require 'init-rust)
 (require 'init-python)
-(require 'init-c)
-(require 'init-cpp)
+(require 'init-ccpp)
 (require 'init-ruby)
 (require 'init-dart)
 (require 'init-jvm)

@@ -3,9 +3,10 @@
 ;;; Code:
 
 (use-package imenu-list
-  :bind (("<f8>" . imenu-list-smart-toggle))
-  :config
-  (imenu-list-minor-mode))
+;  :bind (("<f8>" . imenu-list-smart-toggle))
+;  :config
+;  (imenu-list-minor-mode))
+)
 
 ;; (use-package window-purpose
 ;;   :config
