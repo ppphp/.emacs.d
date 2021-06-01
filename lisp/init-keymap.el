@@ -157,8 +157,9 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "M-p") #'hydra-global/body)
 (global-set-key (kbd "M-<space>") #'major-mode-hydra)
 
+
+(global-set-key [f8] 'treemacs)
 (with-eval-after-load "treemacs"
-  (global-set-key [f8] 'treemacs)
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
 
 (global-set-key [f12] 'multi-term-dedicated-toggle)
