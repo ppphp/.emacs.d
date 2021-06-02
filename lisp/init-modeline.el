@@ -30,11 +30,6 @@
 
   (doom-modeline-mode 1))
 
-;(setq mode-line-format
-;      (list
-;       '(:eval (list (nyan-create)))
-;       ))
-
 (provide 'init-modeline)
 
 ;;; init-modeline.el ends here

@@ -3,10 +3,15 @@
 ;;; Code:
 
 (use-package treemacs
+<<<<<<< HEAD
   :after (all-the-icons f)
+=======
+  :commands (treemacs)
+;;  :after (all-the-icons f)
+>>>>>>> 54911f309e77c1898597715460292cd9486657f5
   :custom
-  (treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist")
-			 treemacs-position 'right)
+  (treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))
+  (treemacs-position 'right)
   :config
   (use-package treemacs-projectile)
   (use-package treemacs-magit)
