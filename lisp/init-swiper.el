@@ -20,9 +20,10 @@
   (use-package ivy-rich
     :config
     (ivy-rich-mode 1)
-    (use-package all-the-icons-ivy-rich
-      :config
-      (all-the-icons-ivy-rich-mode 1)))
+    ;(use-package all-the-icons-ivy-rich
+    ;  :config
+    ;  (all-the-icons-ivy-rich-mode 1)))
+  )
   (use-package ivy-posframe
     :custom
     (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))

@@ -30,7 +30,8 @@
 
 ;;; Code:
 
-(use-package protobuf-mode)
+(use-package protobuf-mode
+  :mode "\\.proto\\'")
 
 (provide 'init-protobuf)
 

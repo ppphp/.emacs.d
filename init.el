@@ -41,6 +41,7 @@
 (require 'init-rust)
 (require 'init-python)
 (require 'init-ccpp)
+(require 'init-protobuf)
 (require 'init-ruby)
 (require 'init-dart)
 (require 'init-jvm)

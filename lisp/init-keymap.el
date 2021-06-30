@@ -165,6 +165,8 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key [f12] 'multi-term-dedicated-toggle)
 
 (global-set-key (kbd "C-s") 'swiper-isearch)
+(global-set-key (kbd "C-M-s") 'projectile-grep)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (global-set-key (kbd "C-r") 'swiper-isearch-backward)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)

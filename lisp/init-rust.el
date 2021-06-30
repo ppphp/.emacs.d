@@ -11,7 +11,10 @@
 
 (use-package rustic
   :mode ("\\.rs\\'" . rustic-mode)
-  :hook (rustic-mode . lsp))
+  :hook (rustic-mode . lsp)
+  :custom
+  (lsp-rust-analyzer-cargo-watch-enable t)
+  (lsp-rust-analyzer-cargo-watch-command "cargo run"))
 
 (provide 'init-rust)
 ;;; init-rust.el ends here
