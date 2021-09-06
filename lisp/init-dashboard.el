@@ -72,8 +72,9 @@
       ;; Jump to the first section
       (dashboard-goto-recent-files))
 
+(require 'all-the-icons)
+(require 'benchmark-init-modes)
 (use-package dashboard
-  :after (all-the-icons)
   :custom
   ;; banner
   ;; title
