@@ -32,6 +32,8 @@
     (lsp-ui-sideline-ignore-duplicate t)
     (lsp-ui-flycheck-enable t)
     :hook (lsp-mode . lsp-ui-mode)
+    :bind (([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+           ([remap xref-find-references] . lsp-ui-peek-find-references))
     :config
     (use-package lsp-ui-imenu)
     (eldoc-mode nil)
