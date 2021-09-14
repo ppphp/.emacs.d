@@ -581,3 +581,6 @@
 [submodule "modules/benchmark-init-el"]
 	path = modules/benchmark-init-el
 	url = https://github.com/ppphp/benchmark-init-el
+[submodule "snippets"]
+	path = snippets
+	url = git@github.com:ppphp/snippets

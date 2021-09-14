@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package cmake-mode)
+(use-package cmake-mode
+  :mode "CMakeLists.txt")
 
 (add-hook 'cmake-mode-hook #'lsp)
 

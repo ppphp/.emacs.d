@@ -40,14 +40,9 @@
 (require 'init-go)
 (require 'init-rust)
 (require 'init-python)
-<<<<<<< HEAD
-(require 'init-ccpp)
 (require 'init-protobuf)
-=======
-(require 'init-c)
 (require 'init-cpp)
 (require 'init-cmake)
->>>>>>> ddb0a41abf92a7930b17798af19838f946d585fc
 (require 'init-ruby)
 (require 'init-dart)
 (require 'init-jvm)

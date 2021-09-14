@@ -4,6 +4,9 @@
 
 ;; global projectile init
 
+(use-package project
+  :disabled)
+
 (require 'f)
 (use-package projectile
   :custom

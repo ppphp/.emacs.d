@@ -2,9 +2,8 @@
 all: ccls gotools impl gotests fillstruct gomodifytags hover rust-analyzer
 
 ccls:
-	cd ccls && mkdir -p build && cd build && cmake ../ -DUSE_SYSTEM_RAPIDJSON=off
+	cd ccls && mkdir -p build && cd build && cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=YES #-DUSE_SYSTEM_RAPIDJSON=off
 	make -C ccls/build
-	ln -sf ${shell pwd}/ccls/build/ccls ../bin/ccls
 
 gotools:
 	cd tools/gopls && \
