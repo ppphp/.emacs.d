@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package treemacs
-  :commands (treemacs)
 ;;  :after (all-the-icons f)
   :custom
   (treemacs-persist-file (f-join user-emacs-directory "local" "treemacs-persist"))

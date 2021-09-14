@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package yaml-mode
-  :mode ("\\.yml\\'" "\\.yaml\\'")
+  :mode ("\\.yml\\'" "\\.yaml\\'" "\\.clang-format\\'")
   :config
   (add-hook 'yaml-mode-hook
 	    (lambda ()

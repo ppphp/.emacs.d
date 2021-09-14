@@ -158,7 +158,11 @@ _vr_ reset      ^^                       ^^                 ^^
 (global-set-key (kbd "M-<space>") #'major-mode-hydra)
 
 
-(global-set-key [f8] 'treemacs)
+(global-set-key [f8] #'(lambda() (interactive) (pcase (treemacs-current-visibility)
+    ('visible (treemacs-select-window))
+    ('exists  (treemacs-select-window))
+    ('none    (treemacs--init)))))
+
 (with-eval-after-load "treemacs"
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
 

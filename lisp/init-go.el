@@ -45,7 +45,7 @@
 (setq goimports "~/.emacs.d/bin/goimports")
 (require 'formatters-goimports)
 
-(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters)))
+(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters 0 t)))
 
 ;; debug protocol
 (use-package dap-go

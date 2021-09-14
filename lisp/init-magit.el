@@ -2,6 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package vc
+  :disabled)
+
 (use-package magit
   :custom
   (transient-history-file (f-join user-emacs-directory "local/transient/history.el"))
