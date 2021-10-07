@@ -167,10 +167,10 @@ rustic:
 	cd rustic && emacs -Q -batch -f batch-byte-compile *.el
 
 transient:
-	make -C transient
+	make lisp -C transient
 
 yasnippet:
-	cd  yasnippet; rake
+	cd  yasnippet; rake compile_all
 
 undo-tree:
 	cd undo-tree && emacs -Q -batch -f batch-byte-compile *.el
