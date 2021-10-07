@@ -25,10 +25,10 @@ deps:
 remote-update:
 	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git reset HEAD --hard"
 	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git fetch --recurse-submodules --prune"
-	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout origin/master"
-	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git branch -D master"
-	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout -b master origin/master"
-	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout master"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout origin/$(shell git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git branch -D $(shell git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout -b master origin/$(shell git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
+	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git checkout $(shell git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
 	-git submodule foreach --recursive --quiet pwd | xargs -P${NPROCS} -I{} bash -c "cd {}; git submodule update --init --recursive"
 
 update: remote-update deps modules
