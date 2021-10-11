@@ -6,8 +6,7 @@
 
 (require 'f)
 (use-package lsp-mode
-  :commands (lsp)
-  :defer
+;;  :commands (lsp)
   :custom
   (lsp-auto-guess-root t)
   (lsp-prefer-flymake nil)
@@ -31,9 +30,13 @@
     (lsp-ui-sideline-enable nil)
     (lsp-ui-sideline-ignore-duplicate t)
     (lsp-ui-flycheck-enable t)
+    (lsp-ui-peek--show t)
+    (lsp-ui-sideline-show-diagnostics t)
+    (lsp-ui-sideline-show-hover t)
+    (lsp-ui-sideline-show-code-actions t)
     :hook (lsp-mode . lsp-ui-mode)
-    :bind (([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
-           ([remap xref-find-references] . lsp-ui-peek-find-references))
+    :bind (:map lsp-ui-mode-map (([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+           ([remap xref-find-references] . lsp-ui-peek-find-references)))
     :config
     (use-package lsp-ui-imenu)
     (eldoc-mode nil)

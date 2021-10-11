@@ -143,7 +143,7 @@ _vr_ reset      ^^                       ^^                 ^^
   ("&" hydra-yasnippet/body)
 
   ("a" org-agenda)
-  ("r" org-roam-find-file)
+  ("r" org-roam-node-find)
   ("c" org-capture)
   ("s" org-store-link)
   ("j" org-journal-new-entry)

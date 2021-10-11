@@ -2,9 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package ccls
-  :custom
-  (ccls-executable (f-join user-emacs-directory "bin" "ccls")))
+;;(use-package ccls
+;;  :custom
+;;  (ccls-executable (f-join user-emacs-directory "bin" "ccls")))
 
 (add-hook 'c-mode-hook #'lsp)
 

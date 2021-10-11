@@ -5,7 +5,9 @@
 (use-package flycheck
   :hook (after-init . global-flycheck-mode)
   :config
-
+  (setq flycheck-clang-include-path '("/usr/include/c++/10/" "/usr/include/x86_64-linux-gnu/c++/10/"))
+  (setq flycheck-clang-language-standard "c++17")
+  (setq flycheck-gcc-language-standard "c++17")
   (if (display-graphic-p)
       (use-package flycheck-posframe
 	:hook

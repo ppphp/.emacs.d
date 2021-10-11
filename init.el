@@ -41,6 +41,7 @@
 (require 'init-rust)
 (require 'init-python)
 (require 'init-protobuf)
+(require 'init-c)
 (require 'init-cpp)
 (require 'init-cmake)
 (require 'init-ruby)

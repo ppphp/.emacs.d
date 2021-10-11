@@ -3,7 +3,8 @@
 ;;; Code:
 
 (use-package org
-  :defer
+  :custom
+  (org-id-locations-file "~/.emacs.d/local/.org-id-locations")
   :config
   ;; beautify
   (use-package org-bullets
@@ -20,7 +21,6 @@
 
   ;; babel
   (use-package ob
-    :defer
     :config
     (defvar load-language-list '((emacs-lisp . t)
 				 (perl . t)
@@ -106,10 +106,11 @@
 
 ;; org-roam
 (use-package org-roam
-  :commands (org-roam-find-file)
   :custom
   (org-roam-directory (f-join user-emacs-directory "notes"))
-  (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam.db")))
+  (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam.db"))
+  :init
+  (setq org-roam-v2-ack t))
 
 (use-package org-roam-server
   :functions xwidget-buffer xwidget-webkit-current-session
