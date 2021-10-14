@@ -205,11 +205,12 @@
   (so-long-threshold 400))
 
 (use-package olivetti
+  :disabled
   :hook
   (org-mode . olivetti-mode)
   (texinfo-mode . olivetti-mode)
   :custom
-  (olivetti-body-with 80))
+  (olivetti-body-with 100))
 
 (use-package fountain-mode)
 
