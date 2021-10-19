@@ -584,3 +584,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git@github.com:ppphp/snippets
+[submodule "modules/rust-mode"]
+	path = modules/rust-mode
+	url = https://github.com/rust-lang/rust-mode
