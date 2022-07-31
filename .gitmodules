@@ -587,3 +587,6 @@
 [submodule "modules/rust-mode"]
 	path = modules/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+[submodule "modules/compat.el"]
+	path = modules/compat.el
+	url = https://github.com/phikal/compat.el.git
