@@ -4,7 +4,8 @@ export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/lsp-mode/clients:$(EMACSLOADPATH)
 
-.PHONY: all ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi auctex avy benchmark-init-el bui.el cider closql commander company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit markdown-mode multi-term nyan-mode org-journal org-mode org-super-agenda perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+.PHONY: all ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi auctex avy benchmark-init-el bui.el cider closql commander company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit markdown-mode multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+
 
 ## compile module codes
 all: build
@@ -12,7 +13,7 @@ all: build
 build:  ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi avy benchmark-init-el bui.el closql company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit markdown-mode multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
 clean:
-	find . -name *.elc|xargs rm
+	-find . -name *.elc|xargs rm
 
 ace-window:
 	make compile -C ace-window
@@ -75,7 +76,7 @@ doom-modeline:
 	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
 
 editorconfig-emacs:
-	make -C editorconfig-emacs
+	make -C editorconfig-emacs compile
 
 emacs-async:
 	make -C emacs-async
@@ -105,7 +106,7 @@ flycheck:
 	cd flycheck && emacs -Q -batch -f batch-byte-compile *.el
 
 ghub:
-	make -C ghub
+	make -C ghub lisp
 
 go-mode:
 	cd go-mode.el && emacs -Q -batch -f batch-byte-compile *.el

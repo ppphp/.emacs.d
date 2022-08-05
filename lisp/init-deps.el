@@ -19,7 +19,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/elisp")
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/src/extra")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp-mode/clients")
-(add-to-list 'load-path "~/.emacs.d/modules/emacs-doom-themes/extensions")
+(add-to-list 'load-path "~/.emacs.d/modules/with-editor/lisp")
+(add-to-list 'load-path "~/.emacs.d/modules/emacs-doom-themes/extensions/")
 
 (require 'use-package)
 ;(require 'straight)
