@@ -43,6 +43,7 @@
 (require 'init-protobuf)
 (require 'init-c)
 (require 'init-cpp)
+(require 'init-cs)
 (require 'init-cmake)
 (require 'init-ruby)
 (require 'init-dart)
@@ -61,6 +62,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(lsp-completion-enable t nil nil "Customized with use-package lsp-mode")
+ '(warning-suppress-log-types '((lsp-mode) (comp)))
  '(warning-suppress-types '((comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

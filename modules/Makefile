@@ -2,6 +2,7 @@
 export EMACSLOADPATH := $(shell printf "%s\n" $(HOME)/.emacs.d/modules/*/ | tr "\n" ":")
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/magit/lisp:$(EMACSLOADPATH)
 export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/treemacs/src/elisp:$(EMACSLOADPATH)
+export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/lsp-mode/clients:$(EMACSLOADPATH)
 
 .PHONY: all ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi auctex avy benchmark-init-el bui.el cider closql commander company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose ert-runner.el f flycheck ghub go-mode hydra imenu-list lsp-dart lsp-mode lsp-ui libegit2 magit markdown-mode multi-term nyan-mode org-journal org-mode org-super-agenda perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
@@ -65,10 +66,10 @@ dash:
 	cd dash.el && emacs -Q -batch -f batch-byte-compile *.el
 
 dart-mode:
-	cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
+	-cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
 
 dart-server:
-	cd dart-server && emacs -Q -batch -f batch-byte-compile *.el
+	-cd dart-server && emacs -Q -batch -f batch-byte-compile *.el
 
 doom-modeline:
 	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
@@ -119,7 +120,7 @@ libegit2:
 	make -C libegit2
 
 lsp-dart:
-	cd lsp-dart && emacs -Q -batch -f batch-byte-compile *.el
+	-cd lsp-dart && emacs -Q -batch -f batch-byte-compile *.el
 
 lsp-mode:
 	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el
