@@ -10,7 +10,7 @@ export EMACSLOADPATH :=$(HOME)/.emacs.d/modules/lsp-mode/clients:$(EMACSLOADPATH
 ## compile module codes
 all: build
 
-build:  ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi avy benchmark-init-el bui.el closql company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit markdown-mode multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
+build: ace-window alert all-the-icons-dired all-the-icons.el all-the-icons-ivy-rich ansi avy benchmark-init-el bui.el closql company-box company-mode dap-mode dart-mode dart-server dash doom-modeline editorconfig-emacs emacs-async emacs-ccls emacs-dashboard emacs-eim emacs-memoize emacs-purpose f flycheck ghub go-mode hydra imenu-list libegit2 lsp-dart lsp-mode lsp-ui magit markdown-mode multi-term nyan-mode org-journal org-mode perspective posframe projectile rustic s swiper transient yasnippet undo-tree
 
 clean:
 	-find . -name *.elc|xargs rm
