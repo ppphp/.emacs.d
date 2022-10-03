@@ -12,6 +12,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/lisp")
+(add-to-list 'load-path "~/.emacs.d/modules/with-editor/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/forge/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/contrib/lisp")

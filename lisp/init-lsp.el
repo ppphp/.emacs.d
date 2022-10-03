@@ -8,7 +8,7 @@
 (use-package lsp-mode
 ;;  :commands (lsp)
   :custom
-  (lsp-auto-guess-root t)
+  (lsp-auto-guess-root nil)
   (lsp-prefer-flymake nil)
   (lsp-enable-completion-at-point t)
   (lsp-enable-snippet t)
@@ -29,7 +29,7 @@
     (lsp-ui-doc-border (face-foreground 'default))
     (lsp-ui-sideline-enable nil)
     (lsp-ui-sideline-ignore-duplicate t)
-    (lsp-ui-flycheck-enable t)
+    (lsp-ui-flycheck t)
     (lsp-ui-peek--show t)
     (lsp-ui-sideline-show-diagnostics t)
     (lsp-ui-sideline-show-hover t)

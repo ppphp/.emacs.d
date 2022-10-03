@@ -222,5 +222,7 @@
 
 (setq comp-deferred-compilation t)
 
+(pixel-scroll-precision-mode)
+
 (provide 'init-common)
 ;;; init-common.el ends here

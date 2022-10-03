@@ -67,10 +67,10 @@ dash:
 	cd dash.el && emacs -Q -batch -f batch-byte-compile *.el
 
 dart-mode:
-	cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
+	-cd dart-mode && emacs -Q -batch -f batch-byte-compile *.el
 
 dart-server:
-	cd dart-server && emacs -Q -batch -f batch-byte-compile *.el
+	-cd dart-server && emacs -Q -batch -f batch-byte-compile *.el
 
 doom-modeline:
 	cd doom-modeline && emacs -Q -batch -f batch-byte-compile *.el
@@ -121,7 +121,7 @@ libegit2:
 	make -C libegit2
 
 lsp-dart:
-	cd lsp-dart && emacs -Q -batch -f batch-byte-compile *.el
+	-cd lsp-dart && emacs -Q -batch -f batch-byte-compile *.el
 
 lsp-mode:
 	cd lsp-mode && emacs -Q -batch -f batch-byte-compile *.el

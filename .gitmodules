@@ -589,4 +589,13 @@
 	url = https://github.com/rust-lang/rust-mode
 [submodule "modules/compat.el"]
 	path = modules/compat.el
-	url = https://github.com/phikal/compat.el.git
+	url = https://github.com/phikal/compat.el
+[submodule "modules/csharp-mode"]
+	path = modules/csharp-mode
+	url = https://github.com/emacs-csharp/csharp-mode
+[submodule "modules/lsp-docker"]
+	path = modules/lsp-docker
+	url = https://github.com/emacs-lsp/lsp-docker
+[submodule "modules/yaml.el"]
+	path = modules/yaml.el
+	url = https://github.com/zkry/yaml.el/
