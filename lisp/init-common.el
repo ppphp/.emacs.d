@@ -158,10 +158,6 @@
 ;; prevent the editor blocking frequently
 (setq gc-cons-threshold (if (display-graphic-p) 400000000 100000000))
 
-(require 'formatters)
-
-(add-hook 'before-save-hook 'formatters-before-save)
-
 (use-package origami
   :config
   (global-origami-mode))

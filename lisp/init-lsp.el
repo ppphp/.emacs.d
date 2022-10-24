@@ -15,7 +15,7 @@
   (lsp-eldoc-render-all t)
   (flymake-fringe-indicator-position 'right-fringe)
   (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
-  (lsp-log-io t)
+  (lsp-log-io nil)
   :config
   (use-package lsp-modeline)
   (use-package lsp-headerline)

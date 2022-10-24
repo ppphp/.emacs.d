@@ -46,6 +46,7 @@
 [submodule "modules/org-mode"]
 	path = modules/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
+	branch = main
 [submodule "modules/go-mode"]
 	path = modules/go-mode
 	url = https://github.com/dominikh/go-mode.el
@@ -106,6 +107,7 @@
 [submodule "modules/emacs-async"]
 	path = modules/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
+	branch = master
 [submodule "modules/magit-popup"]
 	path = modules/magit-popup
 	url = https://github.com/magit/magit-popup
@@ -157,6 +159,7 @@
 [submodule "modules/libegit2"]
 	path = modules/libegit2
 	url = https://github.com/magit/libegit2.git
+	branch = master
 [submodule "modules/ansi.el"]
 	path = modules/ansi.el
 	url = https://github.com/rejeep/ansi.el
@@ -407,6 +410,7 @@
 [submodule "deps/gomodifytags"]
 	path = deps/gomodifytags
 	url = https://github.com/fatih/gomodifytags
+	branch = main
 [submodule "deps/impl"]
 	path = deps/impl
 	url = https://github.com/josharian/impl
@@ -599,3 +603,9 @@
 [submodule "modules/yaml.el"]
 	path = modules/yaml.el
 	url = https://github.com/zkry/yaml.el/
+[submodule "deps/modules/emacs-async"]
+	branch = master
+[submodule "modules/libgit2"]
+	branch = master
+[submodule "modules/libegit2/libgit2"]
+	branch = master

@@ -3,6 +3,7 @@
 ;;; Code:
 
 (use-package cmake-mode
+  :ensure t
   :mode "CMakeLists.txt")
 
 (add-hook 'cmake-mode-hook #'lsp)

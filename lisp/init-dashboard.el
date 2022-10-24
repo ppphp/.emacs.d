@@ -11,7 +11,7 @@
   "Return non-nil if `all-the-icons' is displayable."
   (and centaur-icon
        (display-graphic-p)
-       (require 'all-the-icons nil t)))
+       (use-package all-the-icons)))
 
     (defun restore-previous-session ()
       "Restore the previous session."
@@ -72,8 +72,7 @@
       ;; Jump to the first section
       (dashboard-goto-recent-files))
 
-(require 'all-the-icons)
-(require 'benchmark-init-modes)
+(use-package benchmark-init)
 (use-package dashboard
   :custom
   ;; banner
