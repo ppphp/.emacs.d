@@ -74,6 +74,7 @@
 
 (use-package benchmark-init)
 (use-package dashboard
+  :after (all-the-icons)
   :custom
   ;; banner
   ;; title

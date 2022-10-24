@@ -13,7 +13,7 @@
   (treemacs-follow-mode 1)
   (treemacs-git-mode 'deferred)
   (treemacs-fringe-indicator-mode nil)
-  (use-package doom-themes-ext-treemacs
+  (use-package doom-themes
     :config
     (doom-themes-treemacs-config)))
 

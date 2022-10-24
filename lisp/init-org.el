@@ -11,7 +11,7 @@
     :hook (org-mode . org-bullets-mode))
 
   ;; shortcut
-  (use-package org-tempo)
+  ;;(use-package org-tempo)
 
   ;; journal
   (use-package org-journal
@@ -20,8 +20,6 @@
     (org-journal-date-format "%d %B %Y"))
 
   ;; babel
-  (use-package ob
-    :config
     (defvar load-language-list '((emacs-lisp . t)
 				 (perl . t)
 				 (python . t)
@@ -44,8 +42,8 @@
       :init (cl-pushnew '(mermaid . t) load-language-list))
     (use-package ob-elixir
       :init (cl-pushnew '(rust . t) load-language-list))
-    (use-package ob-lilypond
-      :init (cl-pushnew '(rust . t) load-language-list))
+    ;(use-package ob-lilypond
+    ;  :init (cl-pushnew '(rust . t) load-language-list))
     (use-package ob-swift
       :init (cl-pushnew '(rust . t) load-language-list))
     (org-babel-do-load-languages 'org-babel-load-languages
@@ -86,7 +84,7 @@
       (capitalize-word 1)
       (buffer-substring start end))))
   ;; agenda
-  (use-package org-agenda
+(use-package org-agenda
     :custom
     (org-agenda-files (list (f-join user-emacs-directory "local" "agenda")))
     (org-agenda-include-diary t)
@@ -102,7 +100,7 @@
   (use-package ox-gfm
     :defer
     :config
-    (add-to-list 'org-export-backends 'md)))
+    (add-to-list 'org-export-backends 'md))
 
 ;; org-roam
 (use-package org-roam

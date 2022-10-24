@@ -34,12 +34,7 @@
   (after-init . global-diff-hl-mode)
   (dired-mode . diff-hl-dired-mode))
 
-(use-package gitattributes-mode
-  :defer)
-(use-package gitconfig-mode
-  :defer)
-(use-package gitignore-mode
-  :defer)
+(use-package git-modes)
 
 (provide 'init-magit)
 ;;; init-magit.el ends here
