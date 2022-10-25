@@ -4,7 +4,6 @@
 
 ;; lsp-mode init
 
-(require 'f)
 (use-package lsp-mode
 ;;  :commands (lsp)
   :custom
@@ -17,8 +16,6 @@
   (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
   (lsp-log-io nil)
   :config
-  (use-package lsp-modeline)
-  (use-package lsp-headerline)
 
   (use-package lsp-ui
     :custom
@@ -38,7 +35,6 @@
     :bind (:map lsp-ui-mode-map (([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
            ([remap xref-find-references] . lsp-ui-peek-find-references)))
     :config
-    (use-package lsp-ui-imenu)
     (eldoc-mode nil)
     (global-eldoc-mode -1))
   (use-package lsp-origami
@@ -49,13 +45,9 @@
     :custom
     (dap-breakpoints-file (f-join user-emacs-directory "local/.dap-breakpoints"))
     (dap-print-io t)
-    :defer
     :config
     (dap-mode 1)
-    (use-package dap-ui
-      :config
-      (dap-ui-mode 1))
-    (use-package dap-mouse)
+    (dap-ui-mode 1)
     ;; enables mouse hover support
     (dap-tooltip-mode 1))
 

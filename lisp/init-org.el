@@ -84,14 +84,12 @@
       (capitalize-word 1)
       (buffer-substring start end))))
   ;; agenda
-(use-package org-agenda
-    :custom
     (org-agenda-files (list (f-join user-emacs-directory "local" "agenda")))
-    (org-agenda-include-diary t)
-    (org-agenda-diary-file (f-join user-emacs-directory "local" "diary.org"))
-    (org-agenda-time-grid (quote (((daily today require-timed)
-				   (800 1000 1200 1400 1600 1800 2000)
-				   "......" "----------------")))))
+    ;; (org-agenda-include-diary t)
+    ;; (org-agenda-diary-file (f-join user-emacs-directory "local" "diary.org"))
+    ;; (org-agenda-time-grid (quote (((daily today require-timed)
+    ;; 				   (800 1000 1200 1400 1600 1800 2000)
+    ;; "......" "----------------")))) 
   (use-package org-super-agenda)
 
   (use-package org-pomodoro)
@@ -110,21 +108,20 @@
   :init
   (setq org-roam-v2-ack t))
 
-(use-package org-roam-server
-  :functions xwidget-buffer xwidget-webkit-current-session
-  :hook (org-roam-server-mode . org-roam-server-browse)
-  :init
-  (defun org-roam-server-browse ()
-    (when org-roam-server-mode
-      (let ((url (format "http://%s:%d" org-roam-server-host org-roam-server-port)))
-	(if (featurep 'xwidget-internal)
-	    (progn
-	      (xwidget-webkit-browse-url url)
-	      (let ((buf (xwidget-buffer (xwidget-webkit-current-session))))
-		(when (buffer-live-p buf)
-		  (and (eq buf (current-buffer)) (quit-window))
-		  (pop-to-buffer buf))))
-	  (browse-url url))))))
+
+(use-package org-roam-ui
+  ;;:straight
+  ;;  (:host github :repo "org-roam/org-roam-ui" :branch "main" :files ("*.el" "out"))
+    :after org-roam
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
 
 (provide 'init-org)
 ;;; init-dashboard.el ends here
