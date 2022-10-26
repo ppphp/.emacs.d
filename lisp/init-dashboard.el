@@ -74,7 +74,6 @@
 
 (use-package benchmark-init)
 (use-package dashboard
-  :after (all-the-icons)
   :custom
   ;; banner
   ;; title
@@ -84,6 +83,8 @@
   (dashboard-startup-banner 'logo)
   (dashboard-banner-logo-title "Hello!")
   (dashboard-set-navigator t)
+  (use-package all-the-icons
+    :config
   (dashboard-navigator-buttons `(;; line1
         ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
          "Github"
@@ -103,7 +104,7 @@
           "Bench-init"
           ""
           (lambda (&rest _) (benchmark-init/show-durations-tree)))
-	 )))
+	 ))))
   (dashboard-center-content t)
   (dashboard-items '((projects . 20)
 			(recents  . 5)

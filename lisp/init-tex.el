@@ -30,12 +30,8 @@
 
 ;;; Code:
 
-(use-package auctex
-  :defer)
-(use-package tex-mik
-  :defer t)
-(use-package preview-latex
-  :defer t)
+(use-package tex
+  :ensure auctex)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)

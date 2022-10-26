@@ -96,7 +96,6 @@
   
   ;; github export
   (use-package ox-gfm
-    :defer
     :config
     (add-to-list 'org-export-backends 'md))
 
@@ -106,19 +105,15 @@
   (org-roam-directory (f-join user-emacs-directory "notes"))
   (org-roam-db-location (f-join user-emacs-directory "notes" "org-roam.db"))
   :init
-  (setq org-roam-v2-ack t))
+  (setq org-roam-v2-ack t)
+  :config)
 
 
 (use-package org-roam-ui
   ;;:straight
   ;;  (:host github :repo "org-roam/org-roam-ui" :branch "main" :files ("*.el" "out"))
-    :after org-roam
-;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
-;;         a hookable mode anymore, you're advised to pick something yourself
-;;         if you don't care about startup time, use
-;;  :hook (after-init . org-roam-ui-mode)
-    :config
-    (setq org-roam-ui-sync-theme t
+  :config
+  (setq org-roam-ui-sync-theme t
           org-roam-ui-follow t
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))

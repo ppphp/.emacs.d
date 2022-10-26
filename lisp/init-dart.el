@@ -9,6 +9,10 @@
     (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
     (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
 
+    
+  (major-mode-hydra-define dart-mode nil
+   ("flutter"
+   (("r" flutter-run-or-hotload "gen"))))
   (use-package dart-server)
 
   (use-package lsp-dart

@@ -13,8 +13,6 @@
         (docstring (if ll (pop ll) nil)))
     (list obsolete-name current-name when docstring))))
 
-(use-package benchmark-init-modes)
-
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -198,7 +196,7 @@
 (use-package so-long
   :hook (after-init . global-so-long-mode)
   :custom
-  (so-long-threshold 400))
+  (so-long-threshold 10000))
 
 (use-package olivetti
   :disabled

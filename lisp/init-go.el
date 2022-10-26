@@ -4,11 +4,12 @@
 
 ;; major mode
 
-(require 'major-mode-hydra)
-
 (use-package go-mode
   :mode "\\.go\\'"
-  :mode-hydra
+  :config
+  (use-package major-mode-hydra
+    :config
+  (major-mode-hydra-define emacs-lisp-mode nil
    ("gen test"
    (("a" go-gen-test-all "gen")
     ("e" go-gen-test-exported "function")
@@ -20,8 +21,7 @@
   "play"
    (("l" go-playground))
   "coverage"
-   (("c" go-coverage)))
-  :config
+   (("c" go-coverage)))))
   (use-package flycheck-golangci-lint
     :hook (flycheck-mode . flycheck-golangci-lint-setup)
     :custom
@@ -34,18 +34,9 @@
   (use-package go-tag)
   (use-package go-impl)
   (use-package go-playground
-    :diminish)
-  (use-package lsp-go
-    :custom
-    (lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))))
+    :diminish))
 
 (add-hook 'go-mode-hook #'lsp)
-
-(add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook #'formatters 0 t)))
-
-;; debug protocol
-(use-package dap-go
-  :defer)
 
 (provide 'init-go)
 ;;; init-go.el ends here

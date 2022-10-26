@@ -15,6 +15,7 @@
   (flymake-fringe-indicator-position 'right-fringe)
   (lsp-session-file (f-join user-emacs-directory "local/.lsp-session-v1"))
   (lsp-log-io nil)
+  (lsp-clients-go-server (f-join user-emacs-directory "bin" "gopls"))
   :config
 
   (use-package lsp-ui

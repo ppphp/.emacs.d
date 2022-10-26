@@ -2,13 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'hydra)
-(require 'hydra-posframe)
+(use-package hydra)
+;; (use-package hydra-posframe
+;;   :config
+;;   (setq hydra-posframe-parameters nil)
+;;   (hydra-posframe-mode -1))
 
-(require 'major-mode-hydra)
-
-(setq hydra-posframe-parameters nil)
-(hydra-posframe-mode -1)
 
 (defhydra hydra-flycheck
     (:pre (flycheck-list-errors)

@@ -8,6 +8,9 @@
     :hook
     (dockerfile-mode . lsp)))
 
+(use-package docker
+  :bind ("C-c d" . docker))
+
 (provide 'init-docker)
 ;;; init-docker.el ends here
 
