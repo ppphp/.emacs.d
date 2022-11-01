@@ -12,7 +12,7 @@
     
   (major-mode-hydra-define dart-mode nil
    ("flutter"
-   (("r" flutter-run-or-hotload "gen"))))
+   (("r" flutter-run-or-hot-reload "gen"))))
   (use-package dart-server)
 
   (use-package lsp-dart

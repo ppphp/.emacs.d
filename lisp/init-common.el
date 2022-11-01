@@ -188,11 +188,6 @@
 
 (setq create-lockfiles nil)
 
-(use-package hungry-delete
-  :disabled
-  :config
-  (global-hungry-delete-mode))
-
 (use-package so-long
   :hook (after-init . global-so-long-mode)
   :custom
@@ -214,7 +209,9 @@
 
 (use-package markdown-mode)
 
-(setq comp-deferred-compilation t)
+(use-package anzu
+  :config
+  (global-anzu-mode +1))
 
 (pixel-scroll-precision-mode)
 
