@@ -215,5 +215,8 @@
 
 (pixel-scroll-precision-mode)
 
+(use-package delsel
+  :hook (after-init . delete-selection-mode))
+
 (provide 'init-common)
 ;;; init-common.el ends here
